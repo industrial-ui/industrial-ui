@@ -1,0 +1,24 @@
+{
+  "name": "industrial-ui",
+  "version": "0.0.1",
+  "description": "Industry-oriented library of unstyled UI-components",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanishMax/industrial-ui.git"
+  },
+  "keywords": [
+    "industrial-ui",
+    "ui-components",
+    "svelte",
+    "javascript"
+  ],
+  "author": "VanishMax",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VanishMax/industrial-ui/issues"
+  },
+  "homepage": "https://github.com/VanishMax/industrial-ui#readme"
+}
