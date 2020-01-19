@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Industry-oriented library of unstyled UI-components",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv --port 3000 public"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,17 @@
   "bugs": {
     "url": "https://github.com/VanishMax/industrial-ui/issues"
   },
-  "homepage": "https://github.com/VanishMax/industrial-ui#readme"
+  "homepage": "https://github.com/VanishMax/industrial-ui#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup": "^1.29.0",
+    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-svelte": "^5.1.1",
+    "rollup-plugin-terser": "^5.2.0",
+    "svelte": "^3.17.1"
+  },
+  "dependencies": {
+    "sirv-cli": "^0.4.5"
+  }
 }
