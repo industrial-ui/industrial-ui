@@ -5,7 +5,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv --port 3000 public",
+    "serve": "sirv --port 3000 public",
+    "start": "npm run build-storybook && npm run build && npm run serve",
     "storybook": "start-storybook",
     "build-storybook": "build-storybook -c .storybook -o public/docs"
   },
