@@ -1,8 +1,14 @@
+// Thanks for the maintainers of the sveltejs/template repo
+// If you also want to use it, do
+// npx degit sveltejs/template svelte-app
+// cd svelte-app
+
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
-import { terser } from 'rollup-plugin-terser';
+import {terser} from 'rollup-plugin-terser';
+import {markdown} from 'svelte-preprocess-markdown';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -16,6 +22,13 @@ export default {
 	},
 	plugins: [
 		svelte({
+			extensions: ['.svelte','.md'],
+
+			// Add the markdown preprocess for the best documenting experience
+			preprocess: [
+				markdown()
+			],
+
 			// enable run-time checks when not in production
 			dev: !production,
 			// we'll extract any component CSS out into
@@ -55,12 +68,10 @@ export default {
 
 function serve() {
 	let started = false;
-
 	return {
 		writeBundle() {
 			if (!started) {
 				started = true;
-
 				require('child_process').spawn('npm', ['run', 'serve', '--', '--dev'], {
 					stdio: ['ignore', 'inherit', 'inherit'],
 					shell: true

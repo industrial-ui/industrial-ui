@@ -4,12 +4,9 @@
   "description": "Industry-oriented library of unstyled UI-components",
   "scripts": {
     "dev": "rollup -c -w",
-    "build:app": "rollup -c",
-    "build:storybook": "build-storybook -c .storybook -o public/docs",
-    "build": "npm run build:storybook && npm run build:app",
-    "serve": "sirv --port 3000 public",
-    "start": "npm run build && npm run serve",
-    "storybook": "start-storybook"
+    "build": "rollup -c",
+    "serve": "sirv --port 3000 public -s",
+    "start": "npm run build && npm run serve"
   },
   "repository": {
     "type": "git",
@@ -28,18 +25,15 @@
   },
   "homepage": "https://github.com/VanishMax/industrial-ui#readme",
   "devDependencies": {
-    "@babel/core": "^7.8.3",
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
-    "@storybook/addons": "^5.3.6",
-    "@storybook/svelte": "^5.3.6",
-    "babel-loader": "^8.0.6",
     "rollup": "^1.29.0",
     "rollup-plugin-livereload": "^1.0.4",
     "rollup-plugin-svelte": "^5.1.1",
     "rollup-plugin-terser": "^5.2.0",
     "svelte": "^3.17.1",
-    "svelte-loader": "^2.13.6"
+    "svelte-preprocess-markdown": "^2.5.11",
+    "svelte-router-spa": "^5.3.3"
   },
   "dependencies": {
     "sirv-cli": "^0.4.5"
