@@ -3,12 +3,13 @@
   "version": "0.0.1",
   "description": "Industry-oriented library of unstyled UI-components",
   "scripts": {
-    "build": "rollup -c",
     "dev": "rollup -c -w",
+    "build:app": "rollup -c",
+    "build:storybook": "build-storybook -c .storybook -o public/docs",
+    "build": "npm run build:storybook && npm run build:app",
     "serve": "sirv --port 3000 public",
-    "start": "npm run build-storybook && npm run build && npm run serve",
-    "storybook": "start-storybook",
-    "build-storybook": "build-storybook -c .storybook -o public/docs"
+    "start": "npm run build && npm run serve",
+    "storybook": "start-storybook"
   },
   "repository": {
     "type": "git",
