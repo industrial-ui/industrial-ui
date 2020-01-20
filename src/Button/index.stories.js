@@ -1,4 +1,4 @@
-import Button from './index.svelte';
+import Button from './story.svelte';
 
 export default { title: 'Button' }
 
