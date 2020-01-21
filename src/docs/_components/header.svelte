@@ -24,7 +24,7 @@
     }
 
     .logo {
-        font-family: 'Unica One', cursive;
+        font-family: 'Unica One', sans-serif;
         text-transform: uppercase;
     }
 </style>

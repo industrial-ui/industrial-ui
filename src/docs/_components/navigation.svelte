@@ -1,7 +1,6 @@
 <script>
     import { Navigate, routeIsActive } from 'svelte-router-spa';
     export let currentRoute;
-    $: console.log(currentRoute);
 </script>
 
 <div>

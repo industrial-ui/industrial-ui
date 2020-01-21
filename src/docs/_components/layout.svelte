@@ -19,7 +19,7 @@
 </section>
 
 <svelte:head>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Unica+One&display=swap" rel="stylesheet">
+    <link href="/style/fonts.css" rel="stylesheet">
 </svelte:head>
 
 <style>
