@@ -24,20 +24,19 @@
     }
 
     main {
-        background: #12141d;
         width: 100%;
         height: 100vh;
         padding: 10% 0 0 15%;
     }
 
     h1 {
-        color: #fff;
+        color: #443333;
         font-size: 54px;
         letter-spacing: -0.02em;
     }
 
     p {
-        color: #ff715b;
+        color: #FF7A00;
         font-size: 20px;
         line-height: 28px;
         font-weight: 600;

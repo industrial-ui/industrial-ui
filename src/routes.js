@@ -1,4 +1,4 @@
-import Home from './docs/index.md';
+import Home from './docs/index.svelte';
 import Layout from './docs/_components/layout.svelte';
 import Intro from './docs/intro.md';
 import Button from './docs/button.md';
