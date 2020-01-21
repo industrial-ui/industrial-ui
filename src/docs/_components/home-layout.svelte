@@ -4,7 +4,7 @@
 
 <main>
     <h1>Be logical!</h1>
-    <p>Visit the <Navigate to="/docs/introduction" styles="link">documentation of industrial-ui </Navigate>to develop web apps faster</p>
+    <p>Visit the <Navigate to="/docs/introduction" styles="link">documentation of industrial-ui</Navigate> to develop web apps faster</p>
 </main>
 
 <style>
@@ -44,6 +44,6 @@
     }
 
     :global(.link) {
-        color: inherit;
+        text-decoration: underline;
     }
 </style>

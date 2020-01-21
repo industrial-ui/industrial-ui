@@ -18,14 +18,18 @@
     </main>
 </section>
 
+<svelte:head>
+    <link href="https://fonts.googleapis.com/css?family=Unica+One&display=swap" rel="stylesheet">
+</svelte:head>
+
 <style>
     header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: 60%;
-        height: 3em;
-        padding: 0 1em;
+        width: 100%;
+        height: 3.7em;
+        padding: 0 2em;
+        border-bottom: 1px solid #EEEEEE;
     }
 
     @media screen and (max-width: 1024px) {
