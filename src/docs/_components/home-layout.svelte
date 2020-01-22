@@ -1,10 +1,6 @@
-<script>
-    import { Navigate } from 'svelte-router-spa'
-</script>
-
 <main>
     <h1>Be logical!</h1>
-    <p>Visit the <Navigate to="/docs/introduction" styles="link">documentation of industrial-ui</Navigate> to develop web apps faster</p>
+    <p>Visit the <a href="/docs" class="link">documentation of industrial-ui</a> to develop web apps faster</p>
 </main>
 
 <style>

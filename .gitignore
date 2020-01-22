@@ -1,5 +1,8 @@
 .idea
 .DS_Store
 node_modules
-public/build
-public/docs
+static/build
+static/docs
+src/node_modules
+__sapper__
+yarn.lock
