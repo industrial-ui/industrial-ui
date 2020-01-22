@@ -4,9 +4,8 @@
   "description": "Industry-oriented library of unstyled UI-components",
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper build --legacy",
-    "export": "sapper export --legacy",
-    "start": "node __sapper__/build"
+    "build": "sapper export",
+    "start": "sapper build && node __sapper__/build"
   },
   "repository": {
     "type": "git",
