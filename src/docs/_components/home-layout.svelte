@@ -45,4 +45,22 @@
     :global(.link) {
         text-decoration: underline;
     }
+
+
+    @media screen and (max-width: 1024px) {
+        main {
+            padding: 10% 0 0 10%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        main {
+            padding: 10% 0 0 5%;
+        }
+
+        p {
+            width: 80%;
+            line-height: 2em;
+        }
+    }
 </style>
