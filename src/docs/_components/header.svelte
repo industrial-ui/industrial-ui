@@ -52,8 +52,9 @@
 
     i {
         transform: scale(1);
-        transition: transform .3s;
+        transition: all .3s;
     }
+
     i,
     i::after,
     i::before {
@@ -63,18 +64,22 @@
         width: 20px;
         height: 2px;
         border-radius: 3px;
-        background: currentColor
+        transition: all .3s;
+        background: black;
     }
+
     i::after,
     i::before {
         content: "";
         position: absolute;
-        top: -6px
-    }
-    i::after {
-        top: 6px
+        top: -6px;
+        transition: all .3s;
     }
 
+    i::after {
+        top: 6px;
+        transition: all .3s;
+    }
 
     @media screen and (max-width: 768px) {
         label {
@@ -83,8 +88,30 @@
         }
 
         input:checked + i {
-            transform: rotate(90deg);
-            transition: transform .3s;
+            transition: all .3s;
+            width: 22px;
+            height: 22px;
+            background: transparent;
+            border-radius: 40px;
+        }
+
+        input:checked + i::after,
+        input:checked + i::before {
+            content: "";
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            width: 16px;
+            height: 2px;
+            transform: rotate(45deg);
+            top: 8px;
+            left: 1px;
+            transition: all .3s;
+        }
+
+        input:checked + i::after {
+            transform: rotate(-45deg);
+            transition: all .3s;
         }
     }
 </style>
