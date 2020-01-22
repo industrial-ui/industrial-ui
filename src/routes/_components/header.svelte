@@ -1,6 +1,4 @@
 <script>
-    import { Navigate } from 'svelte-router-spa';
-
     export let open;
 </script>
 
@@ -15,11 +13,11 @@
         >
         <i/>
     </label>
-    <Navigate to="/">
+    <a href="/">
         <div class="logo">
             <h2>industrial-ui</h2>
         </div>
-    </Navigate>
+    </a>
 </div>
 
 <div class="right">

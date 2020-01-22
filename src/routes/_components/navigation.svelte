@@ -1,6 +1,5 @@
 <script>
-    import { Navigate, routeIsActive } from 'svelte-router-spa';
-    export let currentRoute;
+    export let segment;
 </script>
 
 <div>
@@ -8,16 +7,21 @@
         Getting started
     </header>
     <ul>
-        <Navigate to="/docs/install">
-            <li class:active={currentRoute.path === '/docs/install'}>
+        <a href="/docs/introduction">
+            <li class:active={segment === 'introduction'}>
+                Introduction
+            </li>
+        </a>
+        <a href="/docs/installation">
+            <li class:active={segment === 'installation'}>
                 Install
             </li>
-        </Navigate>
-        <Navigate to="/docs/button">
-            <li class:active={currentRoute.path === '/docs/button'}>
+        </a>
+        <a href="/docs/button">
+            <li class:active={segment === 'button'}>
                 Button
             </li>
-        </Navigate>
+        </a>
     </ul>
 </div>
 

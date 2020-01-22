@@ -1,9 +1,8 @@
 <script>
     import Header from './header.svelte';
     import Navigation from './navigation.svelte';
-    import { Route } from 'svelte-router-spa';
 
-    export let currentRoute;
+    export let segment;
     let open = false;
 </script>
 
@@ -13,10 +12,10 @@
 
 <section>
     <nav class:open={open}>
-        <Navigation {currentRoute} />
+        <Navigation {segment} />
     </nav>
     <main on:click={() => open = false}>
-        <Route {currentRoute} />
+        <slot />
     </main>
 </section>
 
