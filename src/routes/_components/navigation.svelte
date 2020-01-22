@@ -1,4 +1,5 @@
 <script>
+    import routes from '../docs/_docs/routes';
     export let segment;
 </script>
 
@@ -7,21 +8,13 @@
         Getting started
     </header>
     <ul>
-        <a href="/docs/introduction">
-            <li class:active={segment === 'introduction'}>
-                Introduction
-            </li>
-        </a>
-        <a href="/docs/installation">
-            <li class:active={segment === 'installation'}>
-                Install
-            </li>
-        </a>
-        <a href="/docs/button">
-            <li class:active={segment === 'button'}>
-                Button
-            </li>
-        </a>
+        {#each routes as route}
+            <a href="/docs/{route.name}">
+                <li class:active={segment === route.name}>
+                    {route.name}
+                </li>
+            </a>
+        {/each}
     </ul>
 </div>
 
@@ -49,6 +42,7 @@
 
     li {
         font-size: 1em;
+        text-transform: capitalize;
     }
 
     li:hover {
