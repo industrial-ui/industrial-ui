@@ -1,6 +1,8 @@
 <script>
+    import {createEventDispatcher} from 'svelte';
     import routes from '../docs/_docs/routes';
     export let segment;
+    const dispatch = createEventDispatcher();
 </script>
 
 {#each routes as group}
@@ -10,7 +12,7 @@
         </header>
         <ul>
             {#each group.nested as route}
-                <a href="/docs/{route.name}">
+                <a href="/docs/{route.name}" on:click={() => dispatch('close')}>
                     <li class:active={segment === route.name}>
                         {route.name}
                     </li>
