@@ -4,7 +4,7 @@
 
     const {page} = stores();
     $: segment = ($page.path.match(/.*\/(.*)$/) || [null, 'introduction'])[1];
-    $: comp = components.find(x => x.name === segment.toLowerCase()).component || null;
+    $: comp = (components.find(x => x.name === segment.toLowerCase()) || {}).component || null;
 </script>
 
 <svelte:component this={comp} />
