@@ -3,6 +3,20 @@
     <p>Visit the <a rel="prefetch" href="/docs/introduction" class="link">documentation of industrial-ui</a> to develop web apps faster</p>
 </main>
 
+<svelte:head>
+    <title>Industrial-UI – industry-oriented library of unstyled UI-components</title>
+    <meta name="title" content="Industrial-UI — industry-oriented library of unstyled UI-components">
+    <meta name="description" content="Industrial-UI — industry-oriented library of unstyled UI-components. Enjoy coding!">
+    <meta name="keywords" content="industrial-ui, iui, ui-kit, ui-components, library, design, logic, javascript, svelte, npm">
+    <meta name="author" content="VanishMax">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://industrial-ui.now.sh/">
+    <meta property="og:title" content="Industrial-UI — industry-oriented library of unstyled UI-components">
+    <meta property="og:description" content="Industrial-UI — industry-oriented library of unstyled UI-components. Enjoy coding!">
+    <meta property="og:image" content="https://industrial-ui.now.sh/img/icon.png">
+</svelte:head>
+
 <style>
     @import url('https://rsms.me/inter/inter.css');
     :global(html) {
