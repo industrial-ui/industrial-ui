@@ -8,12 +8,12 @@
 
     const {page} = stores();
     $: segment = ($page.path.match(/.*\/(.*)$/) || [null, 'introduction'])[1];
-    $: comp = components.find(x => x.name === segment.toLowerCase()) || {};
+    $: comp = components.find(x => x.name === segment.toLowerCase()) || {component: null, meta: {}};
 </script>
 
 <svelte:head>
-    <title>{comp.meta.title}</title>
-    <meta name="description" content={comp.meta.description}>
+    <title>{comp.meta.title || ''} | INDUSTRIAL-UI</title>
+    <meta name="description" content={comp.meta.description || ''}>
 </svelte:head>
 
-<svelte:component this={comp.component || null} />
+<svelte:component this={comp.component} />
