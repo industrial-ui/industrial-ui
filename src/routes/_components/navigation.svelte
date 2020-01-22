@@ -3,20 +3,22 @@
     export let segment;
 </script>
 
-<div>
-    <header>
-        Getting started
-    </header>
-    <ul>
-        {#each routes as route}
-            <a href="/docs/{route.name}">
-                <li class:active={segment === route.name}>
-                    {route.name}
-                </li>
-            </a>
-        {/each}
-    </ul>
-</div>
+{#each routes as group}
+    <div>
+        <header>
+            {group.title}
+        </header>
+        <ul>
+            {#each group.nested as route}
+                <a href="/docs/{route.name}">
+                    <li class:active={segment === route.name}>
+                        {route.name}
+                    </li>
+                </a>
+            {/each}
+        </ul>
+    </div>
+{/each}
 
 <style>
     div {
