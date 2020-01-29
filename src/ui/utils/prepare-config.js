@@ -1,4 +1,19 @@
-const mergeDeep = (target, ...sources) => {
+export default (defaultConfig, actualConfig) => {
+  // Merge default and given configs into one
+  let config = mergeDeep({}, defaultConfig, actualConfig);
+
+  // Add 'is:' prefix to all components' isProperties
+  Object.keys(config.components).forEach(key => {
+    const component = config.components[key];
+    if (component.isProperties) {
+      component.isProperties = component.isProperties.map(prop => 'is:' + prop);
+    }
+  });
+
+  return config;
+};
+
+export const mergeDeep = (target, ...sources) => {
   if (!sources.length) return target;
   const source = sources.shift();
 
@@ -19,5 +34,3 @@ const mergeDeep = (target, ...sources) => {
 const isObject = item => {
   return (item && typeof item === 'object' && !Array.isArray(item));
 };
-
-export default mergeDeep;
