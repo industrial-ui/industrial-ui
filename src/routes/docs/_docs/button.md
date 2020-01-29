@@ -5,3 +5,4 @@
 </script>
 
 <Button>Hello</Button>
+<Button isRound isOutline>Cool thing</Button>
