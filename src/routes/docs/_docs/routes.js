@@ -1,6 +1,7 @@
 import Intro from './introduction.md';
 import Instal from './installation.md';
 import Button from './button.md';
+import Conventions from './conventions.md';
 
 export default [
   {
@@ -20,6 +21,14 @@ export default [
         meta: {
           title: 'Installation',
           description: 'Get started with industrial-ui right now by following these simple steps of installation the library',
+        },
+      },
+      {
+        name: 'conventions',
+        component: Conventions,
+        meta: {
+          title: 'UI Conventions',
+          description: 'The philosophy behind the industrial-ui project and how to live and code with it easily',
         },
       },
     ],
