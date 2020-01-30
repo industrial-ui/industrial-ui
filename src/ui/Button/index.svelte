@@ -13,7 +13,7 @@
 
 <button
   type="button"
-  class={config.className}
+  class={config.class}
   use:filterIsProps={{isProperties: config.isProperties, props: $$props}}
   {...filterProps(propsList, $$props)}
 >

@@ -6,7 +6,7 @@
   const config = {
     components: {
       button: {
-        className: 'btn',
+        class: 'btn',
         isProperties: ['round', 'outline'],
       }
     }
