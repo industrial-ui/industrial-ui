@@ -21,27 +21,41 @@
 <div id="swipe-container-left" class:disabled={open} on:swiperight={() => open = true} />
 <div id="swipe-container-right" class:disabled={!open} on:swipeleft={() => open = false} />
 
+<nav class:open={open}>
+  <Navigation {segment} on:close={() => open = false} />
+</nav>
+
 <section>
-  <nav class:open={open}>
-    <Navigation {segment} on:close={() => open = false} />
-  </nav>
   <main on:click={() => open = false}>
     <slot />
   </main>
+
+  <aside id="contents">
+    <h3>Contents</h3>
+    <ul>
+      <li>Some point</li>
+      <li>One point</li>
+      <li>Second point</li>
+    </ul>
+  </aside>
 </section>
 
 <style>
   :global(body) {
     font-family: 'Noto Sans', sans-serif;
+    overflow: hidden;
   }
 
   header {
+    position: fixed;
     display: flex;
     align-items: center;
     width: 100%;
     height: 3.7rem;
     padding: 0 2rem;
     border-bottom: 1px solid #EEEEEE;
+    background: white;
+    z-index: 1000;
   }
 
   #swipe-container-left,
@@ -61,19 +75,35 @@
   }
 
   section {
+    position: absolute;
+    top: 3.7rem;
+    bottom: 0;
+    left: calc(100vw / 12 * 2);
     display: flex;
-    min-height: calc(100vh - 3.7rem);
+    overflow-y: auto;
   }
 
   nav {
+    position: fixed;
+    top: 3.7rem;
+    left: 0;
+    bottom: 0;
     background: rgba(220, 220, 220, .1);
-    width: calc(100% / 12 * 2);
+    width: calc(100vw / 12 * 2);
+    overflow-y: auto;
     border-right: 1px solid #EEEEEE;
+    z-index: 999;
   }
 
   main {
-    width: calc(100% / 12 * 10);
-    padding: 1rem;
+    width: calc(100vw / 12 * 8);
+    padding: 2.5rem;
+  }
+
+  aside {
+    width: calc(100vw / 12 * 2);
+    position: sticky;
+    top: 0;
   }
 
   @media screen and (max-width: 1024px) {
@@ -82,7 +112,15 @@
     }
 
     main {
-      width: 75%;
+      width: 100%;
+    }
+
+    section {
+      left: 25%;
+    }
+
+    aside {
+      display: none;
     }
   }
 
@@ -93,26 +131,35 @@
     }
 
     nav {
-      position: fixed;
-      top: 3.7rem;
+      left: unset;
       right: 100%;
       transition: right .3s;
-      bottom: 0;
-      width: 70%;
+      width: 50%;
       background: #FBFBFB;
     }
 
     nav.open {
       display: block;
-      right: 30%;
+      right: 50%;
     }
 
-    main {
+    section {
       width: 100%;
+      left: 0;
     }
 
     header {
       padding: 0 1rem;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    nav {
+      width: 70%;
+    }
+
+    nav.open {
+      right: 30%;
     }
   }
 </style>
