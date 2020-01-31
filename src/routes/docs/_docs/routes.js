@@ -1,6 +1,7 @@
 import Intro from './introduction.md';
 import Instal from './installation.md';
 import Button from './button.md';
+import DocStyling from './doc-styling.md';
 import Conventions from './conventions.md';
 
 export default [
@@ -41,6 +42,14 @@ export default [
         component: Button,
         meta: {
           title: 'Button component',
+          description: ''
+        }
+      },
+      {
+        name: 'doc-styling',
+        component: DocStyling,
+        meta: {
+          title: 'Documentation Components',
           description: ''
         }
       },
