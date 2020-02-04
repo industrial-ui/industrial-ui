@@ -14,7 +14,6 @@
 <svelte:head>
   <link href="/style/fonts.css" rel="stylesheet">
   <link href="/style/content.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=html&amp;skin=sons-of-obsidian"></script>
 </svelte:head>
 
 <svelte:body  on:swiperight={() => open = true} on:swipeleft={() => open = false} />

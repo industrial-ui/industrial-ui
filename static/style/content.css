@@ -1,5 +1,4 @@
 #content * {
-  text-align: justify;
   font-weight: 300;
 }
 
@@ -28,6 +27,7 @@
 #content span
 {
   line-height: 1.25em;
+  text-align: justify;
 }
 
 #content strong, #content b {
