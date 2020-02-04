@@ -32,6 +32,7 @@
     line-height: 2em;
     font-weight: 400;
     padding-left: .7rem;
+    margin-bottom: 0;
   }
 
   ul {

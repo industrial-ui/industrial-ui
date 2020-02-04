@@ -45,8 +45,7 @@
   }
 
   li {
-    font-size: 1em;
-    text-transform: capitalize;
+    height: 2em;
   }
 
   li:hover {
@@ -61,5 +60,12 @@
     width: inherit;
     height: inherit;
     display: block;
+    font-size: 1em;
+    text-transform: capitalize;
+  }
+
+  a:hover {
+    font-size: 1.05em;
+    transition: all .1s;
   }
 </style>
