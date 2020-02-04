@@ -79,6 +79,10 @@
     transition: all .3s;
   }
 
+  i {
+    margin-right: 2px;
+  }
+
   @media screen and (max-width: 768px) {
     label {
       display: block;
@@ -86,9 +90,10 @@
     }
 
     input:checked + i {
-      transition: all .3s;
+      transition: background 0s, height .3s;
       width: 22px;
-      height: 22px;
+      height: 2px;
+      margin-right: 0;
       background: transparent;
       border-radius: 40px;
     }
@@ -102,7 +107,7 @@
       width: 16px;
       height: 2px;
       transform: rotate(45deg);
-      top: 8px;
+      top: 0;
       left: 1px;
       transition: all .3s;
     }

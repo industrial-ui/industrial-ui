@@ -15,11 +15,11 @@
   <link href="/style/fonts.css" rel="stylesheet">
 </svelte:head>
 
+<svelte:body  on:swiperight={() => open = true} on:swipeleft={() => open = false} />
+
 <header>
   <Header bind:open={open} />
 </header>
-<div id="swipe-container-left" class:disabled={open} on:swiperight={() => open = true} />
-<div id="swipe-container-right" class:disabled={!open} on:swipeleft={() => open = false} />
 
 <nav class:open={open}>
   <Navigation {segment} on:close={() => open = false} />
@@ -56,22 +56,6 @@
     border-bottom: 1px solid #EEEEEE;
     background: white;
     z-index: 1000;
-  }
-
-  #swipe-container-left,
-  #swipe-container-right,
-  #swipe-container-right.disabled,
-  #swipe-container-left.disabled {
-    display: none;
-    position: fixed;
-    top: 3.7rem;
-    left: 0;
-    width: 50%;
-    bottom: 0;
-  }
-
-  #swipe-container-right {
-    width: 100%;
   }
 
   section {
@@ -125,11 +109,6 @@
   }
 
   @media screen and (max-width: 768px) {
-    #swipe-container-left,
-    #swipe-container-right {
-      display: block;
-    }
-
     nav {
       left: unset;
       right: 100%;
