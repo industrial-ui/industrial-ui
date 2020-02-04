@@ -1,0 +1,60 @@
+<script>
+  import routes from '../docs/_docs/routes';
+
+  export let segment = '';
+
+  $: contents = routes
+    .reduce((accumulator, current) => {
+      return [...accumulator, ...current.nested];
+    }, [])
+    .find(component => component.name === segment)
+    .contents;
+</script>
+
+{#if contents}
+  <h3>Contents</h3>
+  <ul>
+    {#each contents as link}
+      <li>
+        <a href="{`/docs/${segment}#${link.slug}`}">
+          {link.text}
+        </a>
+      </li>
+    {/each}
+  </ul>
+{/if}
+
+<style>
+  h3 {
+    text-transform: uppercase;
+    color: #555555;
+    font-size: .8em;
+    line-height: 2em;
+    font-weight: 400;
+    padding-left: .7rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li:hover {
+    background-image: linear-gradient(to right, rgba(255, 122, 0, .3), rgba(255, 122, 0, .1), rgba(255, 122, 0, 0));
+    font-size: 1.05em;
+    transition: all .1s;
+    height: 2em;
+  }
+
+  a {
+    width: inherit;
+    height: inherit;
+    display: block;
+    line-height: 2em;
+    padding-left: .7rem;
+    font-size: 1em;
+    text-transform: capitalize;
+  }
+</style>
+

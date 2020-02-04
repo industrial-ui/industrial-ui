@@ -14,6 +14,10 @@
   font-size: 1.9em;
 }
 
+#content h1[id]:not(.first) {
+  margin-top: 2.5rem;
+}
+
 #content h2 {
   font-size: 1.5em;
 }

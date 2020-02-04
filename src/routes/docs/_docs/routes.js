@@ -51,7 +51,29 @@ export default [
         meta: {
           title: 'Documentation Components',
           description: ''
-        }
+        },
+        contents: [
+          {
+            slug: 'headings',
+            text: 'Headings',
+          },
+          {
+            slug: 'simple-text',
+            text: 'Simple text',
+          },
+          {
+            slug: 'lists',
+            text: 'Lists',
+          },
+          {
+            slug: 'text-types',
+            text: 'Text types',
+          },
+          {
+            slug: 'code',
+            text: 'Code',
+          },
+        ],
       },
     ]
   },

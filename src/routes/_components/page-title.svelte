@@ -3,7 +3,7 @@
   export let subtitle = '';
 </script>
 
-<header>
+<header id="page-heading">
   <h1>{title}</h1>
   <p>{subtitle}</p>
   <hr />
@@ -17,6 +17,7 @@
   p {
     margin: 0;
     font-style: italic;
+    text-align: left !important;
   }
 
   hr {

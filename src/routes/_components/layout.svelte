@@ -2,6 +2,7 @@
   import {onMount} from 'svelte';
   import Header from './header.svelte';
   import Navigation from './navigation.svelte';
+  import Contents from '../_components/contents.svelte';
 
   export let segment;
   let open = false;
@@ -32,12 +33,7 @@
   </main>
 
   <aside id="contents">
-    <h3>Contents</h3>
-    <ul>
-      <li>Some point</li>
-      <li>One point</li>
-      <li>Second point</li>
-    </ul>
+    <Contents {segment} />
   </aside>
 </section>
 
@@ -89,6 +85,7 @@
   aside {
     width: calc(100vw / 12 * 2);
     position: sticky;
+    padding: 0 1rem;
     top: 0;
   }
 

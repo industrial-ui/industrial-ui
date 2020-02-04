@@ -12,11 +12,11 @@
     </header>
     <ul>
       {#each group.nested as route}
-        <a href="/docs/{route.name}" on:click={() => dispatch('close')}>
-          <li class:active={segment === route.name}>
+        <li class:active={segment === route.name}>
+          <a href="/docs/{route.name}" on:click={() => dispatch('close')}>
             {route.name}
-          </li>
-        </a>
+          </a>
+        </li>
       {/each}
     </ul>
   </div>
@@ -27,7 +27,7 @@
     margin-top: 1rem;
   }
 
-  header, li {
+  header, a {
     padding-left: 2rem;
     line-height: 2em;
   }
@@ -55,5 +55,11 @@
 
   li.active {
     color: rgba(255, 122, 0, 1);
+  }
+
+  a {
+    width: inherit;
+    height: inherit;
+    display: block;
   }
 </style>
