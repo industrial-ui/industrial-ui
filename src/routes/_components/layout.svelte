@@ -13,6 +13,8 @@
 
 <svelte:head>
   <link href="/style/fonts.css" rel="stylesheet">
+  <link href="/style/content.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=html&amp;skin=sons-of-obsidian"></script>
 </svelte:head>
 
 <svelte:body  on:swiperight={() => open = true} on:swipeleft={() => open = false} />
@@ -26,7 +28,7 @@
 </nav>
 
 <section>
-  <main on:click={() => open = false}>
+  <main on:click={() => open = false} id="content">
     <slot />
   </main>
 
@@ -63,6 +65,7 @@
     top: 3.7rem;
     bottom: 0;
     left: calc(100vw / 12 * 2);
+    right: 0;
     display: flex;
     overflow-y: auto;
   }
@@ -81,7 +84,7 @@
 
   main {
     width: calc(100vw / 12 * 8);
-    padding: 2.5rem;
+    padding: 0 4rem;
   }
 
   aside {
@@ -97,6 +100,7 @@
 
     main {
       width: 100%;
+      padding: 0 2rem;
     }
 
     section {
@@ -139,6 +143,10 @@
 
     nav.open {
       right: 30%;
+    }
+
+    main {
+      padding: 0 1.5rem;
     }
   }
 </style>

@@ -30,14 +30,19 @@ want it?
 
 <a href="/docs/doc-styling#h3">This is a link to h3</a>
 
-`Look at me, i am a code`
+Code inside the text `Look at me, i am a code` should 
+look good
 
-```sveltehtml
+<pre class="prettyprint">
+```html
 <script>
-  export let myVar = 'Hello, world!'
+  export let myVar = 'Hello, world!';
 </script>
 
 <button type="button">
   {myVar}
 </button>
 ```
+</pre>
+
+And, i guess, this is the biggest part

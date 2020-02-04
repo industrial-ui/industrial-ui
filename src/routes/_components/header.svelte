@@ -37,6 +37,7 @@
   .logo {
     font-family: 'Unica One', sans-serif;
     text-transform: uppercase;
+    color: black;
   }
 
   img {
