@@ -35,12 +35,18 @@
 }
 
 #content ul {
-  padding-left: inherit;
+  padding-left: 1rem;
   padding-right: 0;
 }
 
 #content li {
   margin: .5rem 0;
+}
+
+#content a {
+  text-decoration-line: underline;
+  text-decoration-color: #FF7A00;
+  font-weight: 500;
 }
 
 #content code {

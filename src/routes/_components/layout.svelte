@@ -83,7 +83,7 @@
 
   main {
     width: calc(100vw / 12 * 8);
-    padding: 0 4rem;
+    padding: 1rem 4rem;
   }
 
   aside {
@@ -99,7 +99,7 @@
 
     main {
       width: 100%;
-      padding: 0 2rem;
+      padding: 1rem 2rem;
     }
 
     section {
@@ -145,7 +145,7 @@
     }
 
     main {
-      padding: 0 1.5rem;
+      padding: 1rem 1.5rem;
     }
   }
 </style>

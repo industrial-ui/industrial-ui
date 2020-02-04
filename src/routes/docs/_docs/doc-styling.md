@@ -1,4 +1,11 @@
-# H1
+<script>
+import Title from '../../_components/page-title.svelte';
+</script>
+
+<Title 
+    title="Example of stylization"
+    subtitle="This is how documentation can be represented in a nice way"
+/>
 
 ## H2
 

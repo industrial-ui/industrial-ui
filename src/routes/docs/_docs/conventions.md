@@ -3,7 +3,7 @@
 In this topic we will discuss the philosophy behind the industrial-ui:
 how to integrate components into your projects and then use it effectively.
 
-## Stylisation
+## Stylization
 
 The worst part in using different ui-component libraries is that all of them
 give you styles which, in most cases, you cannot override fully. Here the
