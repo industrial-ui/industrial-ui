@@ -2,7 +2,7 @@
   import {onMount} from 'svelte';
   import Header from './header.svelte';
   import Navigation from './navigation.svelte';
-  import Contents from '../_components/contents.svelte';
+  import Contents from './contents.svelte';
 
   export let segment;
   let open = false;
@@ -37,7 +37,7 @@
   </aside>
 </section>
 
-<style>
+<style lang="scss">
   :global(body) {
     font-family: 'Noto Sans', sans-serif;
     overflow: hidden;

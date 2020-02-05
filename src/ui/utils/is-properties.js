@@ -8,7 +8,6 @@ export default (node,  {isProperties, props}) => {
 
   for (let key of classes) {
     if (props[key] && props[key] !== 'false' && isProperties.hasOwnProperty(key)) {
-      console.log(isProperties[key]);
       node.classList.add(...isProperties[key].split(' '));
     }
   }

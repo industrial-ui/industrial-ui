@@ -1,6 +1,6 @@
 <script>
   import {createEventDispatcher} from 'svelte';
-  import routes from '../docs/_docs/routes';
+  import routes from '../_docs/routes';
   export let segment;
   const dispatch = createEventDispatcher();
 </script>
