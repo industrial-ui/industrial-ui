@@ -2,7 +2,7 @@ export default {
   styles: [],
   components: {
     button: {
-      isProperties: [],
+      isProperties: {},
       className: '',
     },
     card: {},

@@ -7,9 +7,9 @@ export default (node,  {isProperties, props}) => {
   const classes = Object.keys(props).filter(key => key.match(/^is:/));
 
   for (let key of classes) {
-    const className = key.replace(/^is:/, '');
-    if (props[key] && props[key] !== 'false' && isProperties.includes(key)) {
-      node.classList.add(className);
+    if (props[key] && props[key] !== 'false' && isProperties.hasOwnProperty(key)) {
+      console.log(isProperties[key]);
+      node.classList.add(...isProperties[key].split(' '));
     }
   }
 };

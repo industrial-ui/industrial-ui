@@ -9,7 +9,7 @@
 
   export let label;
 
-  const propsList = ['label', 'class', ...config.isProperties];
+  const propsList = ['label', 'class', ...Object.keys(config.isProperties)];
 </script>
 
 <button

@@ -7,7 +7,10 @@
     components: {
       button: {
         class: 'btn',
-        isProperties: ['round', 'outline'],
+        isProperties: {
+          outline: 'outline',
+          icon: 'round icon',
+        },
       }
     }
   };

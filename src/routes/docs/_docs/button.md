@@ -5,5 +5,5 @@
 </script>
 
 <Button>Hello</Button>
-<Button class="special" is:round>Trying example</Button>
-<Button class="special" title="some" is:round={false} is:outline="false">Cool thing</Button>
+<Button class="special" is:outline is:icon>Trying example</Button>
+<Button title="some" is:icon={false} is:outline="false">Cool thing</Button>
