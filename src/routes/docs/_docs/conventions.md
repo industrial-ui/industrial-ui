@@ -62,6 +62,6 @@ const config = {
 
 ***PROPOSALS***
 
-* class = globalClass + config.class + class="..."
+* class = globalClass + config.class + class="..." - !Done!
 * is:Properties будет добавлять пару такие классы, какие задашь. Например,
 is:icon добавит "round normal icon"

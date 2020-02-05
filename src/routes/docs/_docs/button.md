@@ -6,4 +6,4 @@
 
 <Button>Hello</Button>
 <Button class="special" is:round>Trying example</Button>
-<Button title="some" is:round={false} is:outline="false">Cool thing</Button>
+<Button class="special" title="some" is:round={false} is:outline="false">Cool thing</Button>
