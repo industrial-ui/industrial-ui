@@ -1,6 +1,7 @@
 <script>
   import {fly} from 'svelte/transition';
   import {changeTheme} from '../_helpers/theme';
+  import themes from '../_helpers/theme-constants';
 
   let chosen = null;
   const choose = type => {
@@ -34,9 +35,9 @@
     <div in:fly="{{duration: 300}}" class="show-code">
       {#if chosen === 'config'}
         <div class="theme-select">
-          <span on:click={() => changeTheme('semantic')}>Semantic</span>
-          <span on:click={() => changeTheme('spectre')}>Spectre</span>
-          <span on:click={() => changeTheme('materialize')}>Materialize</span>
+          {#each themes as theme}
+            <span on:click={() => changeTheme(theme.name)}>{theme.name}</span>
+          {/each}
         </div>
       {/if}
 
@@ -106,6 +107,7 @@
     top: 0;
     right: 0;
     display: flex;
+    z-index: 10;
   }
 
   .theme-select span {
