@@ -54,7 +54,7 @@ want it?
 Code inside the text `Look at me, i am a code` should 
 look good
 
-<pre class="prettyprint">
+<pre class="code">
 ```html
 <script>
   export let myVar = 'Hello, world!';
@@ -82,7 +82,7 @@ look good
     </span>
   </Button>
   
-  <pre class="prettyprint" slot="code">
+  <pre class="code" slot="code">
   ```html
   <script>
     import Button from 'industrial-ui/Button';
@@ -103,7 +103,7 @@ look good
   ```
   </pre>
 
-  <pre class="prettyprint" slot="config">
+  <pre class="code" slot="config">
   ```javascript
   const config = {
     components: {

@@ -1,5 +1,5 @@
 export default {
-  styles: [],
+  globalClass: '',
   components: {
     button: {
       isProperties: {},

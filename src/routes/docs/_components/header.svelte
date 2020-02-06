@@ -21,7 +21,7 @@
 </div>
 
 <div class="right">
-  <a href="https://github.com/VanishMax/industrial-ui" target="_blank">
+  <a href="https://github.com/VanishMax/industrial-ui" target="_blank" rel="noreferrer noopener">
     <img src="/img/github.svg" alt="link to github repository" />
   </a>
 </div>

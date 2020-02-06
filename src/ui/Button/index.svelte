@@ -14,7 +14,7 @@
 
 <button
   type="button"
-  class={composeClasses(config.class, $$props.class)}
+  class={composeClasses(globalConfig.globalClass, config.class, $$props.class)}
   use:filterIsProps={{isProperties: config.isProperties, props: $$props}}
   {...filterProps(propsList, $$props)}
 >

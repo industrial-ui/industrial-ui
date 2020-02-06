@@ -9,7 +9,7 @@ hljs.registerLanguage('bash', bash_lang);
 hljs.registerLanguage('css', css_lang);
 
 export const highlight = (code, lang) => {
-  let result = hljs.highlight(lang,"\n"+code).value;
+  let result = hljs.highlight(lang, code).value;
   result = result.replace(/<span class="(javascript|css)">/g,"$&&nbsp;");
   return result;
 };

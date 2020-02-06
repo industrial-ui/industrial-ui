@@ -19,7 +19,7 @@
     </span>
   </Button>
   
-  <pre class="prettyprint" slot="code">
+  <pre class="code" slot="code">
   ```html
   <script>
     import Button from 'industrial-ui/Button';
@@ -40,7 +40,7 @@
   ```
   </pre>
 
-  <pre class="prettyprint" slot="config">
+  <pre class="code" slot="config">
   ```javascript
   const config = {
     components: {
