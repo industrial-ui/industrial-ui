@@ -1,4 +1,6 @@
 <script>
+  import { fly } from 'svelte/transition';
+
   let chosen = null;
   const choose = type => {
     if (chosen && chosen === type) {
@@ -9,16 +11,26 @@
   };
 </script>
 
-<div class="doc-block">
-  <div class="doc-showcase">
+<div class="show-block" class:open={chosen}>
+  <div class="show-showcase">
     <nav>
-      <img src="/img/code.svg" alt="show code usage" on:click={() => choose('code')} />
-      <img src="/img/settings.svg" alt="show settings configuration" on:click={() => choose('config')} />
+      <img
+        src="/img/code.svg"
+        alt="show code usage"
+        title="Show code usage"
+        on:click={() => choose('code')}
+      />
+      <img
+        src="/img/settings.svg"
+        alt="show settings configuration"
+        title="Show settings configuration"
+        on:click={() => choose('config')}
+      />
     </nav>
     <slot />
   </div>
   {#if chosen}
-    <div class="doc-code">
+    <div in:fly="{{duration: 300}}" class="show-code">
       {#if chosen === 'code'}
         <slot name="code" />
       {:else if chosen === 'config'}
@@ -29,12 +41,17 @@
 </div>
 
 <style>
-  .doc-block {
-    border-radius: 1rem;
-    border: 1px solid #b1b4b3;
+  .show-block {
+    margin: 1rem;
   }
 
-  .doc-showcase {
+  .show-block.open .show-showcase {
+    border-bottom: none;
+    border-radius: 1rem 1rem 0 0;
+    transition: all .3s;
+  }
+
+  .show-showcase {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -42,10 +59,17 @@
     justify-content: center;
     align-items: center;
     padding: .5rem 1rem .5rem;
+    border-radius: 1rem;
+    border: 1px solid #b1b4b3;
+    transition: border-radius .3s;
   }
 
-  :global(.doc-showcase) > *:not(nav) {
+  :global(.show-showcase) > *:not(nav) {
     margin: .5rem 0;
+  }
+
+  .show-code {
+    max-height: 0;
   }
 
   nav {

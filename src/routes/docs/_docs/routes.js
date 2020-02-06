@@ -73,6 +73,10 @@ export default [
             slug: 'code',
             text: 'Code',
           },
+          {
+            slug: 'showcase-block',
+            text: 'Showcase block',
+          },
         ],
       },
     ]

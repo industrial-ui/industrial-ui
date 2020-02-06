@@ -82,6 +82,15 @@
   color: whitesmoke;
 }
 
-#content .doc-block .doc-showcase > *:not(nav) {
+#content .show-block .show-showcase > *:not(nav) {
   margin: .5rem;
+}
+
+#content .show-block .show-code .prettyprint {
+  margin: 0;
+}
+#content .show-block .show-code pre pre {
+  border-radius: 0 0 1rem 1rem;
+  border: 1px solid #b1b4b3;
+  border-top: none;
 }
