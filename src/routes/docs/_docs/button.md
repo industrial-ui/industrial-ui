@@ -1,9 +1,15 @@
-# Button
-
 <script>
-  import Button from '../../../ui/Button/index.svelte';
-  import ShowBlock from '../_components/show-block.svelte';
+import Title from '../_components/page-title.svelte';
+import Button from '../../../ui/Button/index.svelte';
+import ShowBlock from '../_components/show-block.svelte';
 </script>
+
+<Title 
+  title="Button"
+/>
+
+Here is how simply you can use the button in pair with *semantic-ui* library 
+or any other stylesheets.
 
 <ShowBlock>
   <Button>Hello</Button>

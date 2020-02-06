@@ -1,6 +1,6 @@
 <main>
     <h1>Be logical!</h1>
-    <p>Visit the <a rel="prefetch" href="/docs/introduction" class="link">documentation of industrial-ui</a> to develop web apps faster</p>
+    <p>Visit the <a rel="prefetch" href="/docs/installation" class="link">documentation of industrial-ui</a> to develop web apps faster</p>
 </main>
 
 <svelte:head>
