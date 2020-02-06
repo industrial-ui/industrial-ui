@@ -6,6 +6,10 @@
   font-family: 'Noto Sans', sans-serif !important;
 }
 
+#content > * {
+  flex-shrink: 0;
+}
+
 #content h1,
 #content h2,
 #content h3
@@ -21,7 +25,7 @@
 }
 
 #content h1[id]:not(.first) {
-  margin-top: 2.5rem;
+  margin-top: .75rem;
 }
 
 #content h2 {

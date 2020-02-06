@@ -25,8 +25,4 @@
     height: 1px;
     background-image: linear-gradient(to right, rgba(100, 100, 100, 0.8), rgba(100, 100, 100, 0.5), rgba(0, 0, 0, 0));
   }
-
-  header {
-    margin-bottom: 1.5rem;
-  }
 </style>

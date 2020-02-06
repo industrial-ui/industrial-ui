@@ -7,7 +7,7 @@ import Title from '../_components/page-title.svelte';
   subtitle="The philosophy behind the industrial-ui: how components were developed"
 />
 
-<h1 id="naming">Naming</h1>
+<h1 id="naming" class="first">Naming</h1>
 
 `TODO:` All components follow the same naming rules, so it could be as easy as possible to
 remember them to not check documentation each time you need a component.

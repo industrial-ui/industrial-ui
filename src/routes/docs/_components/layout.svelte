@@ -30,6 +30,12 @@
 <section>
   <main on:click={() => open = false} id="content">
     <slot />
+
+    <div class="grow" />
+    <footer>
+      <hr />
+      Copyright <a href="https://github.com/VanishMax" target="_blank" rel="noreferrer noopener">by VanishMax</a>, 2020
+    </footer>
   </main>
 
   <aside id="contents">
@@ -80,6 +86,8 @@
   main {
     width: calc(100vw / 12 * 8);
     padding: 1rem 4rem;
+    display: flex;
+    flex-direction: column;
   }
 
   aside {
@@ -87,6 +95,19 @@
     position: sticky;
     padding: 0 1rem;
     top: 0;
+  }
+
+  .grow {
+    flex-grow: 1;
+  }
+
+  footer {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    color: #646866;
+  }
+  footer a {
+    color: #646866 !important;
   }
 
   @media screen and (max-width: 1024px) {
