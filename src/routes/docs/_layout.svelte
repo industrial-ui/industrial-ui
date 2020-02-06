@@ -2,29 +2,17 @@
   import Layout from './_components/layout.svelte';
   import IUI from '../../ui/IUI/index.svelte';
   import 'highlight.js/styles/an-old-hope.css';
-  export let segment;
+  import {theme} from './_helpers/theme';
 
-  const config = {
-    components: {
-      button: {
-        class: 'ui button',
-        isProperties: {
-          primary: 'primary',
-          outline: 'outline',
-          icon: 'round icon',
-          labeled: 'labeled',
-        },
-      }
-    }
-  };
+  export let segment;
 </script>
 
 <svelte:head>
-  <link href="/style/semantic.min.css" type="text/css" rel="stylesheet">
+  <link href={$theme.url} type="text/css" rel="stylesheet">
 </svelte:head>
 
 <Layout {segment}>
-  <IUI {config}>
+  <IUI config={$theme.config}>
     <slot />
   </IUI>
 </Layout>

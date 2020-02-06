@@ -1,5 +1,6 @@
 <script>
-  import { fly } from 'svelte/transition';
+  import {fly} from 'svelte/transition';
+  import {changeTheme} from '../_helpers/theme';
 
   let chosen = null;
   const choose = type => {
@@ -13,7 +14,7 @@
 
 <div class="show-block" class:open={chosen}>
   <div class="show-showcase">
-    <nav>
+    <div class="show-navbar">
       <img
         src="/img/code.svg"
         alt="show code usage"
@@ -26,11 +27,19 @@
         title="Show settings configuration"
         on:click={() => choose('config')}
       />
-    </nav>
+    </div>
     <slot />
   </div>
   {#if chosen}
     <div in:fly="{{duration: 300}}" class="show-code">
+      {#if chosen === 'config'}
+        <div class="theme-select">
+          <span on:click={() => changeTheme('semantic')}>Semantic</span>
+          <span on:click={() => changeTheme('spectre')}>Spectre</span>
+          <span on:click={() => changeTheme('materialize')}>Materialize</span>
+        </div>
+      {/if}
+
       {#if chosen === 'code'}
         <slot name="code" />
       {:else if chosen === 'config'}
@@ -68,11 +77,15 @@
     transition: border-radius .3s;
   }
 
-  :global(.show-showcase) > *:not(nav) {
+  .show-code {
+    position: relative;
+  }
+
+  :global(.show-showcase) > *:not(.show-navbar) {
     margin: .5rem 0;
   }
 
-  nav {
+  .show-navbar {
     position: absolute;
     top: 0;
     right: 1rem;
@@ -82,9 +95,25 @@
     justify-content: space-between;
   }
 
-  nav img {
+  .show-navbar img {
     background-color: white;
     padding: 0 .1rem;
     cursor: pointer;
+  }
+
+  .theme-select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+  }
+
+  .theme-select span {
+    cursor: pointer;
+    color: #F5F5F5;
+    margin-right: .75rem;
+    padding-top: .5rem;
+    text-transform: uppercase;
+    text-decoration: underline;
   }
 </style>
