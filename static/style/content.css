@@ -81,3 +81,7 @@
   background-color: #191a1a;
   color: whitesmoke;
 }
+
+#content .doc-block .doc-showcase > *:not(nav) {
+  margin: .5rem;
+}
