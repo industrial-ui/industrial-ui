@@ -42,7 +42,7 @@
 
 <style>
   .show-block {
-    margin: 1rem;
+    margin-top: 1rem;
   }
 
   .show-block.open .show-showcase {
@@ -66,10 +66,6 @@
 
   :global(.show-showcase) > *:not(nav) {
     margin: .5rem 0;
-  }
-
-  .show-code {
-    max-height: 0;
   }
 
   nav {
