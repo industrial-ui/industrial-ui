@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import {markdown} from 'svelte-preprocess-markdown';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
+import {highlight} from './src/preproccess';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -30,7 +31,9 @@ export default {
 				// Add the markdown preprocess for the best documenting experience
 				extensions: ['.svelte','.md'],
 				preprocess: [
-					markdown()
+					markdown({
+            highlight,
+          })
 				],
 			}),
 			resolve({
@@ -62,7 +65,9 @@ export default {
 				// Add the markdown preprocess for the best documenting experience
 				extensions: ['.svelte','.md'],
 				preprocess: [
-					markdown()
+					markdown({
+            highlight
+          })
 				],
 			}),
 			resolve({

@@ -27,7 +27,7 @@ const config = {
 
 And then include configuration into the *IUI wrapper*:
 
-```sveltehtml
+```html
 <script>
   import IUI from 'industrial-ui';
   import config from './config.js';

@@ -104,7 +104,7 @@ look good
   </pre>
 
   <pre class="prettyprint" slot="config">
-  ```html
+  ```javascript
   const config = {
     components: {
       button: {

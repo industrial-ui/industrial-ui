@@ -43,6 +43,10 @@
 <style>
   .show-block {
     margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .show-block.open {
+    margin-bottom: 0;
   }
 
   .show-block.open .show-showcase {

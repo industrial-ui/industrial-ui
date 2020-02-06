@@ -1,6 +1,7 @@
 <script>
   import Layout from './_components/layout.svelte';
   import IUI from '../../ui/IUI/index.svelte';
+  import 'highlight.js/styles/an-old-hope.css';
   export let segment;
 
   const config = {

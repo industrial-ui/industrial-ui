@@ -78,7 +78,7 @@
   overflow-x: auto;
   padding: .75rem;
   border-radius: .5rem;
-  background-color: #191a1a;
+  background-color: #1c1d21;
   color: whitesmoke;
 }
 
@@ -93,4 +93,6 @@
   border-radius: 0 0 1rem 1rem;
   border: 1px solid #b1b4b3;
   border-top: none;
+  padding-top: 0;
+  padding-bottom: 1rem;
 }
