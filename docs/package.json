@@ -1,0 +1,31 @@
+{
+  "name": "industrial-ui-docs",
+  "version": "0.0.1",
+  "description": "Documentation for industry-oriented library of unstyled UI-components Industrial-ui",
+  "scripts": {
+    "dev": "sapper dev",
+    "build": "sapper export",
+    "start": "sapper build && node __sapper__/build"
+  },
+  "author": "VanishMax",
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.0.1",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "@rollup/plugin-replace": "^2.3.0",
+    "highlight.js": "^9.18.1",
+    "rollup": "^1.29.0",
+    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-svelte": "^5.1.1",
+    "rollup-plugin-terser": "^5.2.0",
+    "sapper": "^0.27.9",
+    "svelte": "^3.18.1",
+    "svelte-preprocess-markdown": "^2.5.11",
+    "tocca": "^2.0.9"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "polka": "^0.5.2",
+    "sirv": "^0.4.2"
+  }
+}

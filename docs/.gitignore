@@ -1,0 +1,9 @@
+.idea
+.DS_Store
+node_modules
+src/node_modules
+static/build
+static/docs
+__sapper__
+yarn.lock
+webpack.config.js

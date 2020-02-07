@@ -1,6 +1,6 @@
 <script>
 import Title from '../_components/page-title.svelte';
-import Button from '../../../ui/Button/index.svelte';
+import {Button} from 'industrial-ui';
 import ShowBlock from '../_components/show-block.svelte';
 </script>
 
