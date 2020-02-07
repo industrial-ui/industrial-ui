@@ -10,7 +10,7 @@ export default {
   plugins: [
     svelte({
       dev: false,
-      hydratable: true,
+      generate: 'ssr',
     }),
     resolve(),
     commonjs()
