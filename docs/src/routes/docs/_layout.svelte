@@ -1,6 +1,6 @@
 <script>
   import Layout from './_components/layout.svelte';
-  import IUI from '../../ui/IUI/index.svelte';
+  import IUI from 'industrial-ui';
   import 'highlight.js/styles/an-old-hope.css';
   import {theme} from './_helpers/theme';
 
