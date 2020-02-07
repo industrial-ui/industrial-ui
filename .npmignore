@@ -1,0 +1,7 @@
+examples
+docs
+.now
+.git
+.idea
+.DS_Code
+yarn.lock
