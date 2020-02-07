@@ -13,7 +13,7 @@
     <ul>
       {#each group.nested as route}
         <li class:active={segment === route.name}>
-          <a href="/docs/{route.name}" on:click={() => dispatch('close')}>
+          <a href="/docs/{route.name}" on:click={() => dispatch('close')} rel="prefetch">
             {route.name}
           </a>
         </li>
