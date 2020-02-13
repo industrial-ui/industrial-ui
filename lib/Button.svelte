@@ -1,15 +1,13 @@
 <script>
   import {getContext} from 'svelte';
-  import filterIsProps from '../utils/is-properties';
-  import filterProps from '../utils/filter-props';
-  import composeClasses from '../utils/compose-classes';
+  import filterIsProps from './utils/is-properties';
+  import filterProps from './utils/filter-props';
+  import composeClasses from './utils/compose-classes';
 
   const globalConfig = getContext('iui-config');
   const config = globalConfig.components.button;
 
-  export let label;
-
-  const propsList = ['label', 'class', ...Object.keys(config.isProperties)];
+  const propsList = [/*'label', */'class', ...Object.keys(config.isProperties)];
 </script>
 
 <button
@@ -18,7 +16,5 @@
   use:filterIsProps={{isProperties: config.isProperties, props: $$props}}
   {...filterProps(propsList, $$props)}
 >
-  <slot>
-    {label}
-  </slot>
+  <slot />
 </button>

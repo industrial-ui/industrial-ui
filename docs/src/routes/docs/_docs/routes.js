@@ -1,8 +1,9 @@
 import Instal from './installation.md';
 import Configuration from './configuration.md';
-import Button from './button.md';
-import DocStyling from './doc-styling.md';
 import Conventions from './conventions.md';
+import DocStyling from './doc-styling.md';
+import Button from './button.md';
+import Dropdown from './dropdown.md';
 
 export default [
   {
@@ -62,19 +63,6 @@ export default [
           },
         ],
       },
-    ],
-  },
-  {
-    title: 'Components',
-    nested: [
-      {
-        name: 'button',
-        component: Button,
-        meta: {
-          title: 'Button component',
-          description: ''
-        }
-      },
       {
         name: 'doc-styling',
         component: DocStyling,
@@ -108,6 +96,27 @@ export default [
             text: 'Showcase block',
           },
         ],
+      },
+    ],
+  },
+  {
+    title: 'Components',
+    nested: [
+      {
+        name: 'button',
+        component: Button,
+        meta: {
+          title: 'Button component',
+          description: ''
+        }
+      },
+      {
+        name: 'dropdown',
+        component: Dropdown,
+        meta: {
+          title: 'Dropdown component',
+          description: ''
+        }
       },
     ]
   },

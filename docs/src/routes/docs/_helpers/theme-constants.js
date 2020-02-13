@@ -8,7 +8,13 @@ export const SemanticTheme = {
         icon: 'round icon',
         labeled: 'labeled',
       },
-    }
+    },
+    dropdown: {
+      class: 'ui dropdown',
+      isProperties: {},
+      triggerClass: '',
+      dropdownClass: 'menu',
+    },
   }
 };
 
