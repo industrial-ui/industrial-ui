@@ -10,6 +10,7 @@ export const SemanticTheme = {
       },
     },
     dropdown: {
+      transition: 'slide',
       isProperties: {},
       class: 'ui dropdown',
       openClass: 'active visible',
