@@ -25,7 +25,8 @@ export const SpectreTheme = {
     }
   }
 };
-export const MaterializeTheme = {
+
+export const TailwindTheme = {
   components: {
     button: {
       class: 'btn',
@@ -51,9 +52,9 @@ export default [
     config: SpectreTheme,
   },
   {
-    name: 'materialize',
-    url: '/style/materialize.min.css',
-    config: MaterializeTheme,
+    name: 'tailwind',
+    url: '/style/tailwind.min.css',
+    config: TailwindTheme,
   },
 ];
 

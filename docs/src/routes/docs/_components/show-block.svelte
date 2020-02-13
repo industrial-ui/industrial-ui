@@ -1,6 +1,6 @@
 <script>
   import {fly} from 'svelte/transition';
-  import {changeTheme} from '../_helpers/theme';
+  import {changeTheme, theme} from '../_helpers/theme';
   import themes from '../_helpers/theme-constants';
 
   let chosen = null;
@@ -44,7 +44,13 @@
       {#if chosen === 'code'}
         <slot name="code" />
       {:else if chosen === 'config'}
-        <slot name="config" />
+        {#if $theme.name === 'semantic'}
+          <slot name="semantic" />
+        {:else if $theme.name === 'spectre'}
+          <slot name="spectre" />
+        {:else if $theme.name === 'tailwind'}
+          <slot name="tailwind" />
+        {/if}
       {/if}
     </div>
   {/if}

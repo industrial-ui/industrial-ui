@@ -46,21 +46,51 @@ or any other stylesheets.
   ```
   </pre>
 
-  <pre class="code" slot="config">
+  <pre class="code" slot="semantic">
   ```javascript
-  const config = {
-    components: {
-      button: {
-        class: 'ui button',
-        isProperties: {
-          primary: 'primary',
-          outline: 'outline',
-          icon: 'round icon',
-          labeled: 'labeled',
-        },
-      }
+  components: {
+    button: {
+      class: 'ui button',
+      isProperties: {
+        primary: 'primary',
+        outline: 'outline',
+        icon: 'round icon',
+        labeled: 'labeled',
+      },
     }
-  };
+  }
+  ```
+  </pre>
+
+  <pre class="code" slot="spectre">
+  ```javascript
+  components: {
+    button: {
+      class: 'ui button',
+      isProperties: {
+        primary: 'primary',
+        outline: 'outline',
+        icon: 'round icon',
+        labeled: 'labeled',
+      },
+    }
+  }
+  ```
+  </pre>
+
+  <pre class="code" slot="tailwind">
+  ```javascript
+  components: {
+    button: {
+      class: 'ui button',
+      isProperties: {
+        primary: 'primary',
+        outline: 'outline',
+        icon: 'round icon',
+        labeled: 'labeled',
+      },
+    }
+  }
   ```
   </pre>
 </ShowBlock>
