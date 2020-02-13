@@ -2,6 +2,8 @@
 .DS_Store
 public
 node_modules
-yarn.lock
-
+yarn.lock	yarn.lock
 .now
+.now 	index.js
+index.mjs
+index.js
