@@ -10,10 +10,16 @@ export const SemanticTheme = {
       },
     },
     dropdown: {
-      class: 'ui dropdown',
       isProperties: {},
+      class: 'ui dropdown',
+      openClass: 'active visible',
+      closeClass: '',
       triggerClass: '',
-      dropdownClass: 'menu',
+      openTriggerClass: '',
+      closeTriggerClass: '',
+      dropdownClass: 'menu transition',
+      openDropdownClass: 'visible',
+      closeDropdownClass: 'hidden',
     },
   }
 };

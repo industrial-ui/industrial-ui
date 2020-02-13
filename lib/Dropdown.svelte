@@ -9,22 +9,28 @@
 
   export let triggerClass = '';
   export let dropdownClass = '';
+  export let value = false;
 
-  const propsList = ['class', 'triggerClass', 'dropdownClass', ...Object.keys(config.isProperties)];
+  const close = () => value = false;
+
+  const propsList = ['class', 'triggerClass', 'dropdownClass', 'value', ...Object.keys(config.isProperties)];
 </script>
 
 <div
-  class={composeClasses(globalConfig.globalClass, config.class, $$props.class)}
+  class={composeClasses(globalConfig.globalClass, config.class, $$props.class, value ? config.openClass : config.closeClass)}
   use:filterIsProps={{isProperties: config.isProperties, props: $$props}}
   {...filterProps(propsList, $$props)}
 >
   <!-- Trigger element -->
-  <div class={composeClasses(config.triggerClass, triggerClass)}>
-    <slot name="trigger" />
+  <div
+    class={composeClasses(config.triggerClass, triggerClass, value ? config.openTriggerClass : config.closeTriggerClass)}
+    on:click={() => value = !value}
+  >
+    <slot name="trigger" {close} />
   </div>
 
   <!-- Dropdown itself -->
-  <div class={composeClasses(config.dropdownClass, dropdownClass)}>
-    <slot />
+  <div class={composeClasses(config.dropdownClass, dropdownClass, value ? config.openDropdownClass : config.closeDropdownClass)}>
+    <slot {close} />
   </div>
 </div>

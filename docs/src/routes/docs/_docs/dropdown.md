@@ -11,13 +11,13 @@ import ShowBlock from '../_components/show-block.svelte';
 Use it, come on. It's cool
 
 <ShowBlock>
-  <Dropdown>
+  <Dropdown let:close={close}>
     <div slot="trigger">
       <Button>Toggle me</Button>
     </div>
     
-    <div class="item">Hello, there</div>
-    <div class="item">Do some action</div>
+    <div class="item" on:click={() => close()}>Hello, there</div>
+    <div class="item" on:click={() => close()}>Do some action</div>
   </Dropdown>
   
   <pre class="code" slot="code">

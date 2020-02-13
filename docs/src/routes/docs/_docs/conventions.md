@@ -83,3 +83,8 @@ class = global_class_from_config + default_class_from_config + class attribute +
 <h1 id="slots">Slots are everywhere!</h1>
 
 `TODO:` Slots are cool features that can really help you on the road of total customization
+
+<h1 id="transitions">Transitions</h1>
+
+Users want to see smooth transitions whenever you open modal window or toggle any menu.
+For this purpose, there should be an ability to configure the most preferable transition.

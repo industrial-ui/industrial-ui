@@ -61,6 +61,10 @@ export default [
             slug: 'slots',
             text: 'Slots',
           },
+          {
+            slug: 'transitions',
+            text: 'Transitions',
+          },
         ],
       },
       {
