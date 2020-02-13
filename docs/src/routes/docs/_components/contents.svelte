@@ -52,10 +52,12 @@
     width: inherit;
     height: inherit;
     display: block;
-    line-height: 2em;
-    padding-left: .7rem;
+    line-height: 1.8em;
+    padding: .05rem 0 .05rem .7rem;
     font-size: 1em;
     text-transform: capitalize;
+    color: #4b4e4d;
+    font-weight: 300;
   }
 </style>
 
