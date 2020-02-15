@@ -10,6 +10,9 @@ import ShowBlock from '../_components/show-block.svelte';
 
 ### Simple example
 
+Dropdown usage without special properties. Just classes are configured with
+some style library that makes it look nice
+
 <ShowBlock>
   <Dropdown let:close={close} id="dd-1">
     <div slot="trigger">
@@ -55,15 +58,6 @@ import ShowBlock from '../_components/show-block.svelte';
   <pre class="code" slot="spectre">
   ```javascript
   components: {
-    button: {
-      class: 'ui button',
-      isProperties: {
-        primary: 'primary',
-        outline: 'outline',
-        icon: 'round icon',
-        labeled: 'labeled',
-      },
-    }
   }
   ```
   </pre>
@@ -71,15 +65,6 @@ import ShowBlock from '../_components/show-block.svelte';
   <pre class="code" slot="tailwind">
   ```javascript
   components: {
-    button: {
-      class: 'ui button',
-      isProperties: {
-        primary: 'primary',
-        outline: 'outline',
-        icon: 'round icon',
-        labeled: 'labeled',
-      },
-    }
   }
   ```
   </pre>
@@ -87,6 +72,10 @@ import ShowBlock from '../_components/show-block.svelte';
 
 
 ### Left or right menu
+
+`TODO` Consider opening the dropdown in the place that depends on window borders.
+If it is close to, for example, right and bottom corner of the screen, it
+will be positioned in the left top corner relative to the trigger.
 
 <ShowBlock>
   <Dropdown let:close={close} dropdownClass="left" id="dd-2">
@@ -148,6 +137,8 @@ import ShowBlock from '../_components/show-block.svelte';
 
 ### Open on hover effect
 
+Pass the `openOnHover` property to open the dropdown when the mouse is on the trigger
+
 <ShowBlock>
   <Dropdown let:close={close} openOnHover id="dd-3">
     <div slot="trigger">
@@ -204,3 +195,13 @@ import ShowBlock from '../_components/show-block.svelte';
   ```
   </pre>
 </ShowBlock>
+
+
+## Dropdown roadmap
+
+To make it work perfectly, there is a need in:
+ - **Positioning**. We need to calculate the position of the dropdown (top-left, top-right,
+bottom-left or bottom-right) depending of how close the window borders are.
+ - **Transition**. Show and configure the non-default transitions for dropdowns
+ - Consider such **cases** from semantic-ui as selection menu, search dropdown. 
+May be just show it in the docs, and that's all.
