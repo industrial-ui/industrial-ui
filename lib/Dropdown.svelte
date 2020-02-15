@@ -11,17 +11,26 @@
 
   export let triggerClass = '';
   export let dropdownClass = '';
+  export let openOnHover = false;
+  export let id = null;
   export let value = false;
-  const propsList = ['class', 'triggerClass', 'dropdownClass', 'value', ...Object.keys(config.isProperties)];
+  const propsList = ['id', 'class', 'triggerClass', 'dropdownClass', 'value', 'openOnHover', ...Object.keys(config.isProperties)];
 
   const close = () => value = false;
+  const hoverEffect = (isEntered) => {
+    if (!openOnHover) return;
+    value = isEntered;
+  }
 </script>
 
 <div
+  {id}
   class={composeClasses(globalConfig.globalClass, config.class, $$props.class, value ? config.openClass : config.closeClass)}
+  {...filterProps(propsList, $$props)}
   use:filterIsProps={{isProperties: config.isProperties, props: $$props}}
   use:clickOutside={close}
-  {...filterProps(propsList, $$props)}
+  on:mouseenter={() => hoverEffect(true)}
+  on:mouseleave={() => hoverEffect(false)}
 >
   <!-- Trigger element -->
   <div
@@ -33,6 +42,7 @@
 
   <!-- Dropdown itself -->
   {#if value}
+  <!--TODO: add transition options, ok?-->
     <div
       class={composeClasses(config.dropdownClass, dropdownClass, value ? config.openDropdownClass : config.closeDropdownClass)}
       transition:transition={{transition: config.transition, options: {}}}
