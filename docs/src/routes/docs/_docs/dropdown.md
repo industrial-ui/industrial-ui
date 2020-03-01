@@ -208,3 +208,25 @@ bottom-left or bottom-right) depending of how close the window borders are.
 May be just show it in the docs, and that's all.
 
 <h1 id="props">Props</h1>
+
+| Prop name | Type | Default | Description |
+|-----------|:----:|:-------:|-------------|
+| `value` | `Boolean` | `false` | Handles the open/close state of the dropdown |
+| `id` | `String` | `''` | **id** of the dropdown (not wrapper). It is advised to put the **id** if you have more than 1 dropdown on the page |
+| `openOnHover` | `Boolean` | `false` | If `true`, will open dropdown on *mouseenter* and close on *mouseleave* |
+| `triggerClass` | `String` | `''` | Trigger (opener element that should be clicked) class |
+| `dropdownClass` | `String` | `''` | Dropdown class |
+
+
+<h1 id="markup">Resulting markup</h1>
+
+This is how the markup of the simplest dropdown will look like
+
+<pre class="code">
+  ```html
+    <div class="your wrapper classes">
+      <div class="trigger class"></div>
+      <div class="dropdown class" id="prop-id"></div>
+    </div>
+  ```
+</pre>
