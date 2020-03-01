@@ -154,11 +154,12 @@ look good
 
 <h1 id="table">Table</h1>
 
-| Prop name | Type | Default | Description |
-|-----------|:----:|:-------:|-------------|
-| col 1 | `String` | `''` | Some property |
-| col 2 | `Boolean` | `true` | Just property|
-| col 3 | `Number` | `353` | Khello |
-
+<div class="table">
+  | Prop name | Type | Default | Description |
+  |-----------|:----:|:-------:|-------------|
+  | col 1 | `String` | `''` | Some property |
+  | col 2 | `Boolean` | `true` | Just property|
+  | col 3 | `Number` | `353` | Khello |
+</div>
 
 And, i guess, this was the biggest part
