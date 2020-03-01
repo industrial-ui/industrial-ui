@@ -107,3 +107,34 @@
   border-top: none;
   padding-bottom: 1rem;
 }
+
+#content table {
+  border: 1px solid #b1b4b3;
+  border-radius: 1rem;
+  border-spacing: 0;
+}
+
+#content table tbody tr:nth-child(odd) {
+  background: #e5e6e6;
+}
+#content table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: .9rem;
+}
+#content table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: .9rem;
+}
+
+#content table tbody tr td, #content table thead tr th {
+  padding: .75rem;
+}
+#content table thead tr th:last-child {
+  width: 50%;
+}
+
+#content table thead tr th {
+  border-bottom: 1px solid #b1b4b3;
+}
+
+#content table code {
+  color: #191a1a;
+}

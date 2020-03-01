@@ -99,6 +99,10 @@ export default [
             slug: 'showcase-block',
             text: 'Showcase block',
           },
+          {
+            slug: 'table',
+            text: 'Table',
+          },
         ],
       },
     ],

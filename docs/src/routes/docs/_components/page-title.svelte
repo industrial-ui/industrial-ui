@@ -1,10 +1,11 @@
 <script>
   export let title;
   export let subtitle = '';
+  export let id = '';
 </script>
 
 <header id="page-heading">
-  <h1>{title}</h1>
+  <h1 {id}>{title}</h1>
   <p>{subtitle}</p>
   <hr />
 </header>

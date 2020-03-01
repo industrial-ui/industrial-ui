@@ -4,7 +4,8 @@ import {Dropdown, Button} from 'industrial-ui';
 import ShowBlock from '../_components/show-block.svelte';
 </script>
 
-<Title 
+<Title
+  id="examples"
   title="Dropdown"
 />
 
@@ -205,3 +206,5 @@ bottom-left or bottom-right) depending of how close the window borders are.
  - **Transition**. Show and configure the non-default transitions for dropdowns
  - Consider such **cases** from semantic-ui as selection menu, search dropdown. 
 May be just show it in the docs, and that's all.
+
+<h1 id="props">Props</h1>

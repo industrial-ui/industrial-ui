@@ -152,4 +152,13 @@ look good
     </pre>
 </ShowBlock>
 
+<h1 id="table">Table</h1>
+
+| Prop name | Type | Default | Description |
+|-----------|:----:|:-------:|-------------|
+| col 1 | `String` | `''` | Some property |
+| col 2 | `Boolean` | `true` | Just property|
+| col 3 | `Number` | `353` | Khello |
+
+
 And, i guess, this was the biggest part
