@@ -1,4 +1,14 @@
 export const SemanticTheme = {
+  customTransitions: {
+    fadeWithColor: (node, {delay = 0, duration = 1000}) => ({
+      delay,
+      duration,
+      css: t => `
+        opacity: ${t};
+        background-color: hsl(${t * 255}, 70%, 30%);
+      `
+    }),
+  },
   components: {
     button: {
       class: 'ui button',
@@ -11,7 +21,7 @@ export const SemanticTheme = {
     },
     dropdown: {
       transition: 'slide',
-      transitionOptions: {delay: 100, duration: 500},
+      transitionOptions: {delay: 0, duration: 300},
       isProperties: {},
       class: 'ui dropdown',
       openClass: 'active visible',

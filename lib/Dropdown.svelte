@@ -4,7 +4,7 @@
   import clickOutside from './utils/click-outside';
   import filterProps from './utils/filter-props';
   import composeClasses from './utils/compose-classes';
-  import transition from './utils/transition';
+  import dynamic from './utils/transition';
 
   const globalConfig = getContext('iui-config');
   const config = globalConfig.components.dropdown;
@@ -14,7 +14,8 @@
   export let openOnHover = false;
   export let id = null;
   export let value = false;
-  const propsList = ['id', 'class', 'triggerClass', 'dropdownClass', 'value', 'openOnHover', ...Object.keys(config.isProperties)];
+  export let transition = null;
+  const propsList = ['id', 'class', 'triggerClass', 'dropdownClass', 'value', 'openOnHover', 'transition', ...Object.keys(config.isProperties)];
 
   const close = () => value = false;
   const hoverEffect = (isEntered) => {
@@ -42,10 +43,9 @@
 
   <!-- Dropdown itself -->
   {#if value}
-  <!--TODO: add transition options, ok?-->
     <div
       class={composeClasses(config.dropdownClass, dropdownClass, value ? config.openDropdownClass : config.closeDropdownClass)}
-      transition:transition={{transition: config.transition, options: config.transitionOptions}}
+      transition:dynamic={{transition: transition || config.transition, options: transition ? {} : config.transitionOptions, customs: globalConfig.customTransitions}}
     >
       <slot {close} />
     </div>

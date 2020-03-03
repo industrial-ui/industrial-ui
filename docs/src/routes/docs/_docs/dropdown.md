@@ -73,19 +73,12 @@ some style library that makes it look nice
 </ShowBlock>
 
 
-### Left or right menu
-
-`TODO` Consider opening the dropdown in the place that depends on window borders.
-If it is close to, for example, right and bottom corner of the screen, it
-will be positioned in the left top corner relative to the trigger.
-
-
 ### Open on hover effect
 
 Pass the `openOnHover` property to open the dropdown when the mouse is on the trigger
 
 <ShowBlock>
-  <Dropdown let:close={close} openOnHover id="dd-3">
+  <Dropdown let:close={close} openOnHover id="dd-2">
     <div slot="trigger">
       <Button>Toggle me</Button>
     </div>
@@ -143,12 +136,85 @@ Pass the `openOnHover` property to open the dropdown when the mouse is on the tr
 </ShowBlock>
 
 
+### Custom transition
+
+You can configure a custom transition and pass its name to the `transition` prop or to the configuration
+object of the dropdown. Transition should be a function that operates on some node element and has options
+like `delay`, `duration` and other properties perfectly described in the 
+<a href="https://svelte.dev/tutorial/custom-css-transitions" target="_blank">Svelte's documentation</a> 
+
+<ShowBlock>
+  <Dropdown transition="fadeWithColor" let:close={close} id="dd-3">
+    <div slot="trigger">
+      <Button>Toggle me</Button>
+    </div>
+    
+    <div class="item" on:click={() => close()}>Hello, there</div>
+    <div class="item" on:click={() => close()}>Do some action</div>
+  </Dropdown>
+  
+  <pre class="code" slot="code">
+  ```html
+  <script>
+    import {Dropdown, Button} from 'industrial-ui';
+  </script>
+  
+  <Dropdown>
+    <div slot="trigger">
+      <Button>Toggle me</Button>
+    </div>
+    
+    Hello, there
+    <Button>And button is here</Button>
+  </Dropdown>
+  ```
+  </pre>
+
+  <pre class="code" slot="semantic">
+  ```javascript
+  customTransitions: {
+    fadeWithColor: (node, {delay = 0, duration = 1000}) => ({
+      delay,
+      duration,
+      css: t => `
+        opacity: ${t};
+        background-color: hsl(${t * 255}, 50%, 50%);
+      `
+    }),
+  },
+  components: {
+    dropdown: {
+      class: 'ui dropdown',
+      openClass: 'active visible',
+      dropdownClass: 'menu transition',
+      openDropdownClass: 'visible',
+      closeDropdownClass: 'hidden',
+    },
+  }
+  ```
+  </pre>
+
+  <pre class="code" slot="spectre">
+  ```javascript
+  components: {
+  }
+  ```
+  </pre>
+
+  <pre class="code" slot="tailwind">
+  ```javascript
+  components: {
+  }
+  ```
+  </pre>
+</ShowBlock>
+
+
 ## Dropdown roadmap
 
 To make it work perfectly, there is a need in:
  - **Positioning**. We need to calculate the position of the dropdown (top-left, top-right,
 bottom-left or bottom-right) depending of how close the window borders are.
- - <a href="https://svelte.dev/docs#svelte_transition" target="_blank">**Transition**</a>. Show and configure the non-default transitions for dropdowns
  - **Event dispatching**. All components should dispatch all DOM events (don't care about children events)
  - Consider such **cases** from semantic-ui as selection menu, search dropdown. 
 May be just show it in the docs, and that's all.
@@ -163,6 +229,7 @@ May be just show it in the docs, and that's all.
   | `openOnHover` | `Boolean` | `false` | If `true`, will open dropdown on *mouseenter* and close on *mouseleave* |
   | `triggerClass` | `String` | `''` | Trigger (opener element that should be clicked) class |
   | `dropdownClass` | `String` | `''` | Dropdown class |
+  | `transition` | `String|Null` | `null` | Transition applied for the dropdown (it is better to put in the config but not as a prop) |
 </div>
 
 
