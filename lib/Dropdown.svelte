@@ -45,7 +45,7 @@
   <!--TODO: add transition options, ok?-->
     <div
       class={composeClasses(config.dropdownClass, dropdownClass, value ? config.openDropdownClass : config.closeDropdownClass)}
-      transition:transition={{transition: config.transition, options: {}}}
+      transition:transition={{transition: config.transition, options: config.transitionOptions}}
     >
       <slot {close} />
     </div>

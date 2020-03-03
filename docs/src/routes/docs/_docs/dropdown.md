@@ -46,6 +46,7 @@ some style library that makes it look nice
   components: {
     dropdown: {
       transition: 'slide',
+      transitionOptions: {delay: 100, duration: 500},
       class: 'ui dropdown',
       openClass: 'active visible',
       dropdownClass: 'menu transition',
@@ -77,63 +78,6 @@ some style library that makes it look nice
 `TODO` Consider opening the dropdown in the place that depends on window borders.
 If it is close to, for example, right and bottom corner of the screen, it
 will be positioned in the left top corner relative to the trigger.
-
-<ShowBlock>
-  <Dropdown let:close={close} dropdownClass="left" id="dd-2">
-    <div slot="trigger">
-      <Button>Left menu</Button>
-    </div>
-    
-    <div class="item" on:click={() => close()}>Hello, there</div>
-    <div class="item" on:click={() => close()}>Do some action</div>
-  </Dropdown>
-  
-  <pre class="code" slot="code">
-  ```html
-  <script>
-    import {Dropdown, Button} from 'industrial-ui';
-  </script>
-  
-  <Dropdown let:close={close} dropdownClass="left">
-    <div slot="trigger">
-      <Button>Left menu</Button>
-    </div>
-    
-    <div class="item" on:click={() => close()}>Hello, there</div>
-    <div class="item" on:click={() => close()}>Do some action</div>
-  </Dropdown>
-  ```
-  </pre>
-
-  <pre class="code" slot="semantic">
-  ```javascript
-  components: {
-    dropdown: {
-      transition: 'slide',
-      class: 'ui dropdown',
-      openClass: 'active visible',
-      dropdownClass: 'menu transition',
-      openDropdownClass: 'visible',
-      closeDropdownClass: 'hidden',
-    },
-  }
-  ```
-  </pre>
-
-  <pre class="code" slot="spectre">
-  ```javascript
-  components: {
-  }
-  ```
-  </pre>
-
-  <pre class="code" slot="tailwind">
-  ```javascript
-  components: {
-  }
-  ```
-  </pre>
-</ShowBlock>
 
 
 ### Open on hover effect
@@ -172,6 +116,7 @@ Pass the `openOnHover` property to open the dropdown when the mouse is on the tr
   components: {
     dropdown: {
       transition: 'slide',
+      transitionOptions: {delay: 100, duration: 500},
       class: 'ui dropdown',
       openClass: 'active visible',
       dropdownClass: 'menu transition',
@@ -203,7 +148,8 @@ Pass the `openOnHover` property to open the dropdown when the mouse is on the tr
 To make it work perfectly, there is a need in:
  - **Positioning**. We need to calculate the position of the dropdown (top-left, top-right,
 bottom-left or bottom-right) depending of how close the window borders are.
- - **Transition**. Show and configure the non-default transitions for dropdowns
+ - <a href="https://svelte.dev/docs#svelte_transition" target="_blank">**Transition**</a>. Show and configure the non-default transitions for dropdowns
+ - **Event dispatching**. All components should dispatch all DOM events (don't care about children events)
  - Consider such **cases** from semantic-ui as selection menu, search dropdown. 
 May be just show it in the docs, and that's all.
 

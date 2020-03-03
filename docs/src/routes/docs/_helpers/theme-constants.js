@@ -11,6 +11,7 @@ export const SemanticTheme = {
     },
     dropdown: {
       transition: 'slide',
+      transitionOptions: {delay: 100, duration: 500},
       isProperties: {},
       class: 'ui dropdown',
       openClass: 'active visible',
