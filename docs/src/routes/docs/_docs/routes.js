@@ -3,7 +3,7 @@ import Configuration from './configuration.md';
 import Conventions from './conventions.md';
 import DocStyling from './doc-styling.md';
 import Button from './button.md';
-import Dropdown from './dropdown.md';
+import Dropdown from './dropdown/index.md';
 
 export default [
   {
