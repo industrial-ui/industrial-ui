@@ -13,7 +13,7 @@ import SimpleSelection from './simple-selection.md';
   title="Dropdown"
 />
 
-### Simple example
+<h2 id="simple-example">Simple example</h2>
 
 Dropdown usage without special properties. Just classes are configured with
 some style library that makes it look nice
@@ -21,14 +21,14 @@ some style library that makes it look nice
 <SimpleExample />
 
 
-### Open on hover effect
+<h2 id="open-on-hover">Open on hover effect</h2>
 
 Pass the `openOnHover` property to open the dropdown when the mouse is on the trigger
 
 <OpenOnHover />
 
 
-### Custom transition
+<h2 id="custom-transition">Custom transition</h2>
 
 You can configure a custom transition and pass its name to the `transition` prop or to the configuration
 object of the dropdown. Transition should be a function that operates on some node element and has options
@@ -37,7 +37,7 @@ like `delay`, `duration` and other properties perfectly described in the
 
 <CustomTransition />
 
-## Selection dropdown
+<h2 id="selection-dropdown">Selection dropdown</h2>
 
 Simple selection: an example of how to pick a value from the list
 
