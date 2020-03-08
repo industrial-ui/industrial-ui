@@ -5,6 +5,7 @@ import ShowBlock from '../../_components/show-block.svelte';
 import SimpleExample from './simple-example.md';
 import OpenOnHover from './open-on-hover.md';
 import CustomTransition from './custom-transition.md';
+import SimpleSelection from './simple-selection.md';
 </script>
 
 <Title
@@ -35,6 +36,12 @@ like `delay`, `duration` and other properties perfectly described in the
 <a href="https://svelte.dev/tutorial/custom-css-transitions" target="_blank">Svelte's documentation</a> 
 
 <CustomTransition />
+
+## Selection dropdown
+
+Simple selection: an example of how to pick a value from the list
+
+<SimpleSelection />
 
 
 ## Dropdown roadmap

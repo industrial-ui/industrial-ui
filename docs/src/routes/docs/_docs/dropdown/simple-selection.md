@@ -1,31 +1,52 @@
 <script>
 import {Dropdown, Button} from 'industrial-ui';
 import ShowBlock from '../../_components/show-block.svelte';
+
+const ITEMS = ['Male', 'Female'];
+let activeItem = null;
+const choose = item => activeItem = item;
 </script>
 
 <ShowBlock>
-  <Dropdown let:close={close} openOnHover id="dd-2">
+  <Dropdown is:select let:close={close}>
     <div slot="trigger">
-      <Button>Toggle me</Button>
+      <div class="default text">
+        {#if activeItem}
+          {activeItem}
+        {:else}
+          Gender
+        {/if}
+      </div>
     </div>
-    
-    <div class="item" on:click={() => close()}>Hello, there</div>
-    <div class="item" on:click={() => close()}>Do some action</div>
+  
+    {#each ITEMS as item}
+      <div class="item" on:click="{() => {choose(item); close()}}">{item}</div>
+    {/each}
   </Dropdown>
   
   <pre class="code" slot="code">
   ```html
   <script>
     import {Dropdown, Button} from 'industrial-ui';
+    let activeItem = null;
+    const ITEMS = ['Male', 'Female'];
+    const choose = item => activeItem = item;
   </script>
   
-  <Dropdown let:close={close} openOnHover id="dd-2">
+  <Dropdown is:select let:close={close}>
     <div slot="trigger">
-      <Button>Toggle me</Button>
+      <div class="default text">
+        {#if activeItem}
+          {activeItem}
+        {:else}
+          Gender
+        {/if}
+      </div>
     </div>
-    
-    <div class="item" on:click={() => close()}>Hello, there</div>
-    <div class="item" on:click={() => close()}>Do some action</div>
+  
+    {#each ITEMS as item}
+      <div class="item" on:click="{() => {choose(item); close()}}">{item}</div>
+    {/each}
   </Dropdown>
   ```
   </pre>
@@ -35,7 +56,7 @@ import ShowBlock from '../../_components/show-block.svelte';
   components: {
     dropdown: {
       transition: 'slide',
-      transitionOptions: {delay: 100, duration: 500},
+      isProperties: {select: 'selection'},
       class: 'ui dropdown',
       openClass: 'active visible',
       dropdownClass: 'menu transition',

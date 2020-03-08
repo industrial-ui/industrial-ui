@@ -19,13 +19,13 @@ import ShowBlock from '../../_components/show-block.svelte';
     import {Dropdown, Button} from 'industrial-ui';
   </script>
   
-  <Dropdown>
+  <Dropdown transition="fadeWithColor" let:close={close} id="dd-3">
     <div slot="trigger">
       <Button>Toggle me</Button>
     </div>
     
-    Hello, there
-    <Button>And button is here</Button>
+    <div class="item" on:click={() => close()}>Hello, there</div>
+    <div class="item" on:click={() => close()}>Do some action</div>
   </Dropdown>
   ```
   </pre>
