@@ -1,5 +1,5 @@
 <script>
-import {Dropdown, Button} from 'industrial-ui';
+import {Dropdown} from 'industrial-ui';
 import ShowBlock from '../../_components/show-block.svelte';
 
 const ITEMS = ['Male', 'Female'];
@@ -27,7 +27,7 @@ const choose = item => activeItem = item;
   <pre class="code" slot="code">
   ```html
   <script>
-    import {Dropdown, Button} from 'industrial-ui';
+    import {Dropdown} from 'industrial-ui';
     let activeItem = null;
     const ITEMS = ['Male', 'Female'];
     const choose = item => activeItem = item;

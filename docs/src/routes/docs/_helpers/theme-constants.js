@@ -22,7 +22,11 @@ export const SemanticTheme = {
     dropdown: {
       transition: 'slide',
       transitionOptions: {delay: 0, duration: 300},
-      isProperties: {select: 'selection', multiselect: 'fluid selection multiple'},
+      isProperties: {
+        select: 'selection',
+        multiselect: 'fluid selection multiple',
+        search: 'search selection'
+      },
       class: 'ui dropdown',
       openClass: 'active visible',
       closeClass: '',

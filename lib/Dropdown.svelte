@@ -23,6 +23,7 @@
   if (!id) console.warn('Dropdown has no id property');
 
   const close = () => value = false;
+  const open = () => value = true;
   const hoverEffect = (isEntered) => {
     if (!openOnHover) return;
     value = isEntered;
@@ -44,12 +45,14 @@
   on:mouseenter={() => hoverEffect(true)}
   on:mouseleave={() => hoverEffect(false)}
 >
+  <slot name="nowrap-trigger" {close} {open} />
+
   <!-- Trigger element -->
   <div
     class={composeClasses(config.triggerClass, triggerClass, value ? config.openTriggerClass : config.closeTriggerClass)}
     on:click={() => value = !value}
   >
-    <slot name="trigger" {close} />
+    <slot name="trigger" {close} {open} />
   </div>
 
   <!-- Dropdown itself -->

@@ -1,5 +1,5 @@
 <script>
-  import {Dropdown, Button} from 'industrial-ui';
+  import {Dropdown} from 'industrial-ui';
   const ITEMS = ['Russia', 'India', 'Not Russia and not India'];
   let activeItems = [];
   const choose = item => {

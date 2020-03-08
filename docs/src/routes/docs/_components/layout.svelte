@@ -93,7 +93,6 @@
   aside {
     width: calc(100vw / 12 * 2);
     position: sticky;
-    padding: 0 1rem;
     top: 0;
   }
 

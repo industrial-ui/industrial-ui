@@ -7,6 +7,7 @@ import OpenOnHover from './open-on-hover.md';
 import CustomTransition from './custom-transition.md';
 import SimpleSelection from './simple-selection.md';
 import MultipleSelection from './multiple-selection.md';
+import Search from './search.md';
 </script>
 
 <Title
@@ -47,6 +48,10 @@ like `delay`, `duration` and other properties perfectly described in the
 *Multiple selection*: Pick as many options as you want.
 
 <MultipleSelection />
+
+*Search dropdown*: Find a value in the dropdown list by typing some letters.
+
+<Search />
 
 
 ## Dropdown roadmap
