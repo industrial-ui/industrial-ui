@@ -20,6 +20,8 @@
   export let transition = null;
   const propsList = ['id', 'class', 'triggerClass', 'dropdownClass', 'value', 'openOnHover', 'transition', ...Object.keys(config.isProperties)];
 
+  if (!id) console.warn('Dropdown has no id property');
+
   const close = () => value = false;
   const hoverEffect = (isEntered) => {
     if (!openOnHover) return;

@@ -8,7 +8,7 @@ const choose = item => activeItem = item;
 </script>
 
 <ShowBlock>
-  <Dropdown is:select let:close={close}>
+  <Dropdown is:select let:close={close} id="dd-4">
     <div slot="trigger">
       <div class="default text">
         {#if activeItem}

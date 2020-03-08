@@ -6,6 +6,7 @@ import SimpleExample from './simple-example.md';
 import OpenOnHover from './open-on-hover.md';
 import CustomTransition from './custom-transition.md';
 import SimpleSelection from './simple-selection.md';
+import MultipleSelection from './multiple-selection.md';
 </script>
 
 <Title
@@ -39,9 +40,13 @@ like `delay`, `duration` and other properties perfectly described in the
 
 <h2 id="selection-dropdown">Selection dropdown</h2>
 
-Simple selection: an example of how to pick a value from the list
+*Simple selection*: an example of how to pick a value from the list
 
 <SimpleSelection />
+
+*Multiple selection*: Pick as many options as you want.
+
+<MultipleSelection />
 
 
 ## Dropdown roadmap
