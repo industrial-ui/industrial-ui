@@ -71,7 +71,7 @@
   color: whitesmoke;
 }
 
-#content p code {
+#content p code, #content li code {
   background-color: #e5e6e6;
   padding: .3rem .5rem;
   line-height: 1.6;

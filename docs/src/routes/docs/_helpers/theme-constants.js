@@ -49,8 +49,27 @@ export const SpectreTheme = {
         outline: 'outline',
         icon: 'round icon',
         labeled: 'labeled',
+        link: ''
       },
-    }
+    },
+    dropdown: {
+      transition: 'slide',
+      transitionOptions: {delay: 0, duration: 300},
+      isProperties: {
+        select: 'selection',
+        multiselect: 'fluid selection multiple',
+        search: 'search selection'
+      },
+      class: 'dropdown',
+      openClass: '',
+      closeClass: '',
+      triggerClass: '',
+      openTriggerClass: '',
+      closeTriggerClass: '',
+      dropdownClass: 'menu',
+      openDropdownClass: '',
+      closeDropdownClass: '',
+    },
   }
 };
 

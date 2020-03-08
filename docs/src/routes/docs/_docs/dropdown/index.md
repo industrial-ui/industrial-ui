@@ -59,8 +59,6 @@ like `delay`, `duration` and other properties perfectly described in the
 To make it work perfectly, there is a need in:
  - **Positioning**. We need to calculate the position of the dropdown (top-left, top-right,
 bottom-left or bottom-right) depending of how close the window borders are.
- - Consider such **cases** from semantic-ui as selection menu, search dropdown. 
-May be just show it in the docs, and that's all.
 
 <h2 id="props">Props</h2>
 
