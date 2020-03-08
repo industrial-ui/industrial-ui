@@ -29,9 +29,14 @@
 
 <div
   {id}
-  class={composeClasses(globalConfig.globalClass, config.class, $$props.class, value ? config.openClass : config.closeClass)}
+  class={composeClasses(
+    globalConfig.globalClass,
+    config.class,
+    $$props.class,
+    filterIsProps(config.isProperties, $$props),
+    value ? config.openClass : config.closeClass
+  )}
   {...filterProps(propsList, $$props)}
-  use:filterIsProps={{isProperties: config.isProperties, props: $$props}}
   use:clickOutside={close}
   use:events
   on:mouseenter={() => hoverEffect(true)}

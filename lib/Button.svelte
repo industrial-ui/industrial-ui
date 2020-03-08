@@ -12,8 +12,12 @@
 
 <button
   type="button"
-  class={composeClasses(globalConfig.globalClass, config.class, $$props.class)}
-  use:filterIsProps={{isProperties: config.isProperties, props: $$props}}
+  class={composeClasses(
+    globalConfig.globalClass,
+    config.class,
+    $$props.class,
+    filterIsProps(config.isProperties, $$props)
+  )}
   {...filterProps(propsList, $$props)}
 >
   <slot />
