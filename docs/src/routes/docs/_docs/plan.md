@@ -41,7 +41,7 @@ Like a philosophical component, it went through many cycles of *think -> create 
 * ✅ Dispatch all dropdown events into the parent
 * ✅ Add a lot of examples for the documentation
 * ✅ Add table for properties and make styles for it
-* ❌ Implement dropdown openings to different directions
+* ✅ Implement dropdown openings to different directions (positioning)
 * ❌ Add more slots to a dropdown and document it properly
 * ❌ Show IUI dropdown usage with different stylesheets (Spectre, Tailwind)
 * ❌ Write docs for 'resulting markup' (maybe new icon in ShowBlock)

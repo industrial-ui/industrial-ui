@@ -5,6 +5,7 @@ import ShowBlock from '../../_components/show-block.svelte';
 import SimpleExample from './simple-example.md';
 import OpenOnHover from './open-on-hover.md';
 import CustomTransition from './custom-transition.md';
+import Positioning from './positioning.md';
 import SimpleSelection from './simple-selection.md';
 import MultipleSelection from './multiple-selection.md';
 import Search from './search.md';
@@ -28,6 +29,16 @@ some style library that makes it look nice
 Pass the `openOnHover` property to open the dropdown when the mouse is on the trigger
 
 <OpenOnHover />
+
+
+<h2 id="positioning">Dropdown position</h2>
+
+If you want your dropdown to open in different parts of the window, you can use the
+`position` property. It can be one of `'auto'|'bottom left'|'bottom right'|'top left'|'top right'`.
+If `auto` is chosen, the dropdown will calculate and choose the most appropriate property
+to fit into the window.
+
+<Positioning />
 
 
 <h2 id="custom-transition">Custom transition</h2>
@@ -54,12 +65,6 @@ like `delay`, `duration` and other properties perfectly described in the
 <Search />
 
 
-## Dropdown roadmap
-
-To make it work perfectly, there is a need in:
- - **Positioning**. We need to calculate the position of the dropdown (top-left, top-right,
-bottom-left or bottom-right) depending of how close the window borders are.
-
 <h2 id="props">Props</h2>
 
 <div class="table">
@@ -71,6 +76,7 @@ bottom-left or bottom-right) depending of how close the window borders are.
   | `triggerClass` | `String` | `''` | Trigger (opener element that should be clicked) class |
   | `dropdownClass` | `String` | `''` | Dropdown class |
   | `transition` | `String` | `null` | Transition applied for the dropdown (it is better to put in the config but not as a prop) |
+  | `position` | `String` | `null` | Position of the dropdown. Requires `position: absolute` for it. One of `'auto'|'bottom left'|'bottom right'|'top left'|'top right'` |
 </div>
 
 
