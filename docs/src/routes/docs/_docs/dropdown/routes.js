@@ -29,6 +29,10 @@ export default {
       text: 'Properties',
     },
     {
+      slug: 'slots',
+      text: 'Slots',
+    },
+    {
       slug: 'markup',
       text: 'Resulting markup',
     },

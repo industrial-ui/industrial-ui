@@ -20,7 +20,7 @@
   export let value = false;
   export let transition = null;
   export let position = null;
-  const propsList = ['id', 'class', 'triggerClass', 'dropdownClass', 'value', 'openOnHover', 'transition', ...Object.keys(config.isProperties)];
+  const propsList = ['id', 'class', 'position', 'triggerClass', 'dropdownClass', 'value', 'openOnHover', 'transition', ...Object.keys(config.isProperties)];
 
   if (!id) console.warn('Dropdown has no id property');
 
@@ -47,24 +47,27 @@
   on:mouseenter={() => hoverEffect(true)}
   on:mouseleave={() => hoverEffect(false)}
 >
-  <slot name="nowrap-trigger" {close} {open} />
 
   <!-- Trigger element -->
-  <div
-    class={composeClasses(config.triggerClass, triggerClass, value ? config.openTriggerClass : config.closeTriggerClass)}
-    on:click={() => value = !value}
-  >
-    <slot name="trigger" {close} {open} />
-  </div>
+  <slot name="nowrap-trigger">
+    <div
+      class={composeClasses(config.triggerClass, triggerClass, value ? config.openTriggerClass : config.closeTriggerClass)}
+      on:click={() => value = !value}
+    >
+      <slot name="trigger" />
+    </div>
+  </slot>
 
   <!-- Dropdown itself -->
-  {#if value}
-    <div
-      class={composeClasses(config.dropdownClass, dropdownClass, value ? config.openDropdownClass : config.closeDropdownClass)}
-      transition:dynamic={{transition: transition || config.transition, options: transition ? {} : config.transitionOptions, customs: globalConfig.customTransitions}}
-      use:checkPosition={position}
-    >
-      <slot {close} />
-    </div>
-  {/if}
+  <slot name="nowrap-dropdown">
+    {#if value}
+      <div
+        class={composeClasses(config.dropdownClass, dropdownClass, value ? config.openDropdownClass : config.closeDropdownClass)}
+        transition:dynamic={{transition: transition || config.transition, options: transition ? {} : config.transitionOptions, customs: globalConfig.customTransitions}}
+        use:checkPosition={position}
+      >
+        <slot {close} {open} {value} />
+      </div>
+    {/if}
+  </slot>
 </div>
