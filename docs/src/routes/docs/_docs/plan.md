@@ -11,7 +11,7 @@ The page is also a checklist with, hopefully, estimate dates for different proje
 development parts. Should be updated rapidly. Waiting for it to become all in green
 check marks.
 
-## ✅ Create project and documentation
+<h2 id="create">✅ Create project and documentation</h2>
 
 This huge step has been done some time ago before the plan creation. First of all,
 the project architecture was chosen: Svelte for the library and Svelte + Sapper for
@@ -23,11 +23,11 @@ the worst part is left behind, there are places that should be fixed or filled i
 the future. 
 
 
-## Dropdown
+<h2 id="dropdown">Dropdown</h2>
 
-The part of a lot of thoughts, philosophical component. By creating the dropdown, I
-changed a lot of ways how we can pass classes to components and configure them properly.
-Roadmap:
+The huge part. Because this is the first component created, a lot of utils were needed.
+Like a philosophical component, it went through many cycles of *think -> create -> think again
+-> refactor.*
 
 * ✅ Add a base markup for the dropdown
 * ✅ Create a template for the configuration JSON
@@ -41,12 +41,13 @@ Roadmap:
 * ✅ Dispatch all dropdown events into the parent
 * ✅ Add a lot of examples for the documentation
 * ✅ Add table for properties and make styles for it
+* ❌ Implement dropdown openings to different directions
+* ❌ Add more slots to a dropdown and document it properly
 * ❌ Show IUI dropdown usage with different stylesheets (Spectre, Tailwind)
 * ❌ Write docs for 'resulting markup' (maybe new icon in ShowBlock)
-* ❌ Implement dropdown openings to different directions
 
 
-## Vue and React support
+<h2 id="vue-react-support">Vue and React support</h2>
 
 Really difficult part of the project, because it requires searching for
 different open-source solutions and updating them. For example, we need to
@@ -63,7 +64,7 @@ forgot React, so more investigations needed.
 These steps might be broken into smaller once when I will start digging into it.
 
 
-## NPM publishing and peer review
+<h2 id="npm-publish">NPM publishing and peer review</h2>
 
 * ❌ Refactor the project for docs to import UMD-format compiled library
 * ❌ Publish project to npm
@@ -71,7 +72,7 @@ These steps might be broken into smaller once when I will start digging into it.
 * ❌ Send the library to some Svelte-working dudes and do a peer review
 * ❌ Fix most annoyed problems listed by the people
 
-## Other components
+<h2 id="other-components">Other components</h2>
 
 The list is not full and the order means nothing
 
@@ -86,3 +87,20 @@ The list is not full and the order means nothing
 * ❌ Progress
 * ❌ Tooltip
 * ❌ Accordion
+
+<h2 id="release">Release</h2>
+
+The way to show Industrial-ui to a broad public, make it popular.
+
+* ❌ Complete the documentation by writing more examples and re-reading
+* ❌ Write a proper and nice readme
+* ❌ Ask a designer to prepare some pictures and logos for the library
+* ❌ Make a peer-review with friends and ask for the first stars in repo
+* ❌ Write an article in Russian to post to Habr
+* ❌ Write an article in English to post to Medium Daily JS
+* ❌ Add a feedback for to the documentation website
+* ❌ Do a release: create new version, push to NPM, publish articles
+* ❌ PR a library in different websites
+* ❌ Get a feedback, fix the library. Do it again and again
+
+### Enjoy, the project is done! Though keep maintaining it
