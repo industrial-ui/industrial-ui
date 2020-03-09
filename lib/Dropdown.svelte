@@ -4,6 +4,7 @@
   import {getEventAction} from './utils/dispatch-events';
   import filterIsProps from './utils/is-properties';
   import clickOutside from './utils/click-outside';
+  import checkPosition from './utils/check-position';
   import filterProps from './utils/filter-props';
   import composeClasses from './utils/compose-classes';
   import dynamic from './utils/transition';
@@ -18,6 +19,7 @@
   export let id = null;
   export let value = false;
   export let transition = null;
+  export let position = null;
   const propsList = ['id', 'class', 'triggerClass', 'dropdownClass', 'value', 'openOnHover', 'transition', ...Object.keys(config.isProperties)];
 
   if (!id) console.warn('Dropdown has no id property');
@@ -60,6 +62,7 @@
     <div
       class={composeClasses(config.dropdownClass, dropdownClass, value ? config.openDropdownClass : config.closeDropdownClass)}
       transition:dynamic={{transition: transition || config.transition, options: transition ? {} : config.transitionOptions, customs: globalConfig.customTransitions}}
+      use:checkPosition={position}
     >
       <slot {close} />
     </div>
