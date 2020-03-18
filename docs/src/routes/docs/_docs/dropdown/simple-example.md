@@ -1,17 +1,11 @@
 <script>
 import {Dropdown, Button} from 'industrial-ui';
 import ShowBlock from '../../_components/show-block.svelte';
+import SimpleExampleSemantic from './simple-example-semantic.svelte';
 </script>
 
 <ShowBlock>
-  <Dropdown let:close={close} id="dd-1">
-    <div slot="trigger">
-      <Button>Toggle me</Button>
-    </div>
-    
-    <div class="item" on:click={() => close()}>Hello, there</div>
-    <div class="item" on:click={() => close()}>Do some action</div>
-  </Dropdown>
+  <SimpleExampleSemantic />
   
   <pre class="code" slot="code">
   ```html
@@ -30,7 +24,7 @@ import ShowBlock from '../../_components/show-block.svelte';
   ```
   </pre>
 
-  <pre class="code" slot="semantic">
+  <pre class="code" slot="config-semantic">
   ```javascript
   components: {
     dropdown: {
@@ -46,14 +40,14 @@ import ShowBlock from '../../_components/show-block.svelte';
   ```
   </pre>
 
-  <pre class="code" slot="spectre">
+  <pre class="code" slot="config-spectre">
   ```javascript
   components: {
   }
   ```
   </pre>
 
-  <pre class="code" slot="tailwind">
+  <pre class="code" slot="config-tailwind">
   ```javascript
   components: {
   }

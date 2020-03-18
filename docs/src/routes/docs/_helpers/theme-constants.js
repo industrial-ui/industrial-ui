@@ -89,17 +89,20 @@ export const TailwindTheme = {
 
 export default [
   {
-    name: 'semantic',
+    name: 'Semantic UI',
+    slug: 'semantic',
     url: '/style/semantic.min.css',
     config: SemanticTheme,
   },
   {
-    name: 'spectre',
+    name: 'Spectre CSS',
+    slug: 'spectre',
     url: '/style/spectre.min.css',
     config: SpectreTheme,
   },
   {
-    name: 'tailwind',
+    name: 'Tailwind CSS',
+    slug: 'tailwind',
     url: '/style/tailwind.min.css',
     config: TailwindTheme,
   },

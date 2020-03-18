@@ -1,4 +1,5 @@
 <script>
+  import StyleChange from './style-change.svelte';
   export let open;
 </script>
 
@@ -21,6 +22,7 @@
 </div>
 
 <div class="right">
+  <StyleChange />
   <a href="https://github.com/VanishMax/industrial-ui" target="_blank" rel="noreferrer noopener">
     <img src="/img/github.svg" alt="link to github repository" />
   </a>
@@ -31,6 +33,12 @@
   .left {
     flex-grow: 1;
     display: flex;
+    align-items: center;
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 

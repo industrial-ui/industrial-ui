@@ -43,6 +43,7 @@ Like a philosophical component, it went through many cycles of *think -> create 
 * ✅ Add table for properties and make styles for it
 * ✅ Implement dropdown openings to different directions (positioning)
 * ✅ Add more slots to a dropdown and document it properly
+* ❌ Take the stylesheet changing out of the ShowBlock to header
 * ❌ Show IUI dropdown usage with different stylesheets (Spectre, Tailwind)
 * ❌ Write docs for 'resulting markup' (maybe new icon in ShowBlock)
 
