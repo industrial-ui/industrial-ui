@@ -39,6 +39,9 @@
 }
 
 .iui-dropdown .menu li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   list-style: none;
   padding: .75rem;
 }
@@ -46,4 +49,18 @@
 .iui-dropdown .menu li:hover {
   cursor: pointer;
   background: #f5f5f5;
+}
+
+.iui-dropdown .menu li a {
+  margin-left: .5rem;
+}
+
+.iui-dropdown .menu li a:hover img {
+  background-color: rgba(255, 122, 0, .2);
+  border-radius: 50%;
+}
+
+.iui-dropdown .menu li a img{
+  width: .9rem;
+  height: .9rem;
 }

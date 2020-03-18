@@ -32,7 +32,12 @@
 
     <ul>
       {#each styles as style}
-        <li on:click="{() => {changeTheme(style.slug); close();}}">{style.name}</li>
+        <li on:click="{() => {changeTheme(style.slug); close();}}">
+          {style.name}
+          <a href={style.credits} target="_blank" rel="noreferrer nofollow" on:click|stopPropagation>
+            <img src="/img/question.svg" alt={'credits to ' + style.name} />
+          </a>
+        </li>
       {/each}
     </ul>
   </Dropdown>

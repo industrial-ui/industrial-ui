@@ -89,18 +89,21 @@ export const TailwindTheme = {
 
 export default [
   {
+    credits: 'https://semantic-ui.com/',
     name: 'Semantic UI',
     slug: 'semantic',
     url: '/style/semantic.min.css',
     config: SemanticTheme,
   },
   {
+    credits: 'https://picturepan2.github.io/spectre/',
     name: 'Spectre CSS',
     slug: 'spectre',
     url: '/style/spectre.min.css',
     config: SpectreTheme,
   },
   {
+    credits: 'https://tailwindcss.com/',
     name: 'Tailwind CSS',
     slug: 'tailwind',
     url: '/style/tailwind.min.css',
