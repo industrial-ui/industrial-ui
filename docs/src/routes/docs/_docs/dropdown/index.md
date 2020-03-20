@@ -2,13 +2,13 @@
 import Title from '../../_components/page-title.svelte';
 import {Dropdown, Button} from 'industrial-ui';
 import ShowBlock from '../../_components/show-block.svelte';
-import SimpleExample from './simple-example.md';
-import OpenOnHover from './open-on-hover.md';
-import CustomTransition from './custom-transition.md';
-import Positioning from './positioning.md';
-import SimpleSelection from './simple-selection.md';
-import MultipleSelection from './multiple-selection.md';
-import Search from './search.md';
+import SimpleExample from './simple-example/index.md';
+import OpenOnHover from './open-on-hover/index.md';
+import CustomTransition from './custom-transition/index.md';
+import Positioning from './positioning/index.md';
+import SimpleSelection from './simple-selection/index.md';
+import MultipleSelection from './multiple-selection/index.md';
+import Search from './search/index.md';
 </script>
 
 <Title

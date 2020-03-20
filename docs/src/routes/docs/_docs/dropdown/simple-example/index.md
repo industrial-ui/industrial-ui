@@ -1,16 +1,16 @@
 <script>
 import {Dropdown, Button} from 'industrial-ui';
-import ShowBlock from '../../_components/show-block.svelte';
-import SimpleExampleSemantic from './simple-example-semantic.svelte';
-import SimpleExampleSpectre from './simple-example-spectre.svelte';
+import ShowBlock from '../../../_components/show-block.svelte';
+import Semantic from './semantic.svelte';
+import Spectre from './spectre.svelte';
 </script>
 
 <ShowBlock>
   <div slot="semantic">
-    <SimpleExampleSemantic />
+    <Semantic />
   </div>
   <div slot="spectre">
-    <SimpleExampleSpectre />
+    <Spectre />
   </div>
   
   <pre class="code" slot="code-semantic">

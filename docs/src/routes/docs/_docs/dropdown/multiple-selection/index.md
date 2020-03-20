@@ -1,13 +1,18 @@
 <script>
-import {Dropdown, Button} from 'industrial-ui';
-import ShowBlock from '../../_components/show-block.svelte';
-import MultipleSelection from './multiple-selection.svelte';
+import ShowBlock from '../../../_components/show-block.svelte';
+import Semantic from './semantic.svelte';
+import Spectre from './spectre.svelte';
 </script>
 
 <ShowBlock>
-  <MultipleSelection />
+  <div slot="semantic">
+    <Semantic />
+  </div>
+  <div slot="spectre">
+    <Spectre />
+  </div>
   
-  <pre class="code" slot="code">
+  <pre class="code" slot="code-semantic">
   ```html
   <script>
     import {Dropdown} from 'industrial-ui';
@@ -37,7 +42,7 @@ import MultipleSelection from './multiple-selection.svelte';
   ```
   </pre>
 
-  <pre class="code" slot="semantic">
+  <pre class="code" slot="config-semantic">
   ```javascript
   components: {
     dropdown: {
@@ -53,14 +58,14 @@ import MultipleSelection from './multiple-selection.svelte';
   ```
   </pre>
 
-  <pre class="code" slot="spectre">
+  <pre class="code" slot="config-spectre">
   ```javascript
   components: {
   }
   ```
   </pre>
 
-  <pre class="code" slot="tailwind">
+  <pre class="code" slot="config-tailwind">
   ```javascript
   components: {
   }

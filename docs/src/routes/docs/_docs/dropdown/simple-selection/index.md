@@ -1,30 +1,18 @@
 <script>
-import {Dropdown} from 'industrial-ui';
-import ShowBlock from '../../_components/show-block.svelte';
-
-const ITEMS = ['Male', 'Female'];
-let activeItem = null;
-const choose = item => activeItem = item;
+import ShowBlock from '../../../_components/show-block.svelte';
+import Semantic from './semantic.svelte';
+import Spectre from './spectre.svelte';
 </script>
 
 <ShowBlock>
-  <Dropdown is:select let:close={close} id="dd-4">
-    <div slot="trigger">
-      <div class="default text">
-        {#if activeItem}
-          {activeItem}
-        {:else}
-          Gender
-        {/if}
-      </div>
-    </div>
+  <div slot="semantic">
+    <Semantic />
+  </div>
+  <div slot="spectre">
+    <Spectre />
+  </div>
   
-    {#each ITEMS as item}
-      <div class="item" on:click="{() => {choose(item); close()}}">{item}</div>
-    {/each}
-  </Dropdown>
-  
-  <pre class="code" slot="code">
+  <pre class="code" slot="code-semantic">
   ```html
   <script>
     import {Dropdown} from 'industrial-ui';
@@ -51,7 +39,7 @@ const choose = item => activeItem = item;
   ```
   </pre>
 
-  <pre class="code" slot="semantic">
+  <pre class="code" slot="config=semantic">
   ```javascript
   components: {
     dropdown: {
@@ -67,14 +55,14 @@ const choose = item => activeItem = item;
   ```
   </pre>
 
-  <pre class="code" slot="spectre">
+  <pre class="code" slot="config-spectre">
   ```javascript
   components: {
   }
   ```
   </pre>
 
-  <pre class="code" slot="tailwind">
+  <pre class="code" slot="config-tailwind">
   ```javascript
   components: {
   }
