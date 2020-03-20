@@ -1,13 +1,24 @@
+@media screen and (min-width: 768px) {
+  .choose-stylesheet.mobile {
+    display: none;
+  }
+}
+
 .iui-dropdown .trigger {
   border: 1px solid #EEEEEE;
   margin-right: 1rem;
   padding: .3rem 1rem;
   border-radius: .5rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
   text-transform: capitalize;
   user-select: none;
+}
+
+.iui-dropdown .trigger:focus {
+  outline: none;
 }
 
 .iui-dropdown .trigger .chevron {
@@ -63,4 +74,19 @@
 .iui-dropdown .menu li a img{
   width: .9rem;
   height: .9rem;
+}
+
+@media screen and (max-width: 768px) {
+  .choose-stylesheet:not(.mobile) {
+    display: none;
+  }
+
+  .choose-stylesheet {
+    margin: 1rem auto 0;
+    width: 80%;
+  }
+  .choose-stylesheet .trigger {
+    margin: 0;
+    border: 1px solid #555555;
+  }
 }

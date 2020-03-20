@@ -4,6 +4,8 @@
   import {changeTheme, theme} from '../_helpers/active-theme';
   import stylesheets from '../_helpers/theme-constants';
 
+  export let inNav = false;
+
   $: styles = stylesheets.filter(style => style.slug !== $theme.slug);
 
   const DDCongig = {
@@ -24,7 +26,12 @@
 </script>
 
 <IUI config={DDCongig}>
-  <Dropdown let:value let:close={close} id="choose-stylesheet">
+  <Dropdown
+    let:value
+    let:close={close}
+    id={inNav ? 'choose-stylesheet-nav' : 'choose-stylesheet'}
+    class={'choose-stylesheet' + (inNav ? ' mobile' : '')}
+  >
     <div slot="trigger">
       {$theme.name}
     </div>
