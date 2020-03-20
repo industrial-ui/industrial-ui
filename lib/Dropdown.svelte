@@ -51,6 +51,7 @@
   <!-- Trigger element -->
   <slot name="nowrap-trigger">
     <div
+      tabindex="0"
       class={composeClasses(config.triggerClass, triggerClass, value ? config.openTriggerClass : config.closeTriggerClass)}
       on:click={() => value = !value}
     >

@@ -37,15 +37,14 @@
         on:click={() => choose(names.config)}
       />
     </div>
-    <slot>
-      {#if $theme.slug === names.semantic}
-        <slot name="semantic" />
-      {:else if $theme.slug === names.spectre}
-        <slot name="spectre" />
-      {:else if $theme.slug === names.tailwind}
-        <slot name="tailwind" />
-      {/if}
-    </slot>
+    <slot />
+    {#if $theme.slug === names.semantic}
+      <slot name="semantic" />
+    {:else if $theme.slug === names.spectre}
+      <slot name="spectre" />
+    {:else if $theme.slug === names.tailwind}
+      <slot name="tailwind" />
+    {/if}
   </div>
   {#if chosen}
     <div in:fly="{{duration: 300}}" class="show-code">

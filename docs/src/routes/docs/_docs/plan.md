@@ -57,6 +57,7 @@ any special loss in functionality. The **Dropdown** has two *slots*,
 but the existing solutions do not support slots at all. And I have really
 forgot React, so more investigations needed.
 
+* ❌ Install the library locally with the simple svelte project to check accessibility
 * ❌ Make a React solution for importing Svelte components (with nice API and full functionality)
 * ❌ Create an example React app inside documentation that would show the working code
 * ❌ The same with Vue. A solution needed

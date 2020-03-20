@@ -45,10 +45,7 @@ export const SpectreTheme = {
     button: {
       class: 'btn',
       isProperties: {
-        primary: 'primary',
-        outline: 'outline',
-        icon: 'round icon',
-        labeled: 'labeled',
+        primary: 'btn-primary',
         link: ''
       },
     },
@@ -63,7 +60,7 @@ export const SpectreTheme = {
       class: 'dropdown',
       openClass: '',
       closeClass: '',
-      triggerClass: '',
+      triggerClass: 'btn btn-primary dropdown-toggle',
       openTriggerClass: '',
       closeTriggerClass: '',
       dropdownClass: 'menu',
