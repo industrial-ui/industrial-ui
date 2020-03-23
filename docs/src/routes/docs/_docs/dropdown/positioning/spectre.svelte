@@ -2,21 +2,21 @@
   import {Dropdown} from 'industrial-ui';
 </script>
 
-<Dropdown id="dd-p-1" position="bottom left" openOnHover>
+<Dropdown id="dd-p-1" position="bottom left" openOnHover is:primary>
   <span slot="trigger">
     Bottom Left
   </span>
   Hello there!
 </Dropdown>
 
-<Dropdown id="dd-p-2" position="bottom right" openOnHover>
+<Dropdown id="dd-p-2" position="bottom right" openOnHover is:primary>
   <span slot="trigger">
     Bottom Right
   </span>
   Hello there!
 </Dropdown>
 
-<Dropdown id="dd-p-3" position="auto" openOnHover>
+<Dropdown id="dd-p-3" position="auto" openOnHover is:primary>
   <span slot="trigger">
     Auto
   </span>
@@ -29,14 +29,14 @@
   position.
 </Dropdown>
 
-<Dropdown id="dd-p-4" position="top left" openOnHover>
+<Dropdown id="dd-p-4" position="top left" openOnHover is:primary>
   <span slot="trigger">
     Top Left
   </span>
   Hello there!
 </Dropdown>
 
-<Dropdown id="dd-p-5" position="top right" openOnHover>
+<Dropdown id="dd-p-5" position="top right" openOnHover is:primary>
   <span slot="trigger">
     Top Right
   </span>

@@ -44,6 +44,18 @@ import Spectre from './spectre.svelte';
   </Dropdown>
   ```
   </pre>
+  
+  <pre class="code" slot="code-spectre">
+  ```html
+  No code provided
+  ```
+  </pre>
+  
+  <pre class="code" slot="code-tailwind">
+  ```html
+  No code provided
+  ```
+  </pre>
 
   <pre class="code" slot="config-semantic">
   ```javascript

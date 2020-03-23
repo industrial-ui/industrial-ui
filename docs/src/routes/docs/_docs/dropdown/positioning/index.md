@@ -72,40 +72,46 @@ import Spectre from './spectre.svelte';
     import {Dropdown} from 'industrial-ui';
   </script>
   
-  <Dropdown id="dd-p-1" position="bottom left" openOnHover>
+  <Dropdown id="dd-p-1" position="bottom left" openOnHover is:primary>
     <span slot="trigger">
       Bottom Left
     </span>
     Hello there!
   </Dropdown>
   
-  <Dropdown id="dd-p-2" position="bottom right" openOnHover>
+  <Dropdown id="dd-p-2" position="bottom right" openOnHover is:primary>
     <span slot="trigger">
       Bottom Right
     </span>
     Hello there!
   </Dropdown>
   
-  <Dropdown id="dd-p-3" position="auto" openOnHover>
+  <Dropdown id="dd-p-3" position="auto" openOnHover is:primary>
     <span slot="trigger">
       Auto
     </span>
     Hello there!
   </Dropdown>
   
-  <Dropdown id="dd-p-4" position="top left" openOnHover>
+  <Dropdown id="dd-p-4" position="top left" openOnHover is:primary>
     <span slot="trigger">
       Top Left
     </span>
     Hello there!
   </Dropdown>
   
-  <Dropdown id="dd-p-5" position="top right" openOnHover>
+  <Dropdown id="dd-p-5" position="top right" openOnHover is:primary>
     <span slot="trigger">
       Top Right
     </span>
     Hello there!
   </Dropdown>
+  ```
+  </pre>
+  
+  <pre class="code" slot="code-tailwind">
+  ```html
+  No code provided
   ```
   </pre>
 
@@ -131,6 +137,10 @@ import Spectre from './spectre.svelte';
     dropdown: {
       transition: 'slide',
       transitionOptions: {delay: 0, duration: 300},
+      isProperties: {
+        select: 'btn',
+        primary: 'btn btn-primary'
+      },
       class: 'dropdown',
       openClass: 'active',
       triggerClass: 'btn btn-primary dropdown-toggle',

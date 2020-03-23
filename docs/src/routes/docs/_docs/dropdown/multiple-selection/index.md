@@ -41,6 +41,18 @@ import Spectre from './spectre.svelte';
   </Dropdown>
   ```
   </pre>
+  
+  <pre class="code" slot="code-spectre">
+  ```html
+  No code provided
+  ```
+  </pre>
+  
+  <pre class="code" slot="code-tailwind">
+  ```html
+  No code provided
+  ```
+  </pre>
 
   <pre class="code" slot="config-semantic">
   ```javascript
@@ -61,6 +73,18 @@ import Spectre from './spectre.svelte';
   <pre class="code" slot="config-spectre">
   ```javascript
   components: {
+    dropdown: {
+      transition: 'slide',
+      transitionOptions: {delay: 0, duration: 300},
+      isProperties: {
+        select: 'btn',
+        primary: 'btn btn-primary'
+      },
+      class: 'dropdown',
+      openClass: 'active',
+      triggerClass: 'btn btn-primary dropdown-toggle',
+      dropdownClass: 'menu',
+    },
   }
   ```
   </pre>

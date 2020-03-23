@@ -2,7 +2,7 @@
   import {Dropdown} from 'industrial-ui';
 </script>
 
-<Dropdown let:close id="dd-1">
+<Dropdown let:close is:primary id="dd-1">
   <span slot="trigger">
     Toggle me
   </span>

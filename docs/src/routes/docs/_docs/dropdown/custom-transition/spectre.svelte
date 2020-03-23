@@ -2,7 +2,7 @@
   import {Dropdown} from 'industrial-ui';
 </script>
 
-<Dropdown transition="fadeWithColor" let:close id="dd-3">
+<Dropdown transition="fadeWithColor" let:close id="dd-3" is:primary>
   <span slot="trigger">
     Toggle me
   </span>

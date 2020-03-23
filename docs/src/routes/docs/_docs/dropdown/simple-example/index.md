@@ -36,7 +36,7 @@ import Spectre from './spectre.svelte';
     import {Dropdown} from 'industrial-ui';
   </script>
   
-  <Dropdown let:close id="dd-1">
+  <Dropdown let:close id="dd-1" is:primary>
     <span slot="trigger">
       Toggle me
     </span>
@@ -48,6 +48,12 @@ import Spectre from './spectre.svelte';
       <a href="/docs/dropdown" on:click|preventDefault={() => close()}>Do some action</a>
     </div>
   </Dropdown>
+  ```
+  </pre>
+  
+  <pre class="code" slot="code-tailwind">
+  ```html
+  No code provided
   ```
   </pre>
 
@@ -74,6 +80,10 @@ import Spectre from './spectre.svelte';
     dropdown: {
       transition: 'slide',
       transitionOptions: {delay: 0, duration: 300},
+      isProperties: {
+        select: 'btn',
+        primary: 'btn btn-primary'
+      },
       class: 'dropdown',
       openClass: 'active',
       triggerClass: 'btn btn-primary dropdown-toggle',

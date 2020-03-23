@@ -2,7 +2,7 @@
   import {Dropdown} from 'industrial-ui';
 </script>
 
-<Dropdown openOnHover id="dd-2">
+<Dropdown openOnHover id="dd-2" is:primary>
   <span slot="trigger">
     Toggle me
   </span>

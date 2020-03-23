@@ -51,14 +51,13 @@ export const SpectreTheme = {
       transition: 'slide',
       transitionOptions: {delay: 0, duration: 300},
       isProperties: {
-        select: 'selection',
-        multiselect: 'fluid selection multiple',
-        search: 'search selection'
+        select: 'btn',
+        primary: 'btn btn-primary'
       },
       class: 'dropdown',
       openClass: 'active',
       closeClass: '',
-      triggerClass: 'btn btn-primary dropdown-toggle',
+      triggerClass: 'dropdown-toggle',
       openTriggerClass: '',
       closeTriggerClass: '',
       dropdownClass: 'menu',

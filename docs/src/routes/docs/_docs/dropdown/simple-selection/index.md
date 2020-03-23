@@ -38,6 +38,38 @@ import Spectre from './spectre.svelte';
   </Dropdown>
   ```
   </pre>
+  <pre class="code" slot="code-spectre">
+  ```html
+  <script>
+    import {Dropdown} from 'industrial-ui';
+    const ITEMS = ['Male', 'Female'];
+    let activeItem = null;
+    const choose = item => activeItem = item;
+  </script>
+  
+  <Dropdown is:select let:close is:select id="dd-4">
+    <div slot="trigger">
+      {#if activeItem}
+        {activeItem}
+      {:else}
+        Gender
+      {/if}
+    </div>
+  
+    {#each ITEMS as item}
+      <div class="menu-item">
+        <a href="/docs/dropdown" on:click|preventDefault="{() => {choose(item); close()}}">{item}</a>
+      </div>
+    {/each}
+  </Dropdown>
+  ```
+  </pre>
+  
+  <pre class="code" slot="code-tailwind">
+  ```html
+  No code provided
+  ```
+  </pre>
 
   <pre class="code" slot="config=semantic">
   ```javascript
@@ -58,6 +90,18 @@ import Spectre from './spectre.svelte';
   <pre class="code" slot="config-spectre">
   ```javascript
   components: {
+    dropdown: {
+      transition: 'slide',
+      transitionOptions: {delay: 0, duration: 300},
+      isProperties: {
+        select: 'btn',
+        primary: 'btn btn-primary'
+      },
+      class: 'dropdown',
+      openClass: 'active',
+      triggerClass: 'btn btn-primary dropdown-toggle',
+      dropdownClass: 'menu',
+    },
   }
   ```
   </pre>
