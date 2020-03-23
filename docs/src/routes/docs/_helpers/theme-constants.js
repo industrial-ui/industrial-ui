@@ -1,13 +1,8 @@
+import {fadeWithColor} from './custom-transitions';
+
 export const SemanticTheme = {
   customTransitions: {
-    fadeWithColor: (node, {delay = 0, duration = 1000}) => ({
-      delay,
-      duration,
-      css: t => `
-        opacity: ${t};
-        background-color: hsl(${t * 255}, 70%, 30%);
-      `
-    }),
+    fadeWithColor,
   },
   components: {
     button: {
@@ -41,6 +36,9 @@ export const SemanticTheme = {
 };
 
 export const SpectreTheme = {
+  customTransitions: {
+    fadeWithColor,
+  },
   components: {
     button: {
       class: 'btn',
@@ -58,7 +56,7 @@ export const SpectreTheme = {
         search: 'search selection'
       },
       class: 'dropdown',
-      openClass: '',
+      openClass: 'active',
       closeClass: '',
       triggerClass: 'btn btn-primary dropdown-toggle',
       openTriggerClass: '',

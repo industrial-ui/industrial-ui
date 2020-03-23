@@ -2,7 +2,7 @@
   import {Dropdown, Button} from 'industrial-ui';
 </script>
 
-<Dropdown let:close={close} openOnHover id="dd-2">
+<Dropdown let:close openOnHover id="dd-2">
   <div slot="trigger">
     <Button>Toggle me</Button>
   </div>

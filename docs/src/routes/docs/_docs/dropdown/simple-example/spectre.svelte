@@ -1,8 +1,8 @@
 <script>
-  import {Dropdown, Button} from 'industrial-ui';
+  import {Dropdown} from 'industrial-ui';
 </script>
 
-<Dropdown let:close>
+<Dropdown let:close id="dd-1">
   <span slot="trigger">
     Toggle me
   </span>

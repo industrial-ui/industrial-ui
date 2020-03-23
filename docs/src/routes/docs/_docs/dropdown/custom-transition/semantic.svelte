@@ -2,7 +2,7 @@
   import {Dropdown, Button} from 'industrial-ui';
 </script>
 
-<Dropdown transition="fadeWithColor" let:close={close} id="dd-3">
+<Dropdown transition="fadeWithColor" let:close id="dd-3">
   <div slot="trigger">
     <Button>Toggle me</Button>
   </div>
