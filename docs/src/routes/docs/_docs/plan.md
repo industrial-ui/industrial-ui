@@ -45,7 +45,9 @@ Like a philosophical component, it went through many cycles of *think -> create 
 * ✅ Add more slots to a dropdown and document it properly
 * ✅ Take the stylesheet changing out of the ShowBlock to header
 * ✅ Write docs for 'resulting markup' (maybe new icon in ShowBlock)
-* ❌ Show IUI dropdown usage with different stylesheets (Spectre, Tailwind)
+* ❌ Show IUI dropdown usage with SpectreCSSS stylesheet
+* ❌ Show IUI dropdown usage with TailwindCSS stylesheet
+* ❌ Test and fix all issues
 
 
 <h2 id="vue-react-support">Vue and React support</h2>
