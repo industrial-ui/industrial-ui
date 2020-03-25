@@ -7,7 +7,8 @@
     "docs-build": "cd ./docs && npm run build",
     "dev": "rollup -c -w",
     "export": "rollup -c",
-    "build": "rollup -c && mkdir __sapper__ && cd ./docs && npm install && npm run build && mv ./__sapper__/export ../__sapper__/export"
+    "build": "rollup -c && mkdir __sapper__ && cd ./docs && npm install && npm run build && mv ./__sapper__ ../",
+    "start": "cd docs && npm install && npm start"
   },
   "repository": {
     "type": "git",
