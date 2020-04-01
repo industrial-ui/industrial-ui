@@ -2,6 +2,7 @@
 import ShowBlock from '../../../_components/show-block.svelte';
 import Semantic from './semantic.svelte';
 import Spectre from './spectre.svelte';
+import Tailwind from './tailwind.svelte';
 </script>
 
 <ShowBlock>
@@ -10,6 +11,9 @@ import Spectre from './spectre.svelte';
   </div>
   <div slot="spectre">
     <Spectre />
+  </div>
+  <div slot="tailwind">
+    <Tailwind />
   </div>
   
   <pre class="code" slot="code-semantic">
