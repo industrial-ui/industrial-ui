@@ -1,7 +1,7 @@
 <script>
   import {IUI, Dropdown} from 'industrial-ui';
   import './style-change.css';
-  import {changeTheme, theme} from '../_helpers/active-theme';
+  import {theme, changeTheme} from '../_helpers/active-theme';
   import stylesheets from '../_helpers/theme-constants';
 
   export let inNav = false;
