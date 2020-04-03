@@ -1,5 +1,6 @@
 <script>
   import routes from './_docs/routes';
+  import {theme} from './_helpers/active-theme';
   import {stores} from '@sapper/app';
 
   let components = routes.reduce((accumulator, current) => {
@@ -16,4 +17,4 @@
   <meta name="description" content={comp.meta.description || ''}>
 </svelte:head>
 
-<svelte:component this={comp.component} />
+<svelte:component this={comp[$theme.slug] || comp.component} />

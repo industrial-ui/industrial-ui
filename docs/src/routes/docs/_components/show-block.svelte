@@ -38,36 +38,13 @@
       />
     </div>
     <slot />
-    {#if $theme.slug === names.semantic}
-      <slot name="semantic" />
-    {:else if $theme.slug === names.spectre}
-      <slot name="spectre" />
-    {:else if $theme.slug === names.tailwind}
-      <slot name="tailwind" />
-    {/if}
   </div>
   {#if chosen}
     <div in:fly="{{duration: 300}}" class="show-code">
       {#if chosen === names.code}
-        <slot name="code">
-          {#if $theme.slug === names.semantic}
-            <slot name="code-semantic" />
-          {:else if $theme.slug === names.spectre}
-            <slot name="code-spectre" />
-          {:else if $theme.slug === names.tailwind}
-            <slot name="code-tailwind" />
-          {/if}
-        </slot>
+        <slot name="code" />
       {:else if chosen === names.config}
-        <slot name="config">
-          {#if $theme.slug === names.semantic}
-            <slot name="config-semantic" />
-          {:else if $theme.slug === names.spectre}
-            <slot name="config-spectre" />
-          {:else if $theme.slug === names.tailwind}
-            <slot name="config-tailwind" />
-          {/if}
-        </slot>
+        <slot name="config" />
       {/if}
     </div>
   {/if}

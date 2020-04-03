@@ -1,4 +1,4 @@
-import Instal from './installation.md';
+import Install from './installation.md';
 import Configuration from './configuration.md';
 import Conventions from './conventions/routes';
 import DocStyling from './doc-styling.md';
@@ -12,7 +12,7 @@ export default [
     nested: [
       {
         name: 'installation',
-        component: Instal,
+        component: Install,
         meta: {
           title: 'Installation',
           description: 'Get started with industrial-ui right now by following these simple steps of installation the library',
