@@ -74,12 +74,6 @@ export const TailwindTheme = {
   components: {
     button: {
       class: 'bg-gray-200 font-semibold py-2 px-6 rounded inline-flex items-center',
-      isProperties: {
-        primary: 'primary',
-        outline: 'outline',
-        icon: 'round icon',
-        labeled: 'labeled',
-      },
     },
     dropdown: {
       transition: 'slide',
@@ -89,16 +83,9 @@ export const TailwindTheme = {
         search: 'rounded border-solid border border-gray-300',
       },
       class: 'inline-block relative',
-      openClass: '',
-      closeClass: '',
-      triggerClass: '',
-      openTriggerClass: '',
-      closeTriggerClass: '',
       dropdownClass: 'absolute rounded bg-white my-2 shadow-xl z-10',
-      openDropdownClass: '',
-      closeDropdownClass: '',
     },
-  }
+  },
 };
 
 export default [
