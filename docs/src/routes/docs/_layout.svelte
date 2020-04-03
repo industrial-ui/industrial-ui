@@ -3,19 +3,23 @@
   import Layout from './_components/layout.svelte';
   import {IUI} from 'industrial-ui';
   import 'highlight.js/styles/an-old-hope.css';
-  import getActiveTheme, {theme} from './_helpers/active-theme';
+  import {checkTheme, getTheme} from './_helpers/active-theme';
+  import {stores} from '@sapper/app';
 
   export let segment;
-  onMount(getActiveTheme);
+  onMount(checkTheme);
+
+  const {page} = stores();
+  const theme = getTheme($page.query);
 </script>
 
 <svelte:head>
-  <link href={$theme.url} type="text/css" rel="stylesheet">
+  <link id="global-stylesheet" href={theme.url} type="text/css" rel="stylesheet">
 </svelte:head>
 
-{#if $theme.slug}
+{#if theme.slug}
   <Layout {segment}>
-    <IUI config={$theme.config}>
+    <IUI config={theme.config}>
       <slot />
     </IUI>
   </Layout>

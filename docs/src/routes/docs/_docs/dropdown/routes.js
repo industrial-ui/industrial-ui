@@ -1,8 +1,12 @@
-import Dropdown from './index.md';
+import Tailwind from './tailwind.md';
+import Semantic from './semantic.md';
+import Spectre from './spectre.md';
 
 export default {
   name: 'dropdown',
-  component: Dropdown,
+  tailwind: Tailwind,
+  semantic: Semantic,
+  spectre: Spectre,
   meta: {
     title: 'Dropdown component',
     description: ''
