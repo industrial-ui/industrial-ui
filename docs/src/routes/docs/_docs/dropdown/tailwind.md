@@ -16,8 +16,22 @@ import PropsSlotsMarkup from './props-slots-markup.md';
 <Title
   id="examples"
   title="Dropdown"
-  subtitle="Show how easily can the IUI dropdown be integrated with Tailwind.css"
+  subtitle="See how easily can the IUI dropdown be integrated with Tailwind.css"
 />
+
+Dropdown component allows you to toggle a menu from invisible to visible state.
+It can be opened by *trigger* click, hovering or focusing (Spectre CSS stylesheet
+implements the focus opening). Your dropdown can be positioned in different corners
+relative to the wrapper and customized to look anyhow depending only on your
+imagination.
+
+All you need to know is that the component accepts two main slots: `trigger` and
+`default`. The first one is passed to the trigger element (it can be button,
+input or any other controller), and the second – inside the dropdown.
+
+You can close the dropdown by clicking outside of it, and, to let the script
+help you, pass an `id` property to component, especially if you have more
+that one dropdown on the page. 
 
 <h2 id="simple-example">Simple example</h2>
 
@@ -61,13 +75,14 @@ Dropdown usage without special properties. Styling is added through Industrial-u
   </pre>
 </ShowBlock>
 
-Open the code and configuration tabs in the block above to see, that all the magic is done
+Open the code and configuration tabs in the block above to see that all the magic is done
 simply by adding and `.absolute` class dropdown block.
 
 
 <h2 id="open-on-hover">Open on hover effect</h2>
 
-Pass the `openOnHover` property to open the dropdown when the mouse is on the trigger
+Pass the `openOnHover` property to open the dropdown when the mouse is over the trigger.
+
 
 <ShowBlock>
   <OpenOnHover />
@@ -240,6 +255,9 @@ like `delay`, `duration` and other properties perfectly described in the
 </ShowBlock>
 
 <h2 id="selection-dropdown">Selection dropdown</h2>
+
+This section shows how the dropdown can be used in real frontend cases. 
+With Tailwind CSS it is quite easy.
 
 *Simple selection*: an example of how to pick a value from the list
 

@@ -1,5 +1,6 @@
 <script>
 import Title from '../../_components/page-title.svelte';
+import Link from '../../_components/link.svelte';
 import {Dropdown, Button} from 'industrial-ui';
 import ShowBlock from '../../_components/show-block.svelte';
 import SimpleExample from './simple-example/spectre.svelte';
@@ -15,12 +16,33 @@ import PropsSlotsMarkup from './props-slots-markup.md';
 <Title
   id="examples"
   title="Dropdown"
+  subtitle="See the Spectre CSS + IUI implementation of the dropdown"
 />
+
+
+Dropdown component allows you to toggle a menu from invisible to visible state.
+It can be opened by *trigger* click, hovering or focusing. Your dropdown can be positioned in different corners
+relative to the wrapper and customized to look anyhow depending only on your
+imagination.
+
+All you need to know is that the component accepts two main slots: `trigger` and
+`default`. The first one is passed to the trigger element (it can be button,
+input or any other controller), and the second – inside the dropdown.
+
+You can close the dropdown by clicking outside of it, and, to let the script
+help you, pass an `id` property to component, especially if you have more
+that one dropdown on the page. 
+
+Spectre CSS, in turn, brings some difficulties if you want to use an input as
+the trigger element. In that case, you will have to omit the IUI predefined
+markup by utilizing wrappers. See <Link path="/docs/dropdown" hash="selection dropdown">real life example</Link>
+for it.
 
 <h2 id="simple-example">Simple example</h2>
 
-Dropdown usage without special properties. Just classes are configured with
-some style library that makes it look nice
+Dropdown usage without special properties. Styling is added through Industrial-ui's
+<Link path="/docs/dropdown" hash="configuration">configuration</Link> with the usage 
+of some Spectre CSS classes.
 
 <ShowBlock>
   <SimpleExample />
@@ -66,10 +88,15 @@ some style library that makes it look nice
   </pre>
 </ShowBlock>
 
+Open the code and configuration tabs in the block above to see that all the magic is done
+by adding the Spectre classes which you can find in the stylesheet's documentation and 
+its examples. The problem with Spectre specifically is that it requires you to make the
+trigger a button by adding `.btn` class on it.
+
 
 <h2 id="open-on-hover">Open on hover effect</h2>
 
-Pass the `openOnHover` property to open the dropdown when the mouse is on the trigger
+Pass the `openOnHover` property to open the dropdown when the mouse is on the trigger.
 
 <ShowBlock>
   <OpenOnHover />
@@ -249,6 +276,14 @@ like `delay`, `duration` and other properties perfectly described in the
 
 <h2 id="selection-dropdown">Selection dropdown</h2>
 
+This section shows how the dropdown can be used in real frontend cases. 
+With Spectre CSS you should be careful. For example, in the **Search dropdown**
+case you have to omit the predefined markup by using the `nowrap-trigger` slot
+and even add multiple html-elements to it. By doing this, you loose provided 
+logic and have to deal with it with slot variables and functions.
+Multiple selection is mostly impossible to implement with the pure Spectre CSS without
+adding extra styles.
+
 *Simple selection*: an example of how to pick a value from the list
 
 <ShowBlock>
@@ -308,26 +343,13 @@ like `delay`, `duration` and other properties perfectly described in the
   
   <pre class="code" slot="code">
   ```html
-  No code provided
-  ```
-  </pre>
-  
+  Unfortunately, no code provided
+   ```
+   </pre>
+    
   <pre class="code" slot="config">
-  ```javascript
-  components: {
-    dropdown: {
-      transition: 'slide',
-      transitionOptions: {delay: 0, duration: 300},
-      isProperties: {
-        select: 'btn',
-        primary: 'btn btn-primary'
-      },
-      class: 'dropdown',
-      openClass: 'active',
-      triggerClass: 'btn btn-primary dropdown-toggle',
-      dropdownClass: 'menu',
-    },
-  }
+  ```html
+  Unfortunately, no code provided
   ```
   </pre>
 </ShowBlock>

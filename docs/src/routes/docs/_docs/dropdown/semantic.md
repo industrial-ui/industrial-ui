@@ -1,5 +1,6 @@
 <script>
 import Title from '../../_components/page-title.svelte';
+import Link from '../../_components/link.svelte';
 import {Dropdown, Button} from 'industrial-ui';
 import ShowBlock from '../../_components/show-block.svelte';
 import SimpleExample from './simple-example/semantic.svelte';
@@ -19,8 +20,9 @@ import PropsSlotsMarkup from './props-slots-markup.md';
 
 <h2 id="simple-example">Simple example</h2>
 
-Dropdown usage without special properties. Just classes are configured with
-some style library that makes it look nice
+Dropdown usage without special properties. Styling is added through Industrial-ui's
+<Link path="/docs/dropdown" hash="configuration">configuration</Link> with the usage 
+of some Semantic-ui classes.
 
 <ShowBlock>
   <SimpleExample />
@@ -59,10 +61,14 @@ some style library that makes it look nice
   </pre>
 </ShowBlock>
 
+Open the code and configuration tabs in the block above to see that all the magic is done
+simply by adding the Semantic classes which you can easily find in the stylesheet's
+documentation and its examples.
+
 
 <h2 id="open-on-hover">Open on hover effect</h2>
 
-Pass the `openOnHover` property to open the dropdown when the mouse is on the trigger
+Pass the `openOnHover` property to open the dropdown when the mouse is on the trigger.
 
 <ShowBlock>
   <OpenOnHover />
@@ -236,6 +242,12 @@ like `delay`, `duration` and other properties perfectly described in the
 </ShowBlock>
 
 <h2 id="selection-dropdown">Selection dropdown</h2>
+
+This section shows how the dropdown can be used in real frontend cases. 
+Semantic-ui is a powerful stylesheet, but, instead of Tailwind, you have to be careful. 
+For example, in the **Search dropdown** case you have to omit the predefined markup by 
+using the `nowrap-trigger` slot and even add multiple html-elements to it. By doing 
+this, you loose provided logic and have to deal with it with slot variables and functions.
 
 *Simple selection*: an example of how to pick a value from the list
 
