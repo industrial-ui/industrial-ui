@@ -1,6 +1,6 @@
 <script>
   import {Dropdown, Button} from 'industrial-ui';
-  const ITEMS = ['Russia', 'India', 'Not Russia and not India'];
+  const ITEMS = ['Tailwind', 'Spectre CSS', 'Semantic-ui', 'Materialize', 'Another one', 'Etcetera'];
   let activeItems = [];
   const choose = item => {
     if (activeItems.includes(item)) activeItems = activeItems.filter(itm => itm !== item);
@@ -15,7 +15,7 @@
         <span class="inline-block bg-gray-200 py-2 px-2 mr-2 rounded cursor-pointer" on:click={() => choose(item)}>{item}</span>
       {/each}
     {:else}
-      Countries
+      Supported stylesheets
     {/if}
   </div>
 

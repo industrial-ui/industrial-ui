@@ -297,7 +297,7 @@ this, you loose provided logic and have to deal with it with slot variables and 
   ```html
   <script>
     import {Dropdown} from 'industrial-ui';
-    const ITEMS = ['Russia', 'India', 'Not Russia and not India'];
+    const ITEMS = ['Tailwind', 'Spectre CSS', 'Semantic-ui', 'Materialize', 'Another one', 'Etcetera'];
     let activeItems = [];
     const choose = item => {
       if (activeItems.includes(item)) activeItems = activeItems.filter(itm => itm !== item);
@@ -312,7 +312,7 @@ this, you loose provided logic and have to deal with it with slot variables and 
           <span class="ui label transition visible" on:click={() => choose(item)}>{item}</span>
         {/each}
       {:else}
-        Countries
+        Supported stylesheets
       {/if}
     </div>
   
