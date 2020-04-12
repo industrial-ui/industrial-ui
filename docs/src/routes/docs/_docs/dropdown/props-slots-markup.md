@@ -13,6 +13,41 @@
 </div>
 
 
+<h2 id="configuration">Configuration</h2>
+
+For detailed explanation on the global configuration and common properties like
+`isProperties`, `transition` and others, see the <a href="/docs/configuration">configuration</a> page.
+
+<pre class="code">
+  ```js
+  {
+    components: {
+      dropdown: {
+        // For this block of properties you can see more information in the configuration page
+        transition: null, // The name of opening transition
+        transitionOptions: null, // Options like duration or delay
+        isProperties: {}, // Dynamically added classes like is:search
+        
+        // The classes passes to the dropdown wrapper
+        class: '',
+        openClass: '', // Class will be applied when the dropdown is open
+        closeClass: '', // Class will be applied when the dropdown is closed
+        
+        // Trigger is what you click (or hover) on to open the dropdown. Also has open and close state classes
+        triggerClass: '',
+        openTriggerClass: '',
+        closeTriggerClass: '',
+        
+        // The dropdown itself with open and close state classes
+        dropdownClass: '',
+        openDropdownClass: '',
+        closeDropdownClass: '',
+      }
+    }
+  }
+  ```
+</pre>
+
 <h2 id="slots">Slots</h2>
 
 Named children of the dropdown. It has a *trigger* (opener) and the *dropdown* (what is opened) itself. For the
