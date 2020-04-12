@@ -33,6 +33,10 @@ export default {
       text: 'Properties',
     },
     {
+      slug: 'configuration',
+      text: 'Configuration',
+    },
+    {
       slug: 'slots',
       text: 'Slots',
     },

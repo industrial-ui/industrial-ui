@@ -1,5 +1,6 @@
 <script>
 import Title from '../../_components/page-title.svelte';
+import Link from '../../_components/link.svelte';
 import {Dropdown, Button} from 'industrial-ui';
 import ShowBlock from '../../_components/show-block.svelte';
 import SimpleExample from './simple-example/tailwind.svelte';
@@ -15,12 +16,13 @@ import PropsSlotsMarkup from './props-slots-markup.md';
 <Title
   id="examples"
   title="Dropdown"
+  subtitle="Show how easily can the IUI dropdown be integrated with Tailwind.css"
 />
 
 <h2 id="simple-example">Simple example</h2>
 
-Dropdown usage without special properties. Just classes are configured with
-some style library that makes it look nice
+Dropdown usage without special properties. Styling is added through Industrial-ui's
+<Link path="/docs/dropdown" hash="configuration">configuration</Link> with the usage of some Tailwind.css classes.
 
 <ShowBlock>
   <SimpleExample />
@@ -58,6 +60,9 @@ some style library that makes it look nice
   ```
   </pre>
 </ShowBlock>
+
+Open the code and configuration tabs in the block above to see, that all the magic is done
+simply by adding and `.absolute` class dropdown block.
 
 
 <h2 id="open-on-hover">Open on hover effect</h2>

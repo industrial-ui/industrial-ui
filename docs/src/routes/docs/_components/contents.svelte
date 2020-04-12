@@ -1,5 +1,6 @@
 <script>
   import routes from '../_docs/routes';
+  import getHashLink from '../_helpers/get-hash-link';
 
   export let segment = '';
 
@@ -16,7 +17,7 @@
   <ul>
     {#each contents as link}
       <li>
-        <a href="{`/docs/${segment}#${link.slug}`}">
+        <a href="{getHashLink('/docs/' + segment, link.slug)}">
           {link.text}
         </a>
       </li>
