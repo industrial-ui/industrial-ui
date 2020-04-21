@@ -1,12 +1,13 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+
+const pkg = require('./package.json');
 
 export default {
   input: 'lib/index.js',
   output: [
-    { file: 'index.mjs', format: 'es' },
-    { file: 'index.js', format: 'umd', name: 'iui' },
+    { file: pkg.module, 'format': 'es' },
+    { file: pkg.main, 'format': 'umd', name: 'industrial-ui' },
   ],
   plugins: [
     svelte({
@@ -14,6 +15,5 @@ export default {
       generate: 'ssr',
     }),
     resolve(),
-    commonjs()
   ]
 };
