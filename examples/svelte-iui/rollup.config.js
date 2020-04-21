@@ -48,9 +48,6 @@ export default {
 		// instead of npm run dev), minify
 		production && terser()
 	],
-	watch: {
-		clearScreen: false
-	}
 };
 
 function serve() {
