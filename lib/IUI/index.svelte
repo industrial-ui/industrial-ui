@@ -7,4 +7,7 @@
   setContext('iui-config', prepareConfig(defaultConfig, config));
 </script>
 
+<!-- In order to export as web components (maybe in the bad future) decomment next line -->
+<!--<svelte:options tag="iui-wrap" />-->
+
 <slot />

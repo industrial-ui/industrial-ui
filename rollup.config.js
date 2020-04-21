@@ -3,18 +3,22 @@ import resolve from '@rollup/plugin-node-resolve';
 import {terser} from 'rollup-plugin-terser';
 
 const pkg = require('./package.json');
+const production = !process.env.ROLLUP_WATCH;
 
 export default {
   input: 'lib/index.js',
   output: [
-    { file: pkg.module, 'format': 'es', plugins: [terser()] },
-    { file: pkg.main, 'format': 'umd', name: 'industrial-ui' },
+    { file: pkg.module, format: 'es' },
+    // { file: pkg.main, 'format': 'umd', name: 'industrial-ui' },
+    { file: pkg.main, format: 'iife', name: 'iui' },
   ],
   plugins: [
     svelte({
-      dev: false,
-      generate: 'ssr',
+      dev: !production,
+      // generate: 'ssr',
+      customElement: true,
     }),
     resolve(),
+    production && terser(),
   ]
 };
