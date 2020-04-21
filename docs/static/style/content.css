@@ -71,7 +71,7 @@
   color: whitesmoke;
 }
 
-#content p code {
+#content p code, #content li code {
   background-color: #e5e6e6;
   padding: .3rem .5rem;
   line-height: 1.6;
@@ -106,4 +106,39 @@
   border: 1px solid #b1b4b3;
   border-top: none;
   padding-bottom: 1rem;
+}
+
+
+#content .table {
+  overflow-x: auto;
+  border: 1px solid #b1b4b3;
+  border-radius: .5rem;
+}
+
+#content table {
+  border-radius: 1rem;
+  border-spacing: 0;
+  min-width: 100%;
+}
+
+#content table tbody tr:nth-child(odd) {
+  background: #e5e6e6;
+}
+
+#content table tbody tr td, #content table thead tr th {
+  min-width: 105px;
+  max-width: 50%;
+  padding: .75rem;
+}
+#content table thead tr th:last-child {
+  min-width: 200px;
+  width: 50%;
+}
+
+#content table thead tr th {
+  border-bottom: 1px solid #b1b4b3;
+}
+
+#content table code {
+  color: #191a1a;
 }

@@ -1,7 +1,15 @@
 <script>
+  import {onMount} from 'svelte';
   import {fly} from 'svelte/transition';
-  import {changeTheme} from '../_helpers/theme';
-  import themes from '../_helpers/theme-constants';
+  import {theme} from '../_helpers/active-theme';
+
+  const names = {
+    semantic: 'semantic',
+    spectre: 'spectre',
+    tailwind: 'tailwind',
+    config: 'config',
+    code: 'code',
+  };
 
   let chosen = null;
   const choose = type => {
@@ -20,30 +28,22 @@
         src="/img/code.svg"
         alt="show code usage"
         title="Show code usage"
-        on:click={() => choose('code')}
+        on:click={() => choose(names.code)}
       />
       <img
         src="/img/settings.svg"
         alt="show settings configuration"
         title="Show settings configuration"
-        on:click={() => choose('config')}
+        on:click={() => choose(names.config)}
       />
     </div>
     <slot />
   </div>
   {#if chosen}
     <div in:fly="{{duration: 300}}" class="show-code">
-      {#if chosen === 'config'}
-        <div class="theme-select">
-          {#each themes as theme}
-            <span on:click={() => changeTheme(theme.name)}>{theme.name}</span>
-          {/each}
-        </div>
-      {/if}
-
-      {#if chosen === 'code'}
+      {#if chosen === names.code}
         <slot name="code" />
-      {:else if chosen === 'config'}
+      {:else if chosen === names.config}
         <slot name="config" />
       {/if}
     </div>
@@ -100,22 +100,5 @@
     background-color: white;
     padding: 0 .1rem;
     cursor: pointer;
-  }
-
-  .theme-select {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    z-index: 10;
-  }
-
-  .theme-select span {
-    cursor: pointer;
-    color: #F5F5F5;
-    margin-right: .75rem;
-    padding-top: .5rem;
-    text-transform: uppercase;
-    text-decoration: underline;
   }
 </style>

@@ -5,7 +5,8 @@ import commonjs from '@rollup/plugin-commonjs';
 export default {
   input: 'lib/index.js',
   output: [
-    { file: 'public/index.js', 'format': 'es' },
+    { file: 'index.mjs', format: 'es' },
+    { file: 'index.js', format: 'umd', name: 'iui' },
   ],
   plugins: [
     svelte({

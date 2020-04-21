@@ -1,5 +1,6 @@
 <script>
   import routes from '../_docs/routes';
+  import getHashLink from '../_helpers/get-hash-link';
 
   export let segment = '';
 
@@ -16,7 +17,7 @@
   <ul>
     {#each contents as link}
       <li>
-        <a href="{`/docs/${segment}#${link.slug}`}">
+        <a href="{getHashLink('/docs/' + segment, link.slug)}">
           {link.text}
         </a>
       </li>
@@ -45,17 +46,19 @@
     background-image: linear-gradient(to right, rgba(255, 122, 0, .3), rgba(255, 122, 0, .1), rgba(255, 122, 0, 0));
     font-size: 1.05em;
     transition: all .1s;
-    height: 2em;
+    height: 1.8em;
   }
 
   a {
     width: inherit;
     height: inherit;
     display: block;
-    line-height: 2em;
-    padding-left: .7rem;
-    font-size: 1em;
+    line-height: 1.8em;
+    padding: .05rem 0 .05rem .7rem;
+    font-size: .85em;
     text-transform: capitalize;
+    color: #4b4e4d;
+    font-weight: 300;
   }
 </style>
 

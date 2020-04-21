@@ -1,15 +1,7 @@
 <script>
-import Title from '../_components/page-title.svelte';
 import {Button} from 'industrial-ui';
-import ShowBlock from '../_components/show-block.svelte';
+import ShowBlock from '../../../_components/show-block.svelte';
 </script>
-
-<Title 
-  title="Button"
-/>
-
-Here is how simply you can use the button in pair with *semantic-ui* library 
-or any other stylesheets.
 
 <ShowBlock>
   <Button>Hello</Button>
@@ -45,22 +37,49 @@ or any other stylesheets.
   </Button>
   ```
   </pre>
-
-  <pre class="code" slot="config">
+  
+  <pre class="code" slot="config-semantic">
   ```javascript
-  const config = {
-    components: {
-      button: {
-        class: 'ui button',
-        isProperties: {
-          primary: 'primary',
-          outline: 'outline',
-          icon: 'round icon',
-          labeled: 'labeled',
-        },
-      }
+  components: {
+    button: {
+      class: 'ui button',
+      isProperties: {
+        primary: 'primary',
+        outline: 'outline',
+        icon: 'round icon',
+        labeled: 'labeled',
+      },
     }
-  };
+  }
+  ```
+  </pre>
+  
+  <pre class="code" slot="config-spectre">
+  ```javascript
+  components: {
+    button: {
+      class: 'btn',
+      isProperties: {
+        primary: 'btn-primary',
+      },
+    },
+  }
+  ```
+  </pre>
+
+  <pre class="code" slot="config-tailwind">
+  ```javascript
+  components: {
+    button: {
+      class: 'ui button',
+      isProperties: {
+        primary: 'primary',
+        outline: 'outline',
+        icon: 'round icon',
+        labeled: 'labeled',
+      },
+    }
+  }
   ```
   </pre>
 </ShowBlock>

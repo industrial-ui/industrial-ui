@@ -1,9 +1,13 @@
 <script>
   import {createEventDispatcher} from 'svelte';
   import routes from '../_docs/routes';
+  import StyleChange from './style-change.svelte';
+
   export let segment;
   const dispatch = createEventDispatcher();
 </script>
+
+<StyleChange inNav />
 
 {#each routes as group}
   <div>

@@ -1,8 +1,10 @@
-import Instal from './installation.md';
+import Install from './installation.md';
 import Configuration from './configuration.md';
-import Button from './button.md';
+import Conventions from './conventions/routes';
 import DocStyling from './doc-styling.md';
-import Conventions from './conventions.md';
+import Plan from './plan.md';
+import Button from './button/index.md';
+import Dropdown from './dropdown/routes';
 
 export default [
   {
@@ -10,7 +12,7 @@ export default [
     nested: [
       {
         name: 'installation',
-        component: Instal,
+        component: Install,
         meta: {
           title: 'Installation',
           description: 'Get started with industrial-ui right now by following these simple steps of installation the library',
@@ -24,57 +26,7 @@ export default [
           description: 'Introduction to industrial-ui. How to configure it to make your development as joyful as possible'
         }
       },
-      {
-        name: 'conventions',
-        component: Conventions,
-        meta: {
-          title: 'UI Conventions',
-          description: 'The philosophy behind the industrial-ui project and how to live and code with it easily',
-        },
-        contents: [
-          {
-            slug: 'naming',
-            text: 'Naming',
-          },
-          {
-            slug: 'ssr-compatibility',
-            text: 'SSR compatibility',
-          },
-          {
-            slug: 'framework-support',
-            text: 'Framework support',
-          },
-          {
-            slug: 'styling',
-            text: 'Styling',
-          },
-          {
-            slug: 'event-dispatch',
-            text: 'Event dispatching',
-          },
-          {
-            slug: 'logic',
-            text: 'Logic',
-          },
-          {
-            slug: 'slots',
-            text: 'Slots',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Components',
-    nested: [
-      {
-        name: 'button',
-        component: Button,
-        meta: {
-          title: 'Button component',
-          description: ''
-        }
-      },
+      Conventions,
       {
         name: 'doc-styling',
         component: DocStyling,
@@ -107,8 +59,60 @@ export default [
             slug: 'showcase-block',
             text: 'Showcase block',
           },
+          {
+            slug: 'table',
+            text: 'Table',
+          },
         ],
       },
+      {
+        name: 'plan',
+        component: Plan,
+        meta: {
+          title: 'Development plan',
+          description: 'The Industrial-ui development roadmap. What is done and what is left for the future'
+        },
+        contents: [
+          {
+            slug: 'create',
+            text: 'Project creation',
+          },
+          {
+            slug: 'dropdown',
+            text: 'Dropdown component',
+          },
+          {
+            slug: 'vue-react-support',
+            text: 'Vue&React support',
+          },
+          {
+            slug: 'npm-publish',
+            text: 'Publish IUI to NPM',
+          },
+          {
+            slug: 'other-components',
+            text: 'Other components',
+          },
+          {
+            slug: 'release',
+            text: 'Release',
+          },
+        ],
+      }
+    ],
+  },
+  {
+    title: 'Components',
+    nested: [
+      {
+        name: 'button',
+        component: Button,
+        meta: {
+          title: 'Button component',
+          description: ''
+        }
+      },
+      Dropdown,
     ]
   },
 ];

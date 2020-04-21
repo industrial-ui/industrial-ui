@@ -103,9 +103,8 @@ look good
   ```
   </pre>
 
-  <pre class="code" slot="config">
-  ```javascript
-  const config = {
+  <pre class="code" slot="semantic">
+    ```javascript
     components: {
       button: {
         class: 'ui button',
@@ -117,9 +116,50 @@ look good
         },
       }
     }
-  };
-  ```
-  </pre>
+    ```
+    </pre>
+  
+    <pre class="code" slot="spectre">
+    ```javascript
+    components: {
+      button: {
+        class: 'ui button',
+        isProperties: {
+          primary: 'primary',
+          outline: 'outline',
+          icon: 'round icon',
+          labeled: 'labeled',
+        },
+      }
+    }
+    ```
+    </pre>
+  
+    <pre class="code" slot="tailwind">
+    ```javascript
+    components: {
+      button: {
+        class: 'ui button',
+        isProperties: {
+          primary: 'primary',
+          outline: 'outline',
+          icon: 'round icon',
+          labeled: 'labeled',
+        },
+      }
+    }
+    ```
+    </pre>
 </ShowBlock>
+
+<h1 id="table">Table</h1>
+
+<div class="table">
+  | Prop name | Type | Default | Description |
+  |-----------|:----:|:-------:|-------------|
+  | col 1 | `String` | `''` | Some property |
+  | col 2 | `Boolean` | `true` | Just property|
+  | col 3 | `Number` | `353` | Khello |
+</div>
 
 And, i guess, this was the biggest part
