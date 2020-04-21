@@ -59,16 +59,16 @@
     </div>
   </slot>
 
+  <slot name="nowrap-dropdown" {close} {open} {value} />
+
   <!-- Dropdown itself -->
-  <slot name="nowrap-dropdown">
-    {#if value}
-      <div
-        class={composeClasses(config.dropdownClass, dropdownClass, value ? config.openDropdownClass : config.closeDropdownClass)}
-        transition:dynamic={{transition: transition || config.transition, options: transition ? {} : config.transitionOptions, customs: globalConfig.customTransitions}}
-        use:checkPosition={position}
-      >
-        <slot {close} {open} {value} />
-      </div>
-    {/if}
-  </slot>
+  {#if value}
+    <div
+      class={composeClasses(config.dropdownClass, dropdownClass, value ? config.openDropdownClass : config.closeDropdownClass)}
+      transition:dynamic={{transition: transition || config.transition, options: transition ? {} : config.transitionOptions, customs: globalConfig.customTransitions}}
+      use:checkPosition={position}
+    >
+      <slot {close} {open} {value} />
+    </div>
+  {/if}
 </div>
