@@ -59,7 +59,7 @@ any special loss in functionality. The **Dropdown** has two *slots*,
 but the existing solutions do not support slots at all. And I have really
 forgot React, so more investigations needed.
 
-* ❌ Install the library locally with the simple svelte project to check accessibility
+* ✅ Install the library locally with the simple svelte project to check accessibility
 * ❌ Make a React solution for importing Svelte components (with nice API and full functionality)
 * ❌ Create an example React app inside documentation that would show the working code
 * ❌ The same with Vue. A solution needed
@@ -70,9 +70,8 @@ These steps might be broken into smaller once when I will start digging into it.
 
 <h2 id="npm-publish">NPM publishing and peer review</h2>
 
-* ❌ Refactor the project for docs to import UMD-format compiled library
-* ❌ Publish project to npm
-* ❌ Test the npm library and investigate the versioning. Make a release and create `changelog`
+* ✅ Publish project to npm
+* ✅ Test the npm library and investigate the versioning. Make a release and create `changelog`
 * ❌ Send the library to some Svelte-working dudes and do a peer review
 * ❌ Fix most annoyed problems listed by the people
 
