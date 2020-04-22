@@ -4,8 +4,15 @@
   import prepareConfig from '../utils/prepare-config';
 
   export let config = {};
-  setContext('iui-config', prepareConfig(defaultConfig, config));
+  const prepared = prepareConfig(defaultConfig, config);
+  setContext('iui-config', prepared);
 </script>
+
+<svelte:head>
+  {#each prepared.stylesheets as style}
+    <link rel="stylesheet" type="text/css" href={style} />
+  {/each}
+</svelte:head>
 
 <!-- In order to export as web components (maybe in the bad future) decomment next line -->
 <!--<svelte:options tag="iui-wrap" />-->
