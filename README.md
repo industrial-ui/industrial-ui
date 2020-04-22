@@ -2,7 +2,7 @@
 *Industry-oriented library of unstyled UI-components.*
 
 Here is the short description. Please, refer to
-(full documentation)[https://industrial-ui.now.sh/]
+[full documentation](https://industrial-ui.now.sh/)
 about all features of Industrial-ui.
 
 ## Problem
@@ -70,11 +70,6 @@ integrate it's CDN styles with Industrial-ui. Just [configure](https://industria
 
 The IUI usage above will be transformed into a nice-looking Button with all the
 logic behind.
-
-## What next?
-
-Please, read the documentation on more details and supported components usage.
-Basically, everything is in [the documentation](https://industrial-ui.now.sh/docs/).
 
 ## License
 
