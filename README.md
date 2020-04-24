@@ -61,7 +61,7 @@ integrate it's CDN styles with Industrial-ui. Just [configure](https://industria
   const config = {
     stylesheets: ['https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css'],
     components: {
-      Button: {
+      button: {
         class: 'bg-gray-200 font-semibold py-2 px-6 rounded inline-flex items-center'
       }
     }
