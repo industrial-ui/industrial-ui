@@ -26,6 +26,25 @@ export default [
           description: 'Introduction to industrial-ui. How to configure it to make your development as joyful as possible'
         }
       },
+    ],
+  },
+  {
+    title: 'Components',
+    nested: [
+      {
+        name: 'button',
+        component: Button,
+        meta: {
+          title: 'Button component',
+          description: ''
+        }
+      },
+      Dropdown,
+    ]
+  },
+  {
+    title: 'Contributors',
+    nested: [
       Conventions,
       {
         name: 'doc-styling',
@@ -100,19 +119,5 @@ export default [
         ],
       }
     ],
-  },
-  {
-    title: 'Components',
-    nested: [
-      {
-        name: 'button',
-        component: Button,
-        meta: {
-          title: 'Button component',
-          description: ''
-        }
-      },
-      Dropdown,
-    ]
   },
 ];
