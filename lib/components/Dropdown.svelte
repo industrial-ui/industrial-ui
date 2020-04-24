@@ -1,13 +1,13 @@
 <script>
   import {getContext} from 'svelte';
   import {current_component} from 'svelte/internal';
-  import {getEventAction} from './utils/dispatch-events';
-  import filterIsProps from './utils/is-properties';
-  import clickOutside from './utils/click-outside';
-  import checkPosition from './utils/check-position';
-  import filterProps from './utils/filter-props';
-  import composeClasses from './utils/compose-classes';
-  import dynamic from './utils/transition';
+  import {getEventAction} from '../utils/dispatch-events';
+  import filterIsProps from '../utils/is-properties';
+  import clickOutside from '../utils/click-outside';
+  import checkPosition from '../utils/check-position';
+  import filterProps from '../utils/filter-props';
+  import composeClasses from '../utils/compose-classes';
+  import dynamic from '../utils/transition';
 
   const globalConfig = getContext('iui-config');
   const config = globalConfig.components.dropdown;

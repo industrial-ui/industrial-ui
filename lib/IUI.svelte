@@ -1,7 +1,7 @@
 <script>
   import {setContext} from 'svelte';
   import defaultConfig from './config';
-  import prepareConfig from '../utils/prepare-config';
+  import prepareConfig from './utils/prepare-config';
 
   export let config = {};
   const prepared = prepareConfig(defaultConfig, config);
