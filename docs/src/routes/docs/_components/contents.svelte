@@ -44,9 +44,12 @@
 
   li:hover {
     background-image: linear-gradient(to right, rgba(255, 122, 0, .3), rgba(255, 122, 0, .1), rgba(255, 122, 0, 0));
-    font-size: 1.05em;
     transition: all .1s;
-    height: 1.8em;
+  }
+
+  li:hover a {
+    transform: scale(1.05);
+    transition: all .1s;
   }
 
   a {

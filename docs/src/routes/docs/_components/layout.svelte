@@ -69,6 +69,7 @@
     right: 0;
     display: flex;
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
   nav {
