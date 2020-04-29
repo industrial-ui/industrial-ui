@@ -1,6 +1,6 @@
 import Install from './installation.md';
-import Configuration from './configuration.md';
 import Conventions from './conventions/routes';
+import Configuration from './configuration/routes';
 import DocStyling from './doc-styling.md';
 import Plan from './plan.md';
 import Button from './button/index.md';
@@ -18,14 +18,7 @@ export default [
           description: 'Get started with industrial-ui right now by following these simple steps of installation the library',
         },
       },
-      {
-        name: 'configuration',
-        component: Configuration,
-        meta: {
-          title: 'Configuration',
-          description: 'Introduction to industrial-ui. How to configure it to make your development as joyful as possible'
-        }
-      },
+      Configuration,
     ],
   },
   {
