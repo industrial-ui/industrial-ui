@@ -19,10 +19,11 @@
   export let id = null;
   export let value = false;
   export let transition = null;
+  export let transitionOptions = null;
   export let position = null;
-  const propsList = ['id', 'class', 'position', 'triggerClass', 'dropdownClass', 'value', 'openOnHover', 'transition', ...Object.keys(config.isProperties)];
+  const propsList = ['id', 'class', 'position', 'triggerClass', 'dropdownClass', 'value', 'openOnHover', 'transition', 'transitionOptions', ...Object.keys(config.isProperties)];
 
-  if (!id) console.warn('Dropdown has no id property');
+  if (!id) console.warn('Dropdown has no id property. It may cause click-outside work not as expected.');
 
   const close = () => value = false;
   const open = () => value = true;
@@ -65,7 +66,7 @@
   {#if value}
     <div
       class={composeClasses(config.dropdownClass, dropdownClass, value ? config.openDropdownClass : config.closeDropdownClass)}
-      transition:dynamic={{transition: transition || config.transition, options: transition ? {} : config.transitionOptions, customs: globalConfig.customTransitions}}
+      transition:dynamic={{transition: transition || config.transition, options: transitionOptions || config.transitionOptions, customs: globalConfig.customTransitions}}
       use:checkPosition={position}
     >
       <slot {close} {open} {value} />

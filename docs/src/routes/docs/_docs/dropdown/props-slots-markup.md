@@ -9,6 +9,7 @@
   | `triggerClass` | `String` | `''` | Trigger (opener element that should be clicked) class |
   | `dropdownClass` | `String` | `''` | Dropdown class |
   | `transition` | `String` | `null` | Transition applied for the dropdown (it is better to put in the config but not as a prop) |
+  | `transitionOptions` | `Object` | `null` | Transition object that defines, for example, delay and duration of how a dropdown will be anumated |
   | `position` | `String` | `null` | Position of the dropdown. Requires `position: absolute` for it. One of `'auto', 'bottom left', 'bottom right', 'top left', 'top right'` |
 </div>
 
