@@ -1,8 +1,8 @@
 import Install from './installation.md';
 import Conventions from './conventions/routes';
 import Configuration from './configuration/routes';
-import DocStyling from './doc-styling.md';
-import Plan from './plan.md';
+import DocStyling from './doc-styling/routes';
+import Plan from './plan/routes';
 import Button from './button/index.md';
 import Dropdown from './dropdown/routes';
 
@@ -39,78 +39,8 @@ export default [
     title: 'Contributors',
     nested: [
       Conventions,
-      {
-        name: 'doc-styling',
-        component: DocStyling,
-        meta: {
-          title: 'Documentation Components',
-          description: ''
-        },
-        contents: [
-          {
-            slug: 'headings',
-            text: 'Headings',
-          },
-          {
-            slug: 'simple-text',
-            text: 'Simple text',
-          },
-          {
-            slug: 'lists',
-            text: 'Lists',
-          },
-          {
-            slug: 'text-types',
-            text: 'Text types',
-          },
-          {
-            slug: 'code',
-            text: 'Code',
-          },
-          {
-            slug: 'showcase-block',
-            text: 'Showcase block',
-          },
-          {
-            slug: 'table',
-            text: 'Table',
-          },
-        ],
-      },
-      {
-        name: 'plan',
-        component: Plan,
-        meta: {
-          title: 'Development plan',
-          description: 'The Industrial-ui development roadmap. What is done and what is left for the future'
-        },
-        contents: [
-          {
-            slug: 'create',
-            text: 'Project creation',
-          },
-          {
-            slug: 'dropdown',
-            text: 'Dropdown component',
-          },
-          {
-            slug: 'vue-react-support',
-            text: 'Vue&React support',
-          },
-          {
-            slug: 'npm-publish',
-            text: 'Publish IUI to NPM',
-          },
-          {
-            slug: 'other-components',
-            text: 'Other components',
-          },
-          {
-            slug: 'release',
-            text: 'Release',
-          },
-        ],
-      }
+      DocStyling,
+      Plan,
     ],
   },
 ];

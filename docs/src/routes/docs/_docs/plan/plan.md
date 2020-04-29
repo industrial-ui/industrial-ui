@@ -1,5 +1,5 @@
 <script>
-import Title from '../_components/page-title.svelte';
+import Title from '../../_components/page-title.svelte';
 </script>
 
 <Title 
