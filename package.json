@@ -32,11 +32,11 @@
   },
   "homepage": "https://github.com/VanishMax/industrial-ui#readme",
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^7.1.1",
-    "rollup": "^1.31.0",
-    "rollup-plugin-svelte": "^5.1.1",
-    "rollup-plugin-terser": "^5.3.0",
-    "svelte": "^3.18.1"
+    "@rollup/plugin-node-resolve": "7.1.1",
+    "rollup": "1.31.0",
+    "rollup-plugin-svelte": "5.1.1",
+    "rollup-plugin-terser": "5.3.0",
+    "svelte": "3.18.1"
   },
   "dependencies": {},
   "renovate": {
