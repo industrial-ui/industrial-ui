@@ -60,10 +60,14 @@ but the existing solutions do not support slots at all. And I have really
 forgot React, so more investigations needed.
 
 * ✅ Install the library locally with the simple svelte project to check accessibility
-* ❌ Make a React solution for importing Svelte components (with nice API and full functionality)
-* ❌ Create an example React app inside documentation that would show the working code
-* ❌ The same with Vue. A solution needed
-* ❌ And the Vue app example needed
+* ❌ Make my svelte-adapter's fork work for React components
+* ❌ Make my svelte-adapter's fork work for Vue components
+* ❌ Add SSR support for React's svelte adapter
+* ❌ Add SSR support for Vue's svelte adapter
+* ❌ Add Slots support for React's svelte adapter
+* ❌ Add Slots support for Vue's svelte adapter
+* ❌ Add examples for React svelte-adapter support
+* ❌ Add examples for Vue svelte-adapter support
 
 These steps might be broken into smaller once when I will start digging into it.
 
@@ -72,8 +76,15 @@ These steps might be broken into smaller once when I will start digging into it.
 
 * ✅ Publish project to npm
 * ✅ Test the npm library and investigate the versioning. Make a release and create `changelog`
-* ❌ Send the library to some Svelte-working dudes and do a peer review
-* ❌ Fix most annoyed problems listed by the people
+* ✅ Send the library to some Svelte-working dudes and do a peer review
+* ✅ Fix most annoyed problems listed by the people
+* ✅ Add contributing.md and code of conduct
+* ✅ Document all code
+* ❌ Add components unit testing
+* ❌ Add documentation cypress testing
+* ❌ Move utils to TypeScript
+* ❌ Add GitHub actions for testing before submitting PR
+
 
 <h2 id="other-components">Other components</h2>
 
