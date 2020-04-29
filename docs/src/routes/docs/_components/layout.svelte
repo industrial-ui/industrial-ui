@@ -34,7 +34,9 @@
     <div class="grow" />
     <footer>
       <hr />
-      Copyright <a href="https://github.com/VanishMax" target="_blank" rel="noreferrer noopener">by VanishMax</a>, 2020
+      <div>
+        Copyright <a href="https://github.com/VanishMax" target="_blank" rel="noreferrer noopener">by VanishMax</a>, 2020
+      </div>
     </footer>
   </main>
 
@@ -102,10 +104,15 @@
   }
 
   footer {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem 1.25rem;
     text-align: center;
     color: #646866;
   }
+
+  footer > div {
+    margin-top: .75rem;
+  }
+
   footer a {
     color: #646866 !important;
   }

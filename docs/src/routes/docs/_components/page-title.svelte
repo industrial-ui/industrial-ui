@@ -11,12 +11,16 @@
 </header>
 
 <style>
+  header {
+    margin-bottom: 1rem;
+  }
+
   h1 {
     margin: 0 0 0.3rem !important;
   }
 
   p {
-    margin: 0;
+    margin: 0 !important;
     font-style: italic;
     text-align: left !important;
   }

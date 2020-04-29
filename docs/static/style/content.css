@@ -18,18 +18,30 @@
 #content h2,
 #content h3
 {
-  margin: 1rem 0;
+  margin-top: 2.5rem;
   color: black;
   line-height: 1.3;
   font-family: 'Noto Sans', sans-serif;
 }
 
-#content h1 {
-  font-size: 1.9em;
+#content p,
+#content ul,
+#content .code,
+#content .table
+{
+  margin-top: 1rem;
 }
 
-#content h1[id]:not(.first) {
-  margin-top: .75rem;
+#content .code {
+  margin-bottom: -1rem;
+}
+
+#content li {
+  margin-top: .3rem;
+}
+
+#content h1 {
+  font-size: 1.9em;
 }
 
 #content h2 {
@@ -48,6 +60,10 @@
   text-align: justify;
 }
 
+#content li {
+  line-height: 1.3;
+}
+
 #content strong, #content b {
   font-weight: 700;
 }
@@ -55,10 +71,6 @@
 #content ul {
   padding-left: 1rem;
   padding-right: 0;
-}
-
-#content li {
-  margin: .5rem 0;
 }
 
 #content a {
@@ -99,7 +111,7 @@
 }
 
 #content .show-block .show-showcase > *:not(.show-navbar) {
-  margin: .5rem;
+  margin: 0;
 }
 
 #content .show-block .show-code .code {
