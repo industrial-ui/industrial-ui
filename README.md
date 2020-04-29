@@ -68,7 +68,7 @@ integrate it's CDN styles with Industrial-ui. Just [configure](https://industria
   };
 ``` 
 
-The UI usage above will be transformed into a nice-looking Button with all the
+The IUI usage above will be transformed into a nice-looking Button with all the
 logic behind.
 
 ## License
