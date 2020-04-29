@@ -26,6 +26,11 @@
   </div>
 {/each}
 
+<a href="https://github.com/VanishMax/industrial-ui" target="_blank" rel="noreferrer noopener">
+  <span>Check out iui repo</span>
+  <img src="/img/github.svg" alt="link to github repository" />
+</a>
+
 <style>
   div {
     margin-top: 1rem;
@@ -60,7 +65,7 @@
     color: rgba(255, 122, 0, 1);
   }
 
-  a {
+  a:not([target="_blank"]) {
     width: inherit;
     height: inherit;
     display: block;
@@ -68,8 +73,33 @@
     text-transform: capitalize;
   }
 
-  a:hover {
+  a:not([target="_blank"]):hover {
     font-size: 1.05em;
     transition: all .1s;
+  }
+
+  a[target="_blank"] {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  a[target="_blank"] img {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  a[target="_blank"] span {
+    margin-right: 0.75rem;
+    font-size: 0.9em;
+    font-style: italic;
+  }
+
+  @media screen and (min-width: 768px) {
+    a[target="_blank"] {
+      display: none;
+    }
   }
 </style>

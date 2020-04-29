@@ -5,15 +5,6 @@
 
 
 <div class="left">
-  <label>
-    <input
-      type="checkbox"
-      name="menu-opener"
-      id="menu-opener"
-      bind:checked={open}
-    >
-    <i/>
-  </label>
   <a href="/">
     <div class="logo">
       <h2>industrial-ui</h2>
@@ -26,6 +17,15 @@
   <a href="https://github.com/VanishMax/industrial-ui" target="_blank" rel="noreferrer noopener">
     <img src="/img/github.svg" alt="link to github repository" />
   </a>
+  <label>
+    <input
+      type="checkbox"
+      name="menu-opener"
+      id="menu-opener"
+      bind:checked={open}
+    >
+    <i/>
+  </label>
 </div>
 
 
@@ -93,6 +93,10 @@
   }
 
   @media screen and (max-width: 768px) {
+    a[target="_blank"] {
+      display: none;
+    }
+
     label {
       display: block;
       margin-right: 1rem;
