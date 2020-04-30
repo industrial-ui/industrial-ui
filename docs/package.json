@@ -19,7 +19,7 @@
     "rollup-plugin-svelte": "5.1.1",
     "rollup-plugin-terser": "5.2.0",
     "sapper": "0.27.12",
-    "svelte": "3.18.1",
+    "svelte": "3.21.0",
     "svelte-preprocess-markdown": "2.5.11",
     "tocca": "2.0.9"
   },
