@@ -32,31 +32,35 @@
   },
   "homepage": "https://github.com/VanishMax/industrial-ui#readme",
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "7.9.6",
     "@rollup/plugin-node-resolve": "7.1.3",
-    "@testing-library/jest-dom": "^5.5.0",
-    "@testing-library/svelte": "^3.0.0",
-    "babel-jest": "^25.5.1",
-    "jest": "^25.5.1",
-    "rollup": "1.32.1",
-    "rollup-plugin-svelte": "5.1.1",
+    "@testing-library/jest-dom": "5.5.0",
+    "@testing-library/svelte": "3.0.0",
+    "babel-jest": "25.5.1",
+    "jest": "25.5.2",
+    "rollup": "2.7.5",
+    "rollup-plugin-svelte": "5.2.1",
     "rollup-plugin-terser": "5.3.0",
     "svelte": "3.21.0",
-    "svelte-jester": "^1.0.5"
+    "svelte-jester": "1.0.5"
   },
   "dependencies": {},
   "renovate": {
+    "groupName": "all dependencies",
+    "separateMajorMinor": false,
+    "groupSlug": "all",
     "packageRules": [
       {
-        "updateTypes": [
-          "minor",
-          "patch",
-          "pin",
-          "digest"
+        "packagePatterns": [
+          "*"
         ],
-        "automerge": true
+        "groupName": "all dependencies",
+        "groupSlug": "all"
       }
-    ]
+    ],
+    "lockFileMaintenance": {
+      "enabled": false
+    }
   }
 }
