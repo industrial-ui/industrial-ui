@@ -20,6 +20,7 @@ export default {
 	client: {
 		input: config.client.input(),
 		output: config.client.output(),
+    preserveEntrySignatures: false,
 		plugins: [
 			replace({
 				'process.browser': true,
