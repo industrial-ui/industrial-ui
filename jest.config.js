@@ -5,8 +5,7 @@ module.exports = {
   },
   moduleFileExtensions: ["js", "svelte"],
   testPathIgnorePatterns: ["node_modules"],
-  bail: false,
-  verbose: true,
   transformIgnorePatterns: ["node_modules"],
+  verbose: true,
   setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"]
 };

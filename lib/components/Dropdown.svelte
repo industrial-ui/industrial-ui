@@ -9,10 +9,6 @@
   import composeClasses from '../utils/compose-classes';
   import dynamic from '../utils/transition';
 
-  const globalConfig = getContext('iui-config');
-  const config = globalConfig.components.dropdown;
-  const events = getEventAction(current_component);
-
   export let triggerClass = '';
   export let dropdownClass = '';
   export let openOnHover = false;
@@ -21,9 +17,16 @@
   export let transition = null;
   export let transitionOptions = null;
   export let position = null;
-  const propsList = ['id', 'class', 'position', 'triggerClass', 'dropdownClass', 'value', 'openOnHover', 'transition', 'transitionOptions', ...Object.keys(config.isProperties)];
+  export let mockConfig = null;
 
   if (!id) console.warn('Dropdown has no id property. It may cause click-outside work not as expected.');
+
+  const globalConfig = mockConfig || getContext('iui-config');
+  if (!globalConfig) throw new Error('No config specified. Please, wrap your component into IUI.');
+
+  const config = globalConfig.components.dropdown;
+  const events = getEventAction(current_component, !!mockConfig);
+  const propsList = ['id', 'class', 'position', 'triggerClass', 'dropdownClass', 'value', 'openOnHover', 'transition', 'transitionOptions', 'mockConfig', ...Object.keys(config.isProperties)];
 
   const close = () => value = false;
   const open = () => value = true;
