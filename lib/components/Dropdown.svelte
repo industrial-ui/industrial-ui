@@ -1,7 +1,7 @@
 <script>
   import {getContext} from 'svelte';
   import {current_component} from 'svelte/internal';
-  import {getEventAction} from '../utils/dispatch-events';
+  import getEventAction from '../utils/dispatch-events';
   import filterIsProps from '../utils/is-properties';
   import clickOutside from '../utils/click-outside';
   import checkPosition from '../utils/check-position';
