@@ -6,8 +6,6 @@
   "module": "dist/index.mjs",
   "svelte": "lib/index.js",
   "scripts": {
-    "test": "jest lib",
-    "test:watch": "npm run test -- --watch",
     "docs-dev": "cd ./docs && npm run dev",
     "docs-build": "cd ./docs && npm run build",
     "dev": "rollup -c -w",
@@ -41,10 +39,10 @@
     "@testing-library/svelte": "^3.0.0",
     "babel-jest": "^25.5.1",
     "jest": "^25.5.1",
-    "rollup": "1.31.0",
+    "rollup": "1.32.1",
     "rollup-plugin-svelte": "5.1.1",
     "rollup-plugin-terser": "5.3.0",
-    "svelte": "3.18.1",
+    "svelte": "3.21.0",
     "svelte-jester": "^1.0.5"
   },
   "dependencies": {},
