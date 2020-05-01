@@ -19,6 +19,8 @@ it, if you want to make it happen by yourself. Then, make changes and open a PR 
 * Do not update dependencies, Renovate GitHub bot will do it for us
 * Remember to update documentation when you add or remove a feature from library
 * It is better to update examples if there is a feature that concerns it
+* If you are changing components, also update the tests for them
+* Make sure the CI jobs in your PR are passing. Otherwise, PR will not be merged
 
 ## Code of conduct
 

@@ -5,3 +5,4 @@ docs
 .idea
 .DS_Code
 yarn.lock
+lib/components/__tests__
