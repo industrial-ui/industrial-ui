@@ -11,7 +11,9 @@
     "dev": "rollup -c -w",
     "export": "rollup -c",
     "build": "rollup -c && mkdir __sapper__ && cd ./docs && npm install && npm run build && mv ./__sapper__ ../",
-    "start": "cd docs && npm install && npm start"
+    "start": "cd docs && npm install && npm start",
+    "test": "jest lib",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
