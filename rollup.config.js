@@ -9,14 +9,12 @@ export default {
   input: 'lib/index.js',
   output: [
     { file: pkg.module, format: 'es' },
-    // { file: pkg.main, 'format': 'umd', name: 'industrial-ui' },
     { file: pkg.main, format: 'iife', name: 'iui' },
   ],
   plugins: [
     svelte({
       dev: !production,
-      // generate: 'ssr',
-      customElement: true,
+      generate: 'ssr',
     }),
     resolve(),
     production && terser(),

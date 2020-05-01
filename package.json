@@ -1,7 +1,7 @@
 {
   "name": "industrial-ui",
   "version": "0.1.3",
-  "description": "Industry-oriented library of unstyled UI-components",
+  "description": "Production-oriented library of styleless UI-components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "svelte": "lib/index.js",
@@ -11,7 +11,9 @@
     "dev": "rollup -c -w",
     "export": "rollup -c",
     "build": "rollup -c && mkdir __sapper__ && cd ./docs && npm install && npm run build && mv ./__sapper__ ../",
-    "start": "cd docs && npm install && npm start"
+    "start": "cd docs && npm install && npm start",
+    "test": "jest lib",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -32,27 +34,35 @@
   },
   "homepage": "https://github.com/VanishMax/industrial-ui#readme",
   "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "7.9.6",
     "@rollup/plugin-node-resolve": "7.1.3",
-    "rollup": "1.32.1",
-    "rollup-plugin-svelte": "5.1.1",
+    "@testing-library/jest-dom": "5.5.0",
+    "@testing-library/svelte": "3.0.0",
+    "babel-jest": "25.5.1",
+    "jest": "25.5.2",
+    "rollup": "2.7.5",
+    "rollup-plugin-svelte": "5.2.1",
     "rollup-plugin-terser": "5.3.0",
-    "svelte": "3.21.0"
+    "svelte": "3.21.0",
+    "svelte-jester": "1.0.5"
   },
   "dependencies": {},
   "renovate": {
-    "extends": [
-      "config:base"
-    ],
+    "groupName": "all dependencies",
+    "separateMajorMinor": false,
+    "groupSlug": "all",
     "packageRules": [
       {
-        "updateTypes": [
-          "minor",
-          "patch",
-          "pin",
-          "digest"
+        "packagePatterns": [
+          "*"
         ],
-        "automerge": true
+        "groupName": "all dependencies",
+        "groupSlug": "all"
       }
-    ]
+    ],
+    "lockFileMaintenance": {
+      "enabled": false
+    }
   }
 }
