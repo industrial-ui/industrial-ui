@@ -1,0 +1,24 @@
+name: Industrial-ui CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, edited]
+    branches:
+      - '*'
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and test
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - run: npm ci
+    - run: npm run export
+    - run: npm run docs-build
+    - run: npm test
