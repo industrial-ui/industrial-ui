@@ -7,3 +7,7 @@ static/docs
 __sapper__
 yarn.lock
 webpack.config.js
+cypress/support
+cypress/plugins
+cypress/fixtures
+cypress/videos
