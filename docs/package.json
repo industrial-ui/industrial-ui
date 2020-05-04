@@ -10,7 +10,7 @@
     "cypress": "cypress open -C ./cypress/config.json",
     "cypress:headless": "cypress run --headless -C ./cypress/config.json",
     "test": "sapper build && run-p --race run-builds cypress:headless",
-    "test:dev": "sapper build && run-p --race run-builds cypress"
+    "test:dev": "run-p --race dev cypress"
   },
   "author": "VanishMax",
   "devDependencies": {

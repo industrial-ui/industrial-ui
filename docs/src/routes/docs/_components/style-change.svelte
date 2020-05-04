@@ -39,7 +39,7 @@
 
     <ul>
       {#each styles as style}
-        <li on:click="{() => {changeTheme(style.slug); close();}}">
+        <li on:click="{() => {changeTheme(style.slug); close();}}" data-stylesheet={style.slug}>
           {style.name}
           <a href={style.credits} target="_blank" rel="noreferrer nofollow" on:click|stopPropagation>
             <img src="/img/question.svg" alt={'credits to ' + style.name} />
