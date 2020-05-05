@@ -4,7 +4,7 @@
 
 <Dropdown let:close openOnHover id="dd-2">
   <div slot="trigger">
-    <Button>Toggle me</Button>
+    <Button>Hover me</Button>
   </div>
 
   <div class="item" on:click={() => close()}>Hello, there</div>

@@ -4,7 +4,7 @@
 
 <Dropdown openOnHover id="dd-2" is:primary>
   <span slot="trigger">
-    Toggle me
+    Hover me
   </span>
 
   <div class="menu-item">
