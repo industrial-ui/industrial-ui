@@ -80,10 +80,9 @@ These steps might be broken into smaller once when I will start digging into it.
 * ✅ Fix most annoyed problems listed by the people
 * ✅ Add contributing.md and code of conduct
 * ✅ Document all code
-* ❌ Add components unit testing
-* ❌ Add documentation cypress testing
-* ❌ Move utils to TypeScript
-* ❌ Add GitHub actions for testing before submitting PR
+* ✅ Add components unit testing
+* ✅ Add documentation Cypress testing
+* ✅ Add GitHub actions for testing before submitting PR
 
 
 <h2 id="other-components">Other components</h2>
