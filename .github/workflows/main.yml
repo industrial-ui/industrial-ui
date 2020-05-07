@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - '*'
+  pull_request:
+      types: [opened, edited]
+      branches:
+        - '*'
 
 jobs:
   build_and_test:
