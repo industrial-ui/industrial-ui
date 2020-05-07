@@ -5,6 +5,7 @@ import DocStyling from './doc-styling/routes';
 import Plan from './plan/routes';
 import Button from './button/index.md';
 import Dropdown from './dropdown/routes';
+import Modal from './modal/routes';
 
 export default [
   {
@@ -33,6 +34,7 @@ export default [
         }
       },
       Dropdown,
+      Modal,
     ]
   },
   {
