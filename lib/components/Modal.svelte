@@ -22,12 +22,7 @@
   const propsList = ['id', 'class', 'overlayClass', 'value', 'mockConfig', ...Object.keys(config.isProperties)];
 
   let dialog = null;
-  onMount(() => {
-    if (typeof window !== 'undefined') {
-      console.log('here');
-      document.body.appendChild(dialog);
-    }
-  });
+  onMount(() => document.body.appendChild(dialog));
 
   const close = () => {
     value = false;
