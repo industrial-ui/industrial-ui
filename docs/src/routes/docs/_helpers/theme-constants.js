@@ -44,10 +44,6 @@ export const SemanticTheme = {
       overlayClass: 'ui page dimmer',
       openOverlayClass: 'visible active',
       closeOverlayClass: 'hidden',
-
-      bodyClass: '',
-      openBodyClass: '',
-      closeBodyClass: '',
     },
   }
 };
@@ -92,6 +88,7 @@ export const TailwindTheme = {
     button: {
       class: 'bg-gray-200 font-semibold py-2 px-6 rounded inline-flex items-center',
     },
+
     dropdown: {
       transition: 'slide',
       transitionOptions: {delay: 0, duration: 300},
@@ -102,6 +99,17 @@ export const TailwindTheme = {
       class: 'inline-block relative',
       dropdownClass: 'absolute rounded bg-white my-2 shadow-xl z-10',
     },
+
+    modal: {
+      moveToBody: false,
+      class: 'w-6/12 relative bg-white shadow-lg rounded-md p-8',
+      openClass: '',
+      closeClass: '',
+
+      overlayClass: 'fixed inset-0 h-screen w-full flex flex-col items-center justify-center bg-black bg-opacity-75 z-10',
+      openOverlayClass: '',
+      closeOverlayClass: 'hidden',
+    }
   },
 };
 

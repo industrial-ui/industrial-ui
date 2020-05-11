@@ -5,8 +5,8 @@
 
 <Button on:click={() => open = !open}>Toggle me</Button>
 
-<Modal id="kem" bind:value={open} let:close>
-  <div class="close icon" on:click={() => close()}>
+<Modal bind:value={open} let:close>
+  <div slot="close" class="close icon" on:click={() => close()}>
     ✕
   </div>
 
