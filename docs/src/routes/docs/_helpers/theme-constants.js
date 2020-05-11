@@ -14,6 +14,7 @@ export const SemanticTheme = {
         labeled: 'labeled',
       },
     },
+
     dropdown: {
       transition: 'slide',
       transitionOptions: {delay: 0, duration: 300},
@@ -31,6 +32,22 @@ export const SemanticTheme = {
       dropdownClass: 'menu transition',
       openDropdownClass: 'visible',
       closeDropdownClass: 'hidden',
+    },
+
+    modal: {
+      moveToBody: false,
+
+      class: 'ui dropdown',
+      openClass: 'active visible',
+      closeClass: 'hidden',
+
+      overlayClass: 'ui page dimmer',
+      openOverlayClass: 'visible active',
+      closeOverlayClass: 'hidden',
+
+      bodyClass: 'testclass',
+      openBodyClass: 'visibleclass',
+      closeBodyClass: 'hiddenclass',
     },
   }
 };

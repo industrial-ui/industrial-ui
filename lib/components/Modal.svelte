@@ -13,24 +13,39 @@
   // export let transition = null;
   // export let transitionOptions = null;
   export let overlayClass = null;
+  export let bodyClass = null;
 
   const globalConfig = mockConfig || getContext('iui-config');
   if (!globalConfig) throw new Error('No config specified. Please, wrap your component into IUI.');
 
   const config = globalConfig.components.modal;
   const events = getEventAction(current_component, !!mockConfig);
-  const propsList = ['id', 'class', 'overlayClass', 'value', 'mockConfig', ...Object.keys(config.isProperties)];
+  const propsList = ['id', 'class', 'overlayClass', 'bodyClass', 'value', 'mockConfig', ...Object.keys(config.isProperties)];
 
   let dialog = null;
-  onMount(() => document.body.appendChild(dialog));
+  const getBodyClasses = val => composeClasses(config.bodyClass, val ? config.openBodyClass : config.closeBodyClass, bodyClass) || '';
+  onMount(() => {
+    if (!config.moveToBody) return;
+    document.body.appendChild(dialog);
+  });
+
+  $: value ? open() : close();
 
   const close = () => {
     value = false;
     dispatchMultiple(['close', 'toggle'], value);
+    if (typeof window !== 'undefined') {
+      document.body.classList.remove(...getBodyClasses(true).split(' '));
+      document.body.classList.add(...getBodyClasses(false).split(' '));
+    }
   };
   const open = () => {
-    value = false;
+    value = true;
     dispatchMultiple(['open', 'toggle'], value);
+    if (typeof window !== 'undefined') {
+      document.body.classList.remove(...getBodyClasses(false).split(' '));
+      document.body.classList.add(...getBodyClasses(true).split(' '));
+    }
   };
 </script>
 
