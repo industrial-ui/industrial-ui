@@ -35,16 +35,18 @@
     value = false;
     dispatchMultiple(['close', 'toggle'], value);
     if (typeof window !== 'undefined') {
-      document.body.classList.remove(...getBodyClasses(true).split(' '));
-      document.body.classList.add(...getBodyClasses(false).split(' '));
+      const trueClasses = getBodyClasses(true), falseClasses = getBodyClasses(false);
+      if (trueClasses) document.body.classList.remove(...getBodyClasses(true).split(' '));
+      if (falseClasses) document.body.classList.add(...getBodyClasses(false).split(' '));
     }
   };
   const open = () => {
     value = true;
     dispatchMultiple(['open', 'toggle'], value);
     if (typeof window !== 'undefined') {
-      document.body.classList.remove(...getBodyClasses(false).split(' '));
-      document.body.classList.add(...getBodyClasses(true).split(' '));
+      const trueClasses = getBodyClasses(true), falseClasses = getBodyClasses(false);
+      if (falseClasses) document.body.classList.remove(...getBodyClasses(false).split(' '));
+      if (trueClasses) document.body.classList.add(...getBodyClasses(true).split(' '));
     }
   };
 </script>

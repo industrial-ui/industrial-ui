@@ -45,9 +45,9 @@ export const SemanticTheme = {
       openOverlayClass: 'visible active',
       closeOverlayClass: 'hidden',
 
-      bodyClass: 'testclass',
-      openBodyClass: 'visibleclass',
-      closeBodyClass: 'hiddenclass',
+      bodyClass: '',
+      openBodyClass: '',
+      closeBodyClass: '',
     },
   }
 };
