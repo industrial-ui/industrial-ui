@@ -68,7 +68,7 @@
   bind:this={dialog}
   on:click={close}
 >
-  <slot name="overlay-close" {close} {open} {value} />
+  <slot name="overlay-close" />
 
   <div
     class={composeClasses(
@@ -80,8 +80,9 @@
     )}
     {...filterProps(propsList, $$props)}
     use:events
+    on:click|stopPropagation
   >
-    <slot name="close" {close} {open} {value} />
+    <slot name="close" />
 
     <slot {close} {open} {value} />
   </div>

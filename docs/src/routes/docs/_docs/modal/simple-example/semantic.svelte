@@ -5,8 +5,8 @@
 
 <Button on:click={() => open = !open}>Toggle me</Button>
 
-<Modal id="kem" bind:value={open}>
-  <div class="close icon">
+<Modal id="kem" bind:value={open} let:close>
+  <div class="close icon" on:click={() => close()}>
     ✕
   </div>
 
@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="actions">
-    <div class="ui black deny button">
+    <div class="ui black deny button" on:click={() => close()}>
       Close
     </div>
   </div>
