@@ -49,7 +49,13 @@
       if (trueClasses) document.body.classList.add(...getBodyClasses(true).split(' '));
     }
   };
+
+  const handleWindowKey = (e) => {
+    if (e.key === 'Escape' && value) close();
+  };
 </script>
+
+<svelte:body on:keyup={handleWindowKey} />
 
 <dialog
   {id}
