@@ -37,7 +37,7 @@ export const SemanticTheme = {
     modal: {
       moveToBody: false,
 
-      class: 'ui dropdown',
+      class: 'ui modal',
       openClass: 'active visible',
       closeClass: 'hidden',
 

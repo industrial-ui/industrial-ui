@@ -5,6 +5,23 @@
 
 <Button on:click={() => open = !open}>Toggle me</Button>
 
-<Modal bind:value={open}>
-  <h1>kek</h1>
+<Modal id="kem" bind:value={open}>
+  <div class="close icon">
+    ✕
+  </div>
+
+  <div class="header">
+    Modal header
+  </div>
+  <div class="content">
+    <div class="description">
+      <div class="ui header">Some text about modal</div>
+      <p>For example, that this modal is really great!</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Close
+    </div>
+  </div>
 </Modal>
