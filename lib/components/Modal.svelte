@@ -23,8 +23,11 @@
   const propsList = ['id', 'class', 'overlayClass', 'bodyClass', 'value', 'mockConfig', ...Object.keys(config.isProperties)];
 
   let dialog = null;
+  let bodyInitialOverflow = null;
   const getBodyClasses = val => composeClasses(config.bodyClass, val ? config.openBodyClass : config.closeBodyClass, bodyClass) || '';
   onMount(() => {
+    bodyInitialOverflow = getComputedStyle(document.body).overflow;
+
     if (!config.moveToBody) return;
     document.body.appendChild(dialog);
   });
@@ -35,6 +38,7 @@
     value = false;
     dispatchMultiple(['close', 'toggle'], value);
     if (typeof window !== 'undefined') {
+      if (config.blockBodyScroll) document.body.style.overflow = bodyInitialOverflow;
       const trueClasses = getBodyClasses(true), falseClasses = getBodyClasses(false);
       if (trueClasses) document.body.classList.remove(...getBodyClasses(true).split(' '));
       if (falseClasses) document.body.classList.add(...getBodyClasses(false).split(' '));
@@ -42,8 +46,10 @@
   };
   const open = () => {
     value = true;
+    console.log(bodyInitialOverflow);
     dispatchMultiple(['open', 'toggle'], value);
     if (typeof window !== 'undefined') {
+      if (config.blockBodyScroll) document.body.style.overflow = 'hidden';
       const trueClasses = getBodyClasses(true), falseClasses = getBodyClasses(false);
       if (falseClasses) document.body.classList.remove(...getBodyClasses(false).split(' '));
       if (trueClasses) document.body.classList.add(...getBodyClasses(true).split(' '));
