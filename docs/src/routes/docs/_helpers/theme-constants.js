@@ -60,6 +60,7 @@ export const SpectreTheme = {
         link: ''
       },
     },
+
     dropdown: {
       transition: 'slide',
       transitionOptions: {delay: 0, duration: 300},
@@ -77,6 +78,17 @@ export const SpectreTheme = {
       openDropdownClass: '',
       closeDropdownClass: '',
     },
+
+    modal: {
+      moveToBody: false,
+      class: 'modal-container',
+      openClass: '',
+      closeClass: '',
+
+      overlayClass: 'modal',
+      openOverlayClass: 'active',
+      closeOverlayClass: '',
+    }
   }
 };
 

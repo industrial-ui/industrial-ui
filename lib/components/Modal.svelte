@@ -68,7 +68,7 @@
   bind:this={dialog}
   on:click={close}
 >
-  <slot name="overlay-close" />
+  <slot name="in-overlay" />
 
   <div
     class={composeClasses(

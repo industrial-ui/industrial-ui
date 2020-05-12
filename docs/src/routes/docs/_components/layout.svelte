@@ -17,7 +17,7 @@
   <link href="/style/content.css" rel="stylesheet">
 </svelte:head>
 
-<svelte:body  on:swiperight={() => open = true} on:swipeleft={() => open = false} />
+<svelte:body on:swiperight={() => open = true} on:swipeleft={() => open = false} />
 
 <header>
   <Header bind:open={open} />
