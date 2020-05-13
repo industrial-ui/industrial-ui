@@ -6,10 +6,6 @@
 <Button on:click={() => open = !open}>Toggle me</Button>
 
 <Modal bind:value={open} let:close>
-  <div slot="close" class="close icon" on:click={() => close()}>
-    ✕
-  </div>
-
   <div class="header">
     Modal header
   </div>
@@ -20,8 +16,7 @@
     </div>
   </div>
   <div class="actions">
-    <div class="ui black deny button" on:click={() => close()}>
-      Close
-    </div>
+    <Button class="negative deny" on:click={() => close()}>Close</Button>
+    <Button class="positive right" on:click={() => close()}>Also close</Button>
   </div>
 </Modal>
