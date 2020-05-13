@@ -17,6 +17,10 @@ export default {
       text: 'Simple example',
     },
     {
+      slug: 'transitions',
+      text: 'Transitions',
+    },
+    {
       slug: 'props',
       text: 'Properties',
     },
