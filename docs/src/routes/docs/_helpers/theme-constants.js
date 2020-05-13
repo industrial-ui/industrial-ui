@@ -113,6 +113,8 @@ export const TailwindTheme = {
     },
 
     modal: {
+      transition: 'fade',
+
       moveToBody: false,
       class: 'w-6/12 relative bg-white shadow-lg rounded-md p-8',
       openClass: '',

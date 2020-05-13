@@ -5,13 +5,14 @@
   import filterIsProps from '../utils/is-properties';
   import filterProps from '../utils/filter-props';
   import composeClasses from '../utils/compose-classes';
+  import {animate} from '../utils/transition';
   // import dynamic from '../utils/transition';
 
   export let mockConfig = null;
   export let id = null;
   export let value = false;
-  // export let transition = null;
-  // export let transitionOptions = null;
+  export let transition = null;
+  export let transitionOptions = null;
   export let overlayClass = null;
   export let bodyClass = null;
 
@@ -20,7 +21,7 @@
 
   const config = globalConfig.components.modal;
   const events = getEventAction(current_component, !!mockConfig);
-  const propsList = ['id', 'class', 'overlayClass', 'bodyClass', 'value', 'mockConfig', ...Object.keys(config.isProperties)];
+  const propsList = ['id', 'class', 'overlayClass', 'bodyClass', 'value', 'mockConfig', 'transition', 'transitionOptions', ...Object.keys(config.isProperties)];
 
   let dialog = null;
   let bodyInitialOverflow = null;
@@ -36,23 +37,30 @@
 
   const close = () => {
     value = false;
-    dispatchMultiple(['close', 'toggle'], value);
+    dispatchMultiple(['close', 'toggle'], false);
+
     if (typeof window !== 'undefined') {
       if (config.blockBodyScroll) document.body.style.overflow = bodyInitialOverflow;
       const trueClasses = getBodyClasses(true), falseClasses = getBodyClasses(false);
       if (trueClasses) document.body.classList.remove(...getBodyClasses(true).split(' '));
       if (falseClasses) document.body.classList.add(...getBodyClasses(false).split(' '));
+
+      // TODO: Animate transition out
+      // animate(dialog, {transition: 'slide' || config.transition, options: config.transitionOptions, customs: globalConfig.customTransitions, isOut: true});
     }
   };
+
   const open = () => {
     value = true;
-    console.log(bodyInitialOverflow);
-    dispatchMultiple(['open', 'toggle'], value);
+    dispatchMultiple(['open', 'toggle'], true);
+
     if (typeof window !== 'undefined') {
       if (config.blockBodyScroll) document.body.style.overflow = 'hidden';
       const trueClasses = getBodyClasses(true), falseClasses = getBodyClasses(false);
       if (falseClasses) document.body.classList.remove(...getBodyClasses(false).split(' '));
       if (trueClasses) document.body.classList.add(...getBodyClasses(true).split(' '));
+
+      animate(dialog, {transition: transition || config.transition, options: transitionOptions || config.transitionOptions, customs: globalConfig.customTransitions});
     }
   };
 
