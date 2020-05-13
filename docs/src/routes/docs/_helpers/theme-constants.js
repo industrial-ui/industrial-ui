@@ -57,7 +57,7 @@ export const SpectreTheme = {
       class: 'btn',
       isProperties: {
         primary: 'btn-primary',
-        link: ''
+        error: 'btn-error'
       },
     },
 
@@ -82,12 +82,8 @@ export const SpectreTheme = {
     modal: {
       moveToBody: false,
       class: 'modal-container',
-      openClass: '',
-      closeClass: '',
-
       overlayClass: 'modal',
       openOverlayClass: 'active',
-      closeOverlayClass: '',
     }
   }
 };

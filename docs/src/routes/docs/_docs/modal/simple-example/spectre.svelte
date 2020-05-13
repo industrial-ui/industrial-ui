@@ -20,7 +20,7 @@
   </div>
 
   <div class="modal-footer">
-    <Button is:primary on:click={() => close()}>
+    <Button is:error on:click={() => close()}>
       Close
     </Button>
   </div>
