@@ -6,7 +6,6 @@
   import filterProps from '../utils/filter-props';
   import composeClasses from '../utils/compose-classes';
   import {animate} from '../utils/transition';
-  // import dynamic from '../utils/transition';
 
   export let mockConfig = null;
   export let id = null;
