@@ -70,6 +70,10 @@ close by clicking on default closers or a button inside of the window.
 
 <h2 id="transitions">Transitions</h2>
 
+Example of transition usage with 3 default types: fade, blur and scale. Pass them as prop or configure globally
+with transition options to give your Modals smoothness. Read more about transitions in 
+<Link path="/docs/configuration" hash="transition">configuration page</Link>. 
+
 <ShowBlock>
   <TransitionsExample />
   

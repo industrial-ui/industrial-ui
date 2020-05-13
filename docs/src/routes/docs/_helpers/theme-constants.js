@@ -39,11 +39,11 @@ export const SemanticTheme = {
 
       class: 'ui modal',
       openClass: 'active visible',
-      closeClass: 'hidden',
+      closeClass: '',
 
       overlayClass: 'ui page dimmer',
       openOverlayClass: 'visible active',
-      closeOverlayClass: 'hidden',
+      closeOverlayClass: '',
     },
   }
 };

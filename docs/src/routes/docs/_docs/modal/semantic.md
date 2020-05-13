@@ -54,10 +54,8 @@ close by clicking on default closers or a button inside of the window.
     modal: {
       class: 'ui modal',
       openClass: 'active visible',
-      closeClass: 'hidden',
       overlayClass: 'ui page dimmer',
       openOverlayClass: 'visible active',
-      closeOverlayClass: 'hidden',
     },
   },
   ```
@@ -67,12 +65,42 @@ close by clicking on default closers or a button inside of the window.
 
 <h2 id="transitions">Transitions</h2>
 
+Example of transition usage with 3 default types: fade, blur and scale. Pass them as prop or configure globally
+with transition options to give your Modals smoothness. Read more about transitions in 
+<Link path="/docs/configuration" hash="transition">configuration page</Link>. 
+
 <ShowBlock>
   <TransitionsExample />
   
   <pre class="code" slot="code">
   ```html
+  <script>
+    import {Modal, Button} from 'industrial-ui';
+    import Child from '../modal-children/semantic.svelte';
+    let open1 = false, open2 = false, open3 = false;
+  </script>
   
+  <Button on:click={() => open1 = !open1}>Fade</Button>
+  <Button on:click={() => open2 = !open2}>Blur</Button>
+  <Button on:click={() => open3 = !open3}>Scale</Button>
+  
+  <Modal transition="fade" bind:value={open1} let:close>
+    <Child closeFunction={close}>
+      <Button class="positive right" on:click={() => {open1 = false; open2 = true}}>Modal "Blur"</Button>
+    </Child>
+  </Modal>
+  
+  <Modal transition="blur" transitionOptions={{opacity: 0.25, amount: 10}} bind:value={open2} let:close>
+    <Child closeFunction={close}>
+      <Button class="positive right" on:click={() => {open2 = false; open3 = true}}>Modal "Scale"</Button>
+    </Child>
+  </Modal>
+  
+  <Modal transition="scale" transitionOptions={{opacity: 0.25, start: 0.5}} bind:value={open3} let:close>
+    <Child closeFunction={close}>
+      <Button class="positive right" on:click={() => {open3 = false; open1 = true}}>Modal "Fade"</Button>
+    </Child>
+  </Modal>
   ```
   </pre>
 
@@ -85,15 +113,23 @@ close by clicking on default closers or a button inside of the window.
     modal: {
       class: 'ui modal',
       openClass: 'active visible',
-      closeClass: 'hidden',
       overlayClass: 'ui page dimmer',
       openOverlayClass: 'visible active',
-      closeOverlayClass: 'hidden',
     },
   },
   ```
   </pre>
 </ShowBlock>
 
+There is a trick with Semantic UI. It specifies `opacity:0` in modal overlay which prevents
+proper transition. You just need to remove it by writing: 
+
+<pre class="code">
+  ```css
+  dialog.ui.dimmer {
+    opacity: 1;
+  }
+  ```
+</pre>
 
 <PropsSlotsMarkup />
