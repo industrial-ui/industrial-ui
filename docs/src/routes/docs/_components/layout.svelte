@@ -17,7 +17,7 @@
   <link href="/style/content.css" rel="stylesheet">
 </svelte:head>
 
-<svelte:body  on:swiperight={() => open = true} on:swipeleft={() => open = false} />
+<svelte:body on:swiperight={() => open = true} on:swipeleft={() => open = false} />
 
 <header>
   <Header bind:open={open} />
@@ -60,7 +60,7 @@
     padding: 0 2rem;
     border-bottom: 1px solid #EEEEEE;
     background: white;
-    z-index: 1000;
+    z-index: 5;
   }
 
   section {
@@ -83,7 +83,7 @@
     width: calc(100vw / 12 * 2);
     overflow-y: auto;
     border-right: 1px solid #EEEEEE;
-    z-index: 999;
+    z-index: 4;
   }
 
   main {

@@ -3,10 +3,10 @@
   import {current_component} from 'svelte/internal';
   import getEventAction from '../utils/dispatch-events';
   import filterIsProps from '../utils/is-properties';
-  import clickOutside from '../utils/click-outside';
-  import checkPosition from '../utils/check-position';
   import filterProps from '../utils/filter-props';
   import composeClasses from '../utils/compose-classes';
+  import clickOutside from '../utils/click-outside';
+  import checkPosition from '../utils/check-position';
   import dynamic from '../utils/transition';
 
   export let triggerClass = '';
@@ -47,7 +47,6 @@
   )}
   {...filterProps(propsList, $$props)}
   use:clickOutside={close}
-  use:events
   on:mouseenter={() => hoverEffect(true)}
   on:mouseleave={() => hoverEffect(false)}
 >

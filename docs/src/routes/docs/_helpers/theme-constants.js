@@ -14,6 +14,7 @@ export const SemanticTheme = {
         labeled: 'labeled',
       },
     },
+
     dropdown: {
       transition: 'slide',
       transitionOptions: {delay: 0, duration: 300},
@@ -32,6 +33,18 @@ export const SemanticTheme = {
       openDropdownClass: 'visible',
       closeDropdownClass: 'hidden',
     },
+
+    modal: {
+      moveToBody: false,
+
+      class: 'ui modal',
+      openClass: 'active visible',
+      closeClass: '',
+
+      overlayClass: 'ui page dimmer',
+      openOverlayClass: 'visible active',
+      closeOverlayClass: '',
+    },
   }
 };
 
@@ -44,9 +57,10 @@ export const SpectreTheme = {
       class: 'btn',
       isProperties: {
         primary: 'btn-primary',
-        link: ''
+        error: 'btn-error'
       },
     },
+
     dropdown: {
       transition: 'slide',
       transitionOptions: {delay: 0, duration: 300},
@@ -64,6 +78,13 @@ export const SpectreTheme = {
       openDropdownClass: '',
       closeDropdownClass: '',
     },
+
+    modal: {
+      moveToBody: false,
+      class: 'modal-container',
+      overlayClass: 'modal',
+      openOverlayClass: 'active',
+    }
   }
 };
 
@@ -75,6 +96,7 @@ export const TailwindTheme = {
     button: {
       class: 'bg-gray-200 font-semibold py-2 px-6 rounded inline-flex items-center',
     },
+
     dropdown: {
       transition: 'slide',
       transitionOptions: {delay: 0, duration: 300},
@@ -85,6 +107,17 @@ export const TailwindTheme = {
       class: 'inline-block relative',
       dropdownClass: 'absolute rounded bg-white my-2 shadow-xl z-10',
     },
+
+    modal: {
+      moveToBody: false,
+      class: 'w-10/12 lg:w-6/12 relative bg-white shadow-lg rounded-md p-8',
+      openClass: '',
+      closeClass: '',
+
+      overlayClass: 'fixed inset-0 h-screen w-full flex flex-col items-center justify-center bg-black bg-opacity-75 z-10',
+      openOverlayClass: '',
+      closeOverlayClass: 'hidden',
+    }
   },
 };
 
