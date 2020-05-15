@@ -2,7 +2,7 @@
 *Industry-oriented library of unstyled UI-components.*
 
 Here is the short description. Please, refer to
-[full documentation](https://industrial-ui.now.sh/)
+[full documentation](https://industrial-ui.com/)
 about all features of Industrial-ui.
 
 ## Problem
@@ -31,7 +31,7 @@ framework. But what if I tell you that this step can easily be skipped?!
 
 ## Solution – Industrial-ui
 
-Whether you use Svelte, React or Vue (other libraries support will come later), [install](https://industrial-ui.now.sh/docs/installation)
+Whether you use Svelte, React or Vue (other libraries support will come later), [install](https://industrial-ui.com/docs/installation)
 
 ```bash
   npm install industrial-ui
@@ -55,7 +55,7 @@ at the Svelte example:
 
 You will see the button naked like in good-old nineties. Let's imagine we don't have
 company's own markup, but instead we use Tailwind CSS. That is how easy it is to
-integrate it's CDN styles with Industrial-ui. Just [configure](https://industrial-ui.now.sh/docs/configuration):
+integrate it's CDN styles with Industrial-ui. Just [configure](https://industrial-ui.com/docs/configuration):
 
 ```javascript
   const config = {

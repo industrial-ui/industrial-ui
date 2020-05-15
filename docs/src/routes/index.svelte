@@ -11,10 +11,10 @@
     <meta name="author" content="VanishMax">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://industrial-ui.now.sh/">
+    <meta property="og:url" content="https://industrial-ui.com/">
     <meta property="og:title" content="Industrial-UI — industry-oriented library of unstyled UI-components">
     <meta property="og:description" content="Industrial-UI — industry-oriented library of unstyled UI-components. Enjoy coding!">
-    <meta property="og:image" content="https://industrial-ui.now.sh/img/icon.png">
+    <meta property="og:image" content="https://industrial-ui.com/img/icon.png">
 </svelte:head>
 
 <style>
