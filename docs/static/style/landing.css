@@ -2,6 +2,18 @@
   font-size: 14px;
 }
 
+@media screen and (max-width: 479px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
 body {
   font-family: 'Ubuntu', sans-serif;
 }
