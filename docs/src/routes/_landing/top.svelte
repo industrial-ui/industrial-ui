@@ -1,13 +1,10 @@
-<script>
-</script>
-
-<img
+<!--<img
   class="wave"
   srcset="/img/wave-mobile.svg 480w, /img/wave.svg 1600w"
   sizes="(max-width: 600px) 100vw, 100vw"
   src="/img/wave.svg"
   alt="Elva dressed as a fairy"
->
+>-->
 
 <header>
   <div class="info container">
@@ -18,26 +15,30 @@
   </div>
 </header>
 
+
+
 <style>
   header {
     height: 100vh;
   }
 
   .info {
-    width: 80%;
+    width: 90%;
     margin: 10% auto;
     color: white;
+    position: relative;
+    z-index: 10;
   }
 
   .logo {
     width: 2.75rem;
   }
 
-  .wave {
+  /*.wave {
     position: absolute;
     z-index: -1;
     width: 100%;
-  }
+  }*/
 
   h1 {
     font-weight: 500;
@@ -63,58 +64,5 @@
 
   br {
     display: none;
-  }
-
-  @media screen and (max-width: 1023px) {
-    .info {
-      margin-top: 25%;
-      margin-left: 30%;
-    }
-
-    .wave {
-      width: 175%;
-    }
-
-    .logo {
-      width: 2.5rem;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-top: 1.75rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      margin-bottom: 1.75rem;
-      font-size: 1.75em;
-    }
-
-    a {
-      font-size: 1.1em;
-      padding: .5rem 1rem;
-    }
-
-    br {
-      display: block;
-    }
-  }
-
-  @media screen and (max-width: 479px) {
-    .logo {
-      width: 2rem;
-    }
-
-    h1 {
-      font-size: 2em;
-    }
-
-    p {
-      font-size: 1.3em;
-    }
-
-    a {
-      font-size: 1em;
-    }
   }
 </style>

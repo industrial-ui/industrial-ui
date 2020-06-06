@@ -1,0 +1,68 @@
+.svgs > svg {
+  position: absolute;
+}
+
+.big-red-icon {
+  right: -200px;
+  top: -100px;
+  width: 800px;
+  height: 700px;
+}
+
+.big-outline-icon:not(.second) {
+  right: -400px;
+  top: -50px;
+  width: 800px;
+  height: 700px;
+  z-index: 2;
+}
+
+.big-outline-icon.second {
+  left: -470px;
+  top: -520px;
+  width: 800px;
+  height: 700px;
+}
+
+.green-one-icon {
+  right: 17%;
+  top: -10%;
+}
+
+.green-two-icon:not(.second) {
+  bottom: 27%;
+  left: -4%;
+}
+
+.green-two-icon.second {
+  right: -3%;
+  bottom: 20%;
+}
+
+.square-circles-icon:not(.second) {
+  bottom: 10%;
+  right: 28%;
+}
+
+.square-circles-icon.second {
+  right: -6%;
+  top: 15%;
+}
+
+.triangle-outline-icon:not(.second) {
+  bottom: 8%;
+  left: -1%;
+  z-index: 2;
+}
+
+
+.triangle-outline-icon.second {
+  top: -15%;
+  right: 37%;
+  z-index: 2;
+}
+
+.triangle-red-icon {
+  bottom: 10%;
+  left: -7.5%;
+}

@@ -1,5 +1,8 @@
 <script>
   import Top from './_landing/top.svelte';
+  import Svgs from './_landing/svgs.svelte';
+  import SimpleBar from '@woden/svelte-simplebar'
+  import 'simplebar/dist/simplebar.css';
 </script>
 
 <svelte:head>
@@ -17,10 +20,19 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style/landing.css" >
+
+  <noscript>
+    <style>
+      .simplebar-content-wrapper {
+        overflow: auto;
+      }
+    </style>
+  </noscript>
 </svelte:head>
 
-<main>
+<SimpleBar style="height: 3000px;" direction="vertical">
   <Top />
+  <Svgs />
 
   <section class="introduction">
   </section>
@@ -34,8 +46,11 @@
 
   <footer>
   </footer>
-</main>
+  <main></main>
+</SimpleBar>
 
 <style>
-
+  :global(body) {
+    background: #6C6EE5;
+  }
 </style>
