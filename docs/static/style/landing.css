@@ -1,0 +1,27 @@
+:root {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+  overflow: scroll;
+}
+
+.header-background {
+  position: absolute;
+  z-index: -1;
+}
+
+.container {
+  padding: 0 calc((100% - 1110px) / 2);
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+}
