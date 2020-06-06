@@ -2,7 +2,7 @@
   font-size: 14px;
 }
 
-@media screen and (max-width: 479px) {
+/*@media screen and (max-width: 479px) {
   :root {
     font-size: 8px;
   }
@@ -12,14 +12,15 @@
   :root {
     font-size: 10px;
   }
-}
+}*/
 
 body {
   font-family: 'Ubuntu', sans-serif;
 }
 
 main {
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .header-background {

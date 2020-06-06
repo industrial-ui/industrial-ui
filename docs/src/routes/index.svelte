@@ -16,7 +16,6 @@
   <meta property="og:image" content="https://industrial-ui.com/img/logo.png">
 
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style/global.css" >
   <link rel="stylesheet" href="/style/landing.css" >
 </svelte:head>
 
