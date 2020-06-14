@@ -1,26 +1,18 @@
 <script>
-  import BigRedIcon from './icons/big-red.svelte';
+  import BackIcon from './icons/back.svelte';
+  import BackMobileIcon from './icons/back-mob.svelte';
   import BigOutlineIcon from './icons/big-outline.svelte';
-  import GreenOneIcon from './icons/green-one.svelte';
-  import GreenTwoIcon from './icons/green-two.svelte';
-  import SquareCirclesIcon from './icons/square-circles.svelte';
-  import TriangleOutlineIcon from './icons/triangle-outline.svelte';
-  import TriangleRedIcon from './icons/triangle-red.svelte';
+  import IconsGroup from './icons/icon-group.svelte';
+  import IconsLeftGroup from './icons/icon-left-group.svelte';
   import './icons/styles.css';
 </script>
 
 <div class="svgs">
-  <BigRedIcon />
+  <BackIcon />
+  <BackMobileIcon />
   <BigOutlineIcon />
-  <BigOutlineIcon second />
-  <GreenOneIcon />
-  <GreenTwoIcon />
-  <GreenTwoIcon second />
-  <SquareCirclesIcon />
-  <SquareCirclesIcon second />
-  <TriangleOutlineIcon />
-  <TriangleOutlineIcon second />
-  <TriangleRedIcon />
+  <IconsLeftGroup />
+  <IconsGroup />
 </div>
 
 <style>

@@ -18,48 +18,40 @@
 
 
 <style>
-  header {
-    height: 100vh;
-  }
-
   .info {
-    width: 90%;
-    margin: 10% auto;
+    width: 50%;
+    margin-top: 17.5%;
+    margin-left: 10%;
     color: white;
     position: relative;
     z-index: 10;
   }
 
   .logo {
-    width: 2.75rem;
+    width: 22px;
+    height: 27px;
   }
-
-  /*.wave {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-  }*/
 
   h1 {
     font-weight: 500;
-    margin-top: 3.5rem;
-    margin-bottom: 1.3rem;
-    font-size: 3.3em;
+    margin-top: 12px;
+    margin-bottom: 7px;
+    font-size: 24px;
   }
 
   p {
     margin-top: 0;
-    margin-bottom: 3.5rem;
-    font-size: 1.75em;
+    margin-bottom: 13px;
+    font-size: 13px;
     font-weight: normal;
   }
 
   a {
     display: inline-block;
     border: 1px solid #FFFFFF;
-    padding: 1rem 2rem;
+    padding: 8px 12px;
     border-radius: 4px;
-    font-size: 1.2em;
+    font-size: 9px;
   }
 
   br {
