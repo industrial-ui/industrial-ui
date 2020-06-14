@@ -16,10 +16,11 @@
 </div>
 
 <style>
-  .svgs {
+  div {
     position: absolute;
-    height: 100vh;
     width: 100%;
+    height: 300px;
     top: 0;
+    overflow-x: hidden;
   }
 </style>

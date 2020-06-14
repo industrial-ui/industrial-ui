@@ -1,6 +1,9 @@
 <script>
   import Top from './_landing/top.svelte';
   import Svgs from './_landing/svgs.svelte';
+  import Intro from './_landing/intro.svelte';
+  import Steps from './_landing/steps.svelte';
+  import Footer from './_landing/footer.svelte';
   import SimpleBar from '@woden/svelte-simplebar'
   import 'simplebar/dist/simplebar.css';
 </script>
@@ -28,29 +31,30 @@
       }
     </style>
   </noscript>
+
+  <style>
+    body {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  </style>
 </svelte:head>
 
-<SimpleBar style="height: 3000px;" direction="vertical">
-  <Top />
-  <Svgs />
+<!--<SimpleBar direction="vertical">
+</SimpleBar>-->
+<Top />
+<Svgs />
 
-  <section class="introduction">
-  </section>
+<Intro />
+<Steps />
 
-  <section class="steps">
-  </section>
+<!--<section class="users">
+</section>-->
 
-  <section class="users">
-  </section>
-
-
-  <footer>
-  </footer>
-  <main></main>
-</SimpleBar>
+<Footer />
 
 <style>
   :global(body) {
-    background: white;
+    overflow-x: hidden;
   }
 </style>

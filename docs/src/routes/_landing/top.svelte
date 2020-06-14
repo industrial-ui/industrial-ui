@@ -1,11 +1,3 @@
-<!--<img
-  class="wave"
-  srcset="/img/wave-mobile.svg 480w, /img/wave.svg 1600w"
-  sizes="(max-width: 600px) 100vw, 100vw"
-  src="/img/wave.svg"
-  alt="Elva dressed as a fairy"
->-->
-
 <header>
   <div class="info container">
     <img class="logo" src="/img/logo.png" alt="Industrial-ui logo" />
@@ -15,13 +7,15 @@
   </div>
 </header>
 
-
-
 <style>
+  header {
+    height: 300px;
+    padding-top: 17.5%;
+    padding-left: 10%;
+  }
+
   .info {
     width: 50%;
-    margin-top: 17.5%;
-    margin-left: 10%;
     color: white;
     position: relative;
     z-index: 10;
