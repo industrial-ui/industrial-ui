@@ -101,4 +101,10 @@ const config = &#123;
   .step code pre {
     overflow-x: auto;
   }
+
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    .step {
+      width: 60%;
+    }
+  }
 </style>

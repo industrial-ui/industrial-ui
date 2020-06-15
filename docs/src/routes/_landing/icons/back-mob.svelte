@@ -1,3 +1,3 @@
-<svg class="background-mobile-icon" width="463" height="354" viewBox="0 0 463 354" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M139.502 303.911C84.6272 299.31 24.2845 356.307 0 333.746V272.741V0H463V328.847C421.656 267.62 345.602 365.326 270.654 352.893C218.374 344.22 191.984 308.311 139.502 303.911Z" fill="#6C6EE5"/>
+<svg class="background-mobile-icon" width="480" height="325" viewBox="0 0 480 325" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M144.624 279.014C87.7344 274.79 25.1761 327.118 0 306.405V250.398V0H480V301.908C437.138 245.696 358.292 335.398 280.591 323.984C226.392 316.022 199.033 283.054 144.624 279.014Z" fill="#6C6EE5"/>
 </svg>

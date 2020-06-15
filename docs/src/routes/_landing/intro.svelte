@@ -42,4 +42,10 @@
   section p:last-child {
     margin-top: 15px;
   }
+
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    section {
+      padding-top: 5%;
+    }
+  }
 </style>

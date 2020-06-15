@@ -9,7 +9,7 @@
 
 <style>
   header {
-    height: 300px;
+    height: 325px;
     padding-top: 17.5%;
     padding-left: 10%;
   }
@@ -50,5 +50,11 @@
 
   br {
     display: none;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    header {
+      height: 400px;
+    }
   }
 </style>
