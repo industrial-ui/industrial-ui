@@ -1,0 +1,30 @@
+:root {
+  font-size: 14px;
+}
+
+/*@media screen and (max-width: 479px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+  :root {
+    font-size: 10px;
+  }
+}*/
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+  padding: 0 calc((100% - 1110px) / 2);
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+}

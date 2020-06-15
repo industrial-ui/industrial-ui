@@ -58,11 +58,11 @@
   }
 
   li:hover {
-    background: rgba(255, 122, 0, .1);
+    background: #dcddf9;
   }
 
   li.active {
-    color: rgba(255, 122, 0, 1);
+    color: #6C6EE5;
   }
 
   a:not([target="_blank"]) {

@@ -1,76 +1,42 @@
-<main>
-    <h1>Be logical!</h1>
-    <p>Visit the <a rel="prefetch" href="/docs/installation" class="link">documentation of industrial-ui</a> to develop web apps faster</p>
-</main>
+<script>
+  import Top from './_landing/top.svelte';
+  import Svgs from './_landing/svgs.svelte';
+  import Intro from './_landing/intro.svelte';
+  import Steps from './_landing/steps.svelte';
+  import Footer from './_landing/footer.svelte';
+</script>
 
 <svelte:head>
-    <title>Industrial-UI – industry-oriented library of unstyled UI-components</title>
-    <meta name="title" content="Industrial-UI — industry-oriented library of unstyled UI-components">
-    <meta name="description" content="Industrial-UI — industry-oriented library of unstyled UI-components. Enjoy coding!">
-    <meta name="keywords" content="industrial-ui, iui, ui-kit, ui-components, library, design, logic, javascript, svelte, npm">
-    <meta name="author" content="VanishMax">
+  <title>Industrial-ui – styleless, pure functional UI components</title>
+  <meta name="title" content="Industrial-ui – styleless, pure functional UI components">
+  <meta name="description" content="Production-oriented library with a feature rich UI components with no styles at all. Enjoy coding!">
+  <meta name="keywords" content="industrial-ui, iui, ui-kit, ui-components, library, design, logic, javascript, svelte, front-end, npm">
+  <meta name="author" content="VanishMax">
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://industrial-ui.now.sh/">
-    <meta property="og:title" content="Industrial-UI — industry-oriented library of unstyled UI-components">
-    <meta property="og:description" content="Industrial-UI — industry-oriented library of unstyled UI-components. Enjoy coding!">
-    <meta property="og:image" content="https://industrial-ui.now.sh/img/icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://industrial-ui.com/">
+  <meta property="og:title" content="Industrial-ui – styleless, pure functional UI components">
+  <meta property="og:description" content="Production-oriented library with a feature rich UI components with no styles at all. Enjoy coding!">
+  <meta property="og:image" content="https://industrial-ui.com/img/logo.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style/landing.css" >
+
+  <style>
+    body {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  </style>
 </svelte:head>
 
-<style>
-    @import url('https://rsms.me/inter/inter.css');
-    :global(html) {
-        font-family: 'Inter', sans-serif;
-    }
-    @supports (font-variation-settings: normal) {
-        :global(html) {
-            font-family: 'Inter var', sans-serif;
-        }
-    }
+<Top />
+<Svgs />
 
-    :global(body) {
-        overflow: hidden;
-        margin: 0;
-    }
+<Intro />
+<Steps />
 
-    main {
-        width: 100%;
-        height: 100vh;
-        padding: 10% 0 0 15%;
-    }
+<!--<section class="users">
+</section>-->
 
-    h1 {
-        color: #443333;
-        font-size: 54px;
-        letter-spacing: -0.02em;
-    }
-
-    p {
-        color: #FF7A00;
-        font-size: 20px;
-        line-height: 28px;
-        font-weight: 600;
-    }
-
-    :global(.link) {
-        text-decoration: underline;
-    }
-
-
-    @media screen and (max-width: 1024px) {
-        main {
-            padding: 10% 0 0 10%;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        main {
-            padding: 10% 0 0 5%;
-        }
-
-        p {
-            width: 80%;
-            line-height: 2em;
-        }
-    }
-</style>
+<Footer />
