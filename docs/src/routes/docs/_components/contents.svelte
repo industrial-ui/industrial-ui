@@ -43,7 +43,7 @@
   }
 
   li:hover {
-    background-image: linear-gradient(to right, rgba(255, 122, 0, .3), rgba(255, 122, 0, .1), rgba(255, 122, 0, 0));
+    background-image: linear-gradient(to right, rgba(220, 221, 249, 1), rgba(220, 221, 249, .5), rgba(220, 221, 249, 0));
     transition: all .1s;
   }
 

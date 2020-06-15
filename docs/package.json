@@ -7,8 +7,6 @@
     "build": "sapper export",
     "run-builds": "node __sapper__/build",
     "start": "sapper build && npm run run-builds",
-    "cypress": "cypress open -C ./cypress/config.json",
-    "cypress:headless": "cypress run --headless -C ./cypress/config.json",
     "test": "sapper build && run-p --race run-builds cypress:headless",
     "test:dev": "run-p --race dev cypress"
   },
