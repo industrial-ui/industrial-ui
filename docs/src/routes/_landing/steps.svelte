@@ -1,10 +1,16 @@
 <script>
   import ChevronIcon from './icons/chevron.svelte';
+  import CirclesIcon from './icons/steps-circles.svelte';
 </script>
 
 <section class="steps">
+  <CirclesIcon />
+
   <div class="step">
-    <h2>Step 1</h2>
+    <div class="step-head">
+      <h2>Step 1</h2>
+      <ChevronIcon />
+    </div>
     <p>
       Easy to get started.<br>
       Just run:
@@ -14,12 +20,17 @@
         $ npm install industrial-ui -D
       </pre>
     </code>
-    <p>* Save as dev dependency because there is no run-time!</p>
+    <p class="help">
+      * Save as dev dependency because there is no run-time!
+    </p>
   </div>
   <ChevronIcon />
 
-  <div class="step">
-    <h2>Step 2</h2>
+  <div class="step second">
+    <div class="step-head">
+      <h2>Step 2</h2>
+      <ChevronIcon />
+    </div>
     <p>Configure with your own styles:</p>
 
     <code>
@@ -34,7 +45,7 @@ const config = &#123;
 &#125;;
       </pre>
     </code>
-    <p>
+    <p class="help">
       * For more information about configuration, read
       <a href="/docs/configuration">documentation</a>
     </p>
@@ -42,7 +53,9 @@ const config = &#123;
   <ChevronIcon />
 
   <div class="step">
-    <h2>Step 3</h2>
+    <div class="step-head">
+      <h2>Step 3</h2>
+    </div>
     <p>
       And then, use in Svelte:
     </p>
@@ -60,7 +73,7 @@ const config = &#123;
 &lt;/IUI&gt;
       </pre>
     </code>
-    <p>
+    <p class="help">
       * For usage with another libraries, see
       <a href="/docs/installation">installation guide</a>
     </p>
@@ -69,9 +82,10 @@ const config = &#123;
 
 <style>
   section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 0;
     background: #6C6EE5;
+    position: relative;
+    overflow-x: hidden;
   }
 
   .step {
@@ -80,6 +94,14 @@ const config = &#123;
     border-radius: 10px;
     padding: 15px;
     background: white;
+    position: relative;
+    z-index: 3;
+  }
+
+  .step-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .step h2 {
@@ -102,9 +124,74 @@ const config = &#123;
     overflow-x: auto;
   }
 
+  .step a {
+    color: #6C6EE5;
+  }
+
+  :global(.step .chevron-icon) {
+    display: none;
+  }
+
   @media screen and (min-width: 480px) and (max-width: 1023px) {
     .step {
       width: 60%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    :global(.chevron-icon) {
+      display: none;
+    }
+
+    :global(.step .chevron-icon) {
+      display: block;
+      transform: rotate(-90deg);
+      width: 26px;
+      height: 26px;
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      padding: 130px 0;
+    }
+
+    .step {
+      width: 400px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 30px;
+    }
+
+    .step code {
+      flex-grow: 1;
+      font-size: 12px;
+    }
+
+    .step.second {
+      margin: 0 30px !important;
+    }
+
+    .step h2 {
+      font-size: 36px;
+    }
+
+    .step p {
+      font-size: 22px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1179px) {
+    .step {
+      width: 300px;
+    }
+  }
+
+  @media screen and (min-width: 1180px) and (max-width: 1279px) {
+    .step {
+      width: 350px;
     }
   }
 </style>

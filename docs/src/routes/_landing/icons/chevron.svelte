@@ -4,8 +4,10 @@
 </svg>
 
 <style>
-  svg {
-    margin: 10px auto;
-    display: block;
+  @media screen and (max-width: 1023px) {
+    svg {
+      margin: 10px auto;
+      display: block;
+    }
   }
 </style>

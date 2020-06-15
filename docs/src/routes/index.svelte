@@ -4,8 +4,6 @@
   import Intro from './_landing/intro.svelte';
   import Steps from './_landing/steps.svelte';
   import Footer from './_landing/footer.svelte';
-  import SimpleBar from '@woden/svelte-simplebar'
-  import 'simplebar/dist/simplebar.css';
 </script>
 
 <svelte:head>
@@ -24,14 +22,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style/landing.css" >
 
-  <noscript>
-    <style>
-      .simplebar-content-wrapper {
-        overflow: auto;
-      }
-    </style>
-  </noscript>
-
   <style>
     body {
       overflow-x: hidden;
@@ -40,8 +30,6 @@
   </style>
 </svelte:head>
 
-<!--<SimpleBar direction="vertical">
-</SimpleBar>-->
 <Top />
 <Svgs />
 
@@ -52,9 +40,3 @@
 </section>-->
 
 <Footer />
-
-<style>
-  :global(body) {
-    overflow-x: hidden;
-  }
-</style>

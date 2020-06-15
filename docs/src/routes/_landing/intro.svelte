@@ -1,5 +1,6 @@
 <script>
   import IntroIcon from './icons/triangles-intro.svelte';
+  import IntroDotsIcon from './icons/dots-intro.svelte';
 </script>
 
 <section class="introduction">
@@ -9,6 +10,7 @@
     <p>Don't refactor, configure it to use with your own styles!</p>
   </div>
 
+  <IntroDotsIcon />
   <IntroIcon />
 </section>
 
@@ -46,6 +48,21 @@
   @media screen and (min-width: 480px) and (max-width: 1023px) {
     section {
       padding-top: 5%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    section {
+      padding-top: 5%;
+      height: 350px;
+    }
+
+    h2 {
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 22px;
     }
   }
 </style>

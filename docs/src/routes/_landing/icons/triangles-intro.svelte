@@ -6,9 +6,17 @@
 <style>
   svg {
     position: absolute;
-    right: -50px;
     top: 0;
+    right: -50px;
     height: 200px;
     width: 200px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    svg {
+      right: 50px;
+      height: 350px;
+      width: 350px;
+    }
   }
 </style>
