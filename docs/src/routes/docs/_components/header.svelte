@@ -7,7 +7,7 @@
 <div class="left">
   <a href="/">
     <div class="logo">
-      <h2>industrial-ui</h2>
+      <h2>Industrial-ui</h2>
     </div>
   </a>
 </div>
@@ -43,8 +43,7 @@
   }
 
   .logo {
-    font-family: 'Unica One', sans-serif;
-    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
     color: black;
   }
 
