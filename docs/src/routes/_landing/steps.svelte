@@ -86,6 +86,7 @@ const config = &#123;
     background: #6C6EE5;
     position: relative;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .step {
