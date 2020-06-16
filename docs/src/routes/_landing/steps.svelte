@@ -179,7 +179,7 @@ const config = &#123;
     }
 
     .step p {
-      font-size: 22px;
+      font-size: 16px;
     }
   }
 

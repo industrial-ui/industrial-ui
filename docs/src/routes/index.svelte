@@ -19,7 +19,7 @@
   <meta property="og:description" content="Production-oriented library with a feature rich UI components with no styles at all. Enjoy coding!">
   <meta property="og:image" content="https://industrial-ui.com/img/logo.png">
 
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+  <link href="/style/landing-fonts.css" rel="stylesheet">
   <link rel="stylesheet" href="/style/landing.css" >
 
   <style>

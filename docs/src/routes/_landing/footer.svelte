@@ -3,7 +3,7 @@
   <div class="flex">
     <p>
       Released by the terms of MIT license.<br>
-      Copyright (c) 2020 VanishMax
+      Copyright © VanishMax 2020
     </p>
     <div class="links">
       <a href="https://github.com/vanishmax/industrial-ui" target="_blank">
